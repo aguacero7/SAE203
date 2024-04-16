@@ -1,0 +1,10 @@
+{
+    "0": {
+        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
+        "email": "admin@admin.com",
+        "role": "admin",
+        "pseudo": "admin",
+        "pfp": "default.png",
+        "password": ""
+    }
+}
