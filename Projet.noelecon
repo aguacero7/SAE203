@@ -15,7 +15,7 @@ Le contexte du projet est un site d' l'intranet dee notre entreprise cad qu'il e
 télécharger bootstrap et le mettre dans le dossier style 
 
 Pages:
-index.php (page d'accueil du site)
+index.php (page d'accueil du site) page vitrine
 fonctions.php (fonctions RÉCURRENTES cad pas une fonction qu'on utilise dans une seule page)
 connexion.php (page de connexion sur laquelle on est redirigée lorsqu'on essaie d'accéder ..
              à n'importe quelle page du site)
