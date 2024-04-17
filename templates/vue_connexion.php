@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Login Page</title>
-	<!-- Bootstrap CSS -->
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-	<!-- Font Awesome CSS -->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-	<style>
-		body {
-			background-color: #c3e6cb;
-
-		}
-	</style>
-</head>
-
-<body style="bg-dark">
+<body style="">
 	<section class="vh-100 gradient-custom">
 		<div class="container py-5 h-100">
 			<div class="row d-flex justify-content-center align-items-center h-100">
