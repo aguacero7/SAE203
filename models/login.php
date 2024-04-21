@@ -4,12 +4,12 @@ $title="Connexion";
 
 session_start();
 
-if(isset($_SESSION["auth"])){
+if($_SESSION["auth"]==true){
     header("Location: index.php");
     exit();
 }
 
-require_once("functions.php");
+
 
 require_once('../templates/vue_login.php'); //stocke affichage la page connexion
 

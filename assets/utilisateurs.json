@@ -2,15 +2,15 @@
     "0": {
         "password": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
         "email": "admin@admin.com",
-        "role": "admin",
+        "groupes": ["admin"],
         "username": "admin",
         "fullname":"Admin Du Site",
         "pfp": "default.png"
     },
     "2": {
-        "password": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
+        "password": "$2y$10$AMMvuIBEaNr5nj1SzJDoP.EvNtX532X5sNEwIapTyI8ihCDnXC4by",
         "email": "test@test.com",
-        "role": "admin",
+        "groupes": ["admin","salarie"],
         "username": "test",
         "fullname": "Testeur",
         "pfp": "default.png"
