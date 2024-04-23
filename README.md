@@ -1,6 +1,4 @@
-# SAE203
-SAÉ 203 - Mettre en place une solution informatique pour une petite entreprise de kebab croustillants aux oignons 😋 fait par des farfadets malicieux 
+#SAÉ 203 - Mettre en place une solution informatique pour une petite entreprise
 
-##👋 Hi, I’m @toskadu93
+Lilian GAUDIN Antoine NUNES Noe QUENOT Gaëtan JOLY Romain DAVY
 
-#Début de projet rester serieux svp les gars pas svp ceci est un communiqué officiel.
