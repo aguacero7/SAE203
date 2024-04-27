@@ -17,9 +17,6 @@ if (isset($_GET["forgotten_pswd"]) && $_GET['forgotten_pswd'] != ''){
 elseif (isset($_GET["loginButton2"]) && $_GET['loginButton2'] != ''){
     require_once('../templates/vue_login_forgotten_pswd2.php'); //stocke affichage de la page réinitialisation mdp
 }
-elseif (isset($_GET["save"]) && $_GET['save'] != ''){
-    require_once('../templates/vue_login.php'); //stocke affichage de la page connexion
-}
 else{
     require_once('../templates/vue_login.php'); //stocke affichage de la page connexion
 }
