@@ -7,26 +7,20 @@
                     <div class="card-body p-5 text-center">
 
                         <div class="mb-md-5 mt-md-4">
-
-                            <h2 class="fw-bold mb-2 text-uppercase">BIG K </h2>
-                            <p class="text-white-50 mb-5">Entrez vos identifiants de connexion</p>
+                            <h2 class="fw-bold mb-2 text-uppercase">Mon identifiant</h2>
+                            <p class="text-white-50 mb-4">Veuillez saisir votre identifiant pour changer de mot de passe.</p>
 
                             <div class="form-outline form-white mb-4">
-                                <input type="text" id="loginID" name="loginId" class="form-control form-control-lg" />
+                                <input type="text" id="loginID" name="loginId" class="form-control form-control-lg" required/>
                                 <label class="form-label" for="loginID">Identifiant</label>
                             </div>
 
-                            <div class="form-outline form-white mb-4">
-                                <input type="password" id="loginPassword" name="loginPass"
-                                    class="form-control form-control-lg" />
-                                <label class="form-label" for="loginPassword">Mot de passe</label>
-                            </div>
-                            <p class="small mb-2 pb-lg-2">
-                                <a class="text-white-50" href="login.php?forgotten_pswd=ok">Mot de passe oublié?</a>
+                            <p class="small mb-2 pb-lg-2"><a class="text-white-50" href="../models/login.php">Retour à la page d'accueil</a>
                             </p>
 
-                            <button class="btn btn-outline-light btn-lg px-5" type="button" id="loginButton">Se
-                                connecter</button>
+                            <a href="login.php?loginButton2=ok">
+                                <button class="btn btn-outline-light btn-lg px-5" type="submit">RÉINITIALISER MON MOT DE PASSE</button>
+                            </a>
 
                         </div>
                         <div class="alert alert-danger text-center mt-5" hidden role="alert">

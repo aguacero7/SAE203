@@ -11,7 +11,7 @@
     <script src="../js/loginScript.js"></script>
     <style>
         body {
-            background-color: #c3e6cb;
+            background: linear-gradient(to bottom right, green, yellow, blue);
 
         }
     </style>
