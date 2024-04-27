@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="../style/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="../style/bootstrap/js/bootstrap.min.js"></script>
-
+    <script src="../js/loginScript.js"></script>
     <style>
         body {
             background-color: #c3e6cb;

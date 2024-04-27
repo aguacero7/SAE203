@@ -6,7 +6,7 @@ require_once("functions.php");
 checkConnection();
 checkPermissions($_SESSION["user"]);
 
-$title = "Accueil";
+$title = "Salaires";
 
-require_once("../templates/vue_index.php");
+//require_once("");
 require_once("../templates/layout.php");
