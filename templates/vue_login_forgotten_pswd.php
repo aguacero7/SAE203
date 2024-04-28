@@ -6,21 +6,37 @@
                 <div class="card bg-dark text-white" style="border-radius: 1rem; position: relative;">
                     <div class="card-body p-5 text-center">
 
+                    <form method="POST" name="authentification" action="login.php">
                         <div class="mb-md-5 mt-md-4">
                             <h2 class="fw-bold mb-2 text-uppercase">Mon identifiant</h2>
-                            <p class="text-white-50 mb-4">Veuillez saisir votre identifiant pour changer de mot de passe.</p>
+                            <p class="text-white-50 mb-4">Veuillez saisir votre identifiant et réponde à la question choisi lors de votre inscription pour changer de mot de passe.</p>
 
                             <div class="form-outline form-white mb-4">
-                                <input type="text" id="loginID" name="loginId" class="form-control form-control-lg" required/>
-                                <label class="form-label" for="loginID">Identifiant</label>
+                                <input type="text" id="loginID2" name="loginId2" class="form-control form-control-lg" required/>
+                                <label class="form-label" for="loginID2">Identifiant</label>
                             </div>
 
-                            <p class="small mb-2 pb-lg-2"><a class="text-white-50" href="../models/login.php">Retour à la page d'accueil</a>
+                            <div class="form-outline form-white mb-4">
+                                <select class="form-select" aria-label="Default select example" name="question" required>
+                                    <option selected>Choisir parmis ces questions</option>
+                                    <option value="mere">Quel est le nom de jeune fille de votre mère ?</option>
+                                    <option value="plat">Quel est votre plat préféré ?</option>
+                                    <option value="voiture">Quel est le modèle de votre première voiture ?</option>
+                                </select>
+                                <label class="form-label" for="question">Questions</label>
+                            </div>
+
+                            <div class="form-outline form-white mb-4">
+                                <input type="text" id="answer" name="answer" class="form-control form-control-lg" required/>
+                                <label class="form-label" for="answer">Réponse</label>
+                            </div>
+
+                            <p class="small mb-2 pb-lg-2">
+                                <a class="text-white-50" href="login.php?retour='retour'">Retour à la page d'accueil</a>
                             </p>
 
-                            <a href="login.php?loginButton2=ok">
-                                <button class="btn btn-outline-light btn-lg px-5" type="submit">RÉINITIALISER MON MOT DE PASSE</button>
-                            </a>
+                            <button class="btn btn-outline-light btn-lg px-5" type="submit" name="submit">RÉINITIALISER MON MOT DE PASSE</button>
+                            </form>
 
                         </div>
                         <div class="alert alert-danger text-center mt-5" hidden role="alert">
