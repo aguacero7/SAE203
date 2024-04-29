@@ -45,3 +45,20 @@ function checkPermissions($userOBJ){
         exit();
     }
 }
+
+function checkID(){
+    $usersList = json_decode(file_get_contents("../assets/utilisateurs.json"), true);
+
+    foreach ($usersList as $key => $value){
+        if(isset($_POST["submit"])){
+            if($value["username"] == $_POST["loginId2"] and $value["question"] == $_POST["question"] and $value["answer"] == $_POST["answer"]){
+                $continue = "<script type='text/javascript'>window.onload = function () { alert('C'est good en fait !'); }</script>";
+                global $continue;
+            }
+            else{
+                $error = "<script type='text/javascript'>window.onload = function () { alert('Attention ! Votre identifiant et votre réponse ne correspondent pas.'); }</script>";
+               global $error;
+            }
+        }
+    }
+}

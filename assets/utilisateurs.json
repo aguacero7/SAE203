@@ -5,7 +5,9 @@
         "groupes": ["admin"],
         "username": "admin",
         "fullname":"Admin Du Site",
-        "pfp": "default.png"
+        "pfp": "default.png",
+        "question": "mere",
+        "answer": "delphine"
     },
     "2": {
         "password": "$2y$10$AMMvuIBEaNr5nj1SzJDoP.EvNtX532X5sNEwIapTyI8ihCDnXC4by",
@@ -13,6 +15,8 @@
         "groupes": ["admin","salarie"],
         "username": "test",
         "fullname": "Testeur",
-        "pfp": "default.png"
+        "pfp": "default.png",
+        "question": "plat",
+        "answer": "ratatouille"
     }
 }
