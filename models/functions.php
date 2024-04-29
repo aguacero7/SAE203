@@ -57,8 +57,24 @@ function checkID(){
             }
             else{
                 $error = "<script type='text/javascript'>window.onload = function () { alert('Attention ! Votre identifiant et votre réponse ne correspondent pas.'); }</script>";
-               global $error;
+                global $error;
             }
         }
+    }
+}
+
+function new_pswd(){
+    $usersList = json_decode(file_get_contents("../assets/utilisateurs.json"), true);
+
+    if ($_POST['pswd'] != $_POST['confirm']){
+        $error_pswd = "<script type='text/javascript'>window.onload = function () { alert('Attention ! Votre mot de passe n'est pas le même.'); }</script>";
+        global $error_pswd; 
+    }
+    elseif (isset($_POST["save"])){
+        $usersList[$key]['password'] = password_hash($_POST[$compteur], PASSWORD_DEFAULT);
+    }
+    else{
+        $ok = "<script type='text/javascript'>window.onload = function () { alert('C'est bon ! Votre mot de passe a été changé avec succès.'); }</script>";
+        global $ok;
     }
 }
