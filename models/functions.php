@@ -46,35 +46,60 @@ function checkPermissions($userOBJ){
     }
 }
 
+function alert($message){
+    echo "<script>alert('$message');</script>"; 
+}
+
 function checkID(){
+    $GLOBALS['last_page'] = null;
+    $GLOBALS['bad_id'] = null;
+    $GLOBALS['error_pswd'] = null;
+    $GLOBALS['pswd_changed'] = null;
+
     $usersList = json_decode(file_get_contents("../assets/utilisateurs.json"), true);
 
-    foreach ($usersList as $key => $value){
-        if(isset($_POST["submit"])){
-            if($value["username"] == $_POST["loginId2"] and $value["question"] == $_POST["question"] and $value["answer"] == $_POST["answer"]){
-                $continue = "<script type='text/javascript'>window.onload = function () { alert('C'est good en fait !'); }</script>";
-                global $continue;
-            }
-            else{
-                $error = "<script type='text/javascript'>window.onload = function () { alert('Attention ! Votre identifiant et votre réponse ne correspondent pas.'); }</script>";
-                global $error;
+    //if (is_array($usersList) || is_object($usersList)){ // cette ligne permet de ne pas afficher d'erreur
+        foreach ($usersList as $key => $value){
+            if(isset($_POST["submit"])){
+                if($value["username"] == $_POST["loginId2"] and $value["question"] == $_POST["question"] and $value["answer"] == $_POST["answer"]){
+                    $GLOBALS['last_page'] = "ok mec";
+                    $GLOBALS['bad_id'] = null;
+                }
+                else{
+                    $GLOBALS['last_page'] = null;
+                    $GLOBALS['bad_id'] = "mauvais id";
+                }
             }
         }
-    }
+    //}
 }
 
 function new_pswd(){
     $usersList = json_decode(file_get_contents("../assets/utilisateurs.json"), true);
 
-    if ($_POST['pswd'] != $_POST['confirm']){
-        $error_pswd = "<script type='text/javascript'>window.onload = function () { alert('Attention ! Votre mot de passe n'est pas le même.'); }</script>";
-        global $error_pswd; 
-    }
-    elseif (isset($_POST["save"])){
-        $usersList[$key]['password'] = password_hash($_POST[$compteur], PASSWORD_DEFAULT);
-    }
-    else{
-        $ok = "<script type='text/javascript'>window.onload = function () { alert('C'est bon ! Votre mot de passe a été changé avec succès.'); }</script>";
-        global $ok;
-    }
+    //if (is_array($usersList) || is_object($usersList)){ // cette ligne permet de ne pas afficher d'erreur
+        foreach ($usersList as $key => $value){
+            if ($_SESSION["user"] == $usersList[$key]['username'] && isset($_POST["save"])){
+                if ($_POST['pswd'] != $_POST['confirm']){
+                    $GLOBALS['error_pswd'] = "mauvais mdp";
+                    $GLOBALS['pswd_changed'] = null;
+                }
+                else{
+                    $GLOBALS['pswd_changed'] = "mdp changé";
+                    $GLOBALS['error_pswd'] = null;
+                    $usersList[$key]['password'] = password_hash($_POST["confirm"], PASSWORD_DEFAULT);
+                }
+            }
+        }
+    //}
+    $data = json_encode($usersList, JSON_PRETTY_PRINT);
+    file_put_contents("../assets/utilisateurs.json", $data);
 }
+
+function  alert_box($message) {  
+    echo '<script type="text/javascript"> ';
+    echo ' function alerte(text) {';
+    echo '    document.location = text;'; 
+    echo '}';  
+    echo '</script>';  
+} 

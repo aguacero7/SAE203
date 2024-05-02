@@ -1,6 +1,9 @@
 <?php 
 ob_start(); 
-$user = $_POST['loginId2'];
+if (isset($_POST['loginId2'])){
+    $_SESSION["user"] = $_POST['loginId2'];
+}
+$user = $_SESSION["user"];
 ?>
 <section class="vh-100 gradient-custom">
     <div class="container py-5 h-100">

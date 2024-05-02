@@ -1,22 +1,27 @@
-{
-    "0": {
+[
+    {
         "password": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
         "email": "admin@admin.com",
-        "groupes": ["admin"],
+        "groupes": [
+            "admin"
+        ],
         "username": "admin",
-        "fullname":"Admin Du Site",
+        "fullname": "Admin Du Site",
         "pfp": "default.png",
         "question": "mere",
         "answer": "delphine"
     },
-    "2": {
-        "password": "$2y$10$AMMvuIBEaNr5nj1SzJDoP.EvNtX532X5sNEwIapTyI8ihCDnXC4by",
+    {
+        "password": "$2y$10$rrOKckzZKKyd6Tn2N2j9uu3Fm\/Iqk5EbM7UuJsTZ0De09FLUY7Hg6",
         "email": "test@test.com",
-        "groupes": ["admin","salarie"],
+        "groupes": [
+            "admin",
+            "salarie"
+        ],
         "username": "test",
         "fullname": "Testeur",
         "pfp": "default.png",
         "question": "plat",
         "answer": "ratatouille"
     }
-}
+]
