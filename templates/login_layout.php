@@ -14,6 +14,18 @@
             background: linear-gradient(to bottom right, green, yellow, blue);
 
         }
+
+        .alert-1{
+            z-index :1;
+            opacity: 1;
+            position: fixed;
+            font-size: 150%;
+            display : flex;
+            top: 18%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            opacity: 0.9;
+        }
     </style>
 </head>
 
