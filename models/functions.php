@@ -78,21 +78,23 @@ function new_pswd(){
 
     //if (is_array($usersList) || is_object($usersList)){ // cette ligne permet de ne pas afficher d'erreur
         foreach ($usersList as $key => $value){
-            if ($_SESSION["user"] == $usersList[$key]['username'] && isset($_POST["save"])){
-                if ($_POST['pswd'] != $_POST['confirm']){
-                    $GLOBALS['error_pswd'] = '<div class="alert-1"><div class="alert alert-warning alert-dismissible fade show" role="alert">
-                    <strong>Attention!</strong> Mauvais mot de passe.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                  </div></div>';
-                    $GLOBALS['pswd_changed'] = null;
-                }
-                else{
-                    $GLOBALS['pswd_changed'] = '<div class="alert-1"><div class="alert alert-primary alert-dismissible fade show" role="alert">
-                    <strong>Tout est bon!</strong> Le nouveau mot de passe a bien été pris en compte.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                  </div></div>';
-                    $GLOBALS['error_pswd'] = null;
-                    $usersList[$key]['password'] = password_hash($_POST["confirm"], PASSWORD_DEFAULT);
+            if (isset($_SESSION["user"])){
+                if ($_SESSION["user"] == $usersList[$key]['username'] && isset($_POST["save"])){
+                    if ($_POST['pswd'] != $_POST['confirm']){
+                        $GLOBALS['error_pswd'] = '<div class="alert-1"><div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Attention!</strong> Mauvais mot de passe.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div></div>';
+                        $GLOBALS['pswd_changed'] = null;
+                    }
+                    else{
+                        $GLOBALS['pswd_changed'] = '<div class="alert-1"><div class="alert alert-primary alert-dismissible fade show" role="alert">
+                        <strong>Tout est bon!</strong> Le nouveau mot de passe a bien été pris en compte.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div></div>';
+                        $GLOBALS['error_pswd'] = null;
+                        $usersList[$key]['password'] = password_hash($_POST["confirm"], PASSWORD_DEFAULT);
+                    }
                 }
             }
         }

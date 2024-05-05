@@ -12,7 +12,6 @@
     <style>
         body {
             background: linear-gradient(to bottom right, green, yellow, blue);
-
         }
 
         .alert-1{
