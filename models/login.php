@@ -8,7 +8,10 @@ new_pswd();
 
 $title="Connexion";
 
-if(isset($_SESSION["auth"]) && $_SESSION["auth"]==true){
+
+session_start();
+
+if($_SESSION["auth"]==true){
     header("Location: index.php");
     exit();
 }

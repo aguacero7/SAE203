@@ -25,7 +25,9 @@ function checkOverload()
 
         if ($tempsEcoule < $delaiMinimum) {
             echo json_encode(["error" => "Trop de requêtes !!!!"]);
-            sleep(2);
+            // Bloquer l'utilisateur pendant 1 seconde
+            sleep(1);
+
             exit();
         }
     }
@@ -101,4 +103,5 @@ function new_pswd(){
     //}
     $data = json_encode($usersList, JSON_PRETTY_PRINT);
     file_put_contents("../assets/utilisateurs.json", $data);
+
 }
