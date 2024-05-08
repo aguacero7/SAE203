@@ -8,16 +8,16 @@
         "username": "admin",
         "fullname": "Admin Du Site",
         "pfp": "default.png",
+
         "contact": "000",
         "age": 45
     },
     "2": {
         "password": "$2y$10$AMMvuIBEaNr5nj1SzJDoP.EvNtX532X5sNEwIapTyI8ihCDnXC4by",
-        "email": "test@test.com",
-        "groupes": [
-            "admin",
-            "salarie"
-        ],
+        "question": "mere",
+        "answer": "delphine"
+    },
+    {
         "username": "test",
         "fullname": "Testeur",
         "pfp": "default.png",
@@ -718,4 +718,4 @@
         "contact": 808,
         "age": 57
     }
-}
+]

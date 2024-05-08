@@ -5,7 +5,9 @@ $post = json_decode(file_get_contents('php://input'), true);
 
 require_once('../controllers/User.php');
 require_once("../models/functions.php"); //recup la fonction checkOverload
-checkOverload(); //Empecher trop de requêtes
+
+checkOverload(); //Empêche trop de requêtes
+
 
 
 if (isset($post["loginId"]) && isset($post["loginPass"])) { // Connexion
