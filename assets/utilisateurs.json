@@ -3,7 +3,8 @@
         "password": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
         "email": "admin@admin.com",
         "groupes": [
-            "admin"
+            "admin",
+            "prouterpro"
         ],
         "username": "admin",
         "fullname": "Admin Du Site",
