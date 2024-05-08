@@ -21,8 +21,9 @@
                                     class="form-control form-control-lg" />
                                 <label class="form-label" for="loginPassword">Mot de passe</label>
                             </div>
+                            <p class="small mb-2 pb-lg-2">
+                                <a class="text-white-50" href="login.php?forgotten_pswd=ok">Mot de passe oublié?</a>
 
-                            <p class="small mb-2 pb-lg-2"><a class="text-white-50" href="#!">Mot de passe oublié?</a>
                             </p>
 
                             <button class="btn btn-outline-light btn-lg px-5" type="button" id="loginButton">Se
