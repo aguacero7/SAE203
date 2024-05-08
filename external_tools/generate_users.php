@@ -16,8 +16,8 @@ function generate_username($prenom, $nom) {
     $random_number = mt_rand(10, 95);
     return strtolower($prenom) . strtolower($nom) . $random_number;
 }
-function contact_exists($contact, $users_data) {
-    foreach ($users_data as $user) {
+function contact_exists($contact, $users) {
+    foreach ($users as $user) {
         if ($user["contact"] == $contact) {
             return true;
         }
@@ -34,11 +34,11 @@ for($i=0;$i<50;$i++){
 
     do {                //verifier le n° de contact
          $contact = mt_rand(100, 999);
-    } while (contact_exists($contact, $users_data));
+    } while (contact_exists($contact, $users));
 
             
     $user_groupes = ["salarie"]; // Par défaut
-
+    $random_group_count = mt_rand(1, 3);
     $random_groupes = array_rand(array_flip($groupes), $random_group_count); //prendre entre 1 et 3 grp au hasard
     if (is_array($random_groupes)) {
         foreach ($random_groupes as $groupe) {
