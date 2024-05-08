@@ -16,17 +16,30 @@ function generate_username($prenom, $nom) {
     $random_number = mt_rand(10, 95);
     return strtolower($prenom) . strtolower($nom) . $random_number;
 }
-
+function contact_exists($contact, $users_data) {
+    foreach ($users_data as $user) {
+        if ($user["contact"] == $contact) {
+            return true;
+        }
+    }
+    return false;
+}
 
 for($i=0;$i<50;$i++){
     $random_prenom = $prenoms[array_rand($prenoms)];
     $random_nom = $noms[array_rand($noms)];
-    $username = generate_username($prenom, $nom);
+    $username = generate_username($random_prenom, $random_nom);
     $hashed_password = generate_hashed_password();
-    
+
+
+    do {                //verifier le n° de contact
+         $contact = mt_rand(100, 999);
+    } while (contact_exists($contact, $users_data));
+
+            
     $user_groupes = ["salarie"]; // Par défaut
-    $random_group_count = mt_rand(1, 3);
-    $random_groupes = array_rand(array_flip($groupes), $random_group_count);
+
+    $random_groupes = array_rand(array_flip($groupes), $random_group_count); //prendre entre 1 et 3 grp au hasard
     if (is_array($random_groupes)) {
         foreach ($random_groupes as $groupe) {
             $user_groupes[] = $groupe;
