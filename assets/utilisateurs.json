@@ -9,19 +9,23 @@
         "username": "admin",
         "fullname": "Admin Du Site",
         "pfp": "default.png",
-
+        "question": "mere",
+        "answer": "delphine",
         "contact": "000",
         "age": 45
     },
     "2": {
         "password": "$2y$10$AMMvuIBEaNr5nj1SzJDoP.EvNtX532X5sNEwIapTyI8ihCDnXC4by",
-        "question": "mere",
-        "answer": "delphine"
-    },
-    {
+        "email": "test@test.com",
+        "groupes": [
+            "admin",
+            "salarie"
+        ],
         "username": "test",
         "fullname": "Testeur",
         "pfp": "default.png",
+        "question": "plat",
+        "answer": "ratatouille",
         "contact": "001",
         "age": 12
     },
@@ -719,4 +723,4 @@
         "contact": 808,
         "age": 57
     }
-]
+}
