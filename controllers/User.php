@@ -39,6 +39,7 @@ class User
                 array_push($forbidden, $this->groupForbiddenPages[$groupe]);
             }
             $this->forbiddenPages = array_unique(array_filter($forbidden, "User::supOne"));
+            
         } else {
             $this->forbiddenPages = $this->groupForbiddenPages[$this->groupes[0]];
         }
