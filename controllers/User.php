@@ -33,12 +33,14 @@ class User
         }
         // Gestion des permissions
         if (count($this->groupes) >= 2) {
-            $forbidden = array();
+            $forbidden = [];
             foreach ($this->groupes as $groupe) {
                 // ajouter les pages interdites en fonction du groupe
+
                 array_push($forbidden, $this->groupForbiddenPages[$groupe]);
             }
             $this->forbiddenPages = array_unique(array_filter($forbidden, "User::supOne"));
+            $this->forbiddenPages = $this->forbiddenPages[0];
             
         } else {
             $this->forbiddenPages = $this->groupForbiddenPages[$this->groupes[0]];

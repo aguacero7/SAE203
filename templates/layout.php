@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
     <link rel="stylesheet" href="../style/bootstrap/css/layout.css">
+    <script src="<?=$script?>"></script>
 </head>
 
 <body>
@@ -37,7 +38,7 @@
               Dashboard
             </a>
           </li>
-          <?php if(!in_array("orders.php",$user->forbiddenPages[0])){?>
+          <?php if(!in_array("orders.php",$user->forbiddenPages)){?>
           <li class="nav-item">
             <a class="nav-link" href="../models/orders.php">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file" aria-hidden="true"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
@@ -46,7 +47,7 @@
           </li>
           <?}?>
 
-          <?php if(!in_array("stocks.php",$user->forbiddenPages[0])){?>
+          <?php if(!in_array("stocks.php",$user->forbiddenPages)){?>
           <li class="nav-item">
             <a class="nav-link" href="../models/stocks.php">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
@@ -55,7 +56,7 @@
           </li>
           <?}?>
 
-          <?php if(!in_array("organization_chart.php",$user->forbiddenPages[0])){?>
+          <?php if(!in_array("organization_chart.php",$user->forbiddenPages)){?>
           <li class="nav-item">
             <a class="nav-link" href="../models/organization_chart.php">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
@@ -64,7 +65,7 @@
           </li>
           <?}?>
 
-          <?php if(!in_array("compta.php",$user->forbiddenPages[0])){?>
+          <?php if(!in_array("compta.php",$user->forbiddenPages)){?>
           <li class="nav-item">
             <a class="nav-link" href="../models/compta.php">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
@@ -73,7 +74,7 @@
           </li>
           <?}?>
 
-          <?php if(!in_array("administration.php",$user->forbiddenPages[0])){?>
+          <?php if(!in_array("administration.php",$user->forbiddenPages)){?>
             <li class="nav-item">
             <a class="nav-link" href="../models/administration.php">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>

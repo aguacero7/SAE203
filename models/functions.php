@@ -36,7 +36,7 @@ function checkOverload()
 
 function checkPermissions($userOBJ){     
     $user=json_decode($userOBJ);
-    $pages= $user->forbiddenPages[0];
+    $pages= $user->forbiddenPages;
     $path=explode("/",$_SERVER["SCRIPT_NAME"]);         //chemin du fichier
 
     if(in_array($path[array_key_last($path)],$pages))     // si la page fait partie des interdites de l'utilisateur
