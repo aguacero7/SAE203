@@ -1,18 +1,21 @@
-[
-    {
+{
+    "0": {
         "password": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
         "email": "admin@admin.com",
         "groupes": [
-            "admin"
+            "admin",
+            "prouterpro"
         ],
         "username": "admin",
         "fullname": "Admin Du Site",
         "pfp": "default.png",
         "question": "mere",
-        "answer": "delphine"
+        "answer": "delphine",
+        "contact": "000",
+        "age": 45
     },
-    {
-        "password": "$2y$10$rrOKckzZKKyd6Tn2N2j9uu3Fm\/Iqk5EbM7UuJsTZ0De09FLUY7Hg6",
+    "2": {
+        "password": "$2y$10$AMMvuIBEaNr5nj1SzJDoP.EvNtX532X5sNEwIapTyI8ihCDnXC4by",
         "email": "test@test.com",
         "groupes": [
             "admin",
@@ -22,6 +25,702 @@
         "fullname": "Testeur",
         "pfp": "default.png",
         "question": "plat",
-        "answer": "ratatouille"
+        "answer": "ratatouille",
+        "contact": "001",
+        "age": 12
+    },
+    "3": {
+        "password": "$2y$10$UrBUcN5Uj18JQF\/mNPGj7OYGzeZCCksO.3mk7JSvPOr3kTaBxTJtK",
+        "email": "Pierre.Dubois@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "manager",
+            "comptable"
+        ],
+        "username": "pierredubois58",
+        "fullname": "Pierre Dubois",
+        "pfp": "default.png",
+        "contact": 714,
+        "age": 52
+    },
+    "4": {
+        "password": "$2y$10$tFkZpcgwv9obK1t268b.L.dPoFnXynArIZFMvgAKBmRKSs0ynCdPy",
+        "email": "Isabelle.David@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "manager",
+            "comptable"
+        ],
+        "username": "isabelledavid57",
+        "fullname": "Isabelle David",
+        "pfp": "default.png",
+        "contact": 574,
+        "age": 45
+    },
+    "5": {
+        "password": "$2y$10$LHsdnBYVmvl4at853gCj7Otp7gyakFgMD\/K705Zx7IUr22iomaHXK",
+        "email": "Pierre.Laurent@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "comptable",
+            "dirigeant"
+        ],
+        "username": "pierrelaurent52",
+        "fullname": "Pierre Laurent",
+        "pfp": "default.png",
+        "contact": 684,
+        "age": 35
+    },
+    "6": {
+        "password": "$2y$10$2.gpCsUIhRKosx1T7mMXL.smxOgBDEoq7ZBha\/67kfGuCtJ1jUxo.",
+        "email": "Fran\u00e7ois.Leroy@bigk.fr",
+        "groupes": [
+            "salarie",
+            "manager"
+        ],
+        "username": "fran\u00e7oisleroy36",
+        "fullname": "Fran\u00e7ois Leroy",
+        "pfp": "default.png",
+        "contact": 878,
+        "age": 30
+    },
+    "7": {
+        "password": "$2y$10$nTh2Sb2R1Vx863sDDpbQkul7JehVw.gVYPbKMF8BhoFUW9CSYaMx2",
+        "email": "Nicolas.Laurent@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin"
+        ],
+        "username": "nicolaslaurent71",
+        "fullname": "Nicolas Laurent",
+        "pfp": "default.png",
+        "contact": 827,
+        "age": 56
+    },
+    "8": {
+        "password": "$2y$10$KpVChoaPNtzLN\/2LHjNUfOmYcIuVuwZFkD0lxAR7IyKke60cobeKe",
+        "email": "Paul.Bertrand@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin"
+        ],
+        "username": "paulbertrand53",
+        "fullname": "Paul Bertrand",
+        "pfp": "default.png",
+        "contact": 720,
+        "age": 55
+    },
+    "9": {
+        "password": "$2y$10$f1Xt0k\/MOEWIyRdk7dSVXuMFEWH\/OGQluZKdAKcgIKZ1VjJzVXlfe",
+        "email": "Julie.Durand@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin"
+        ],
+        "username": "juliedurand76",
+        "fullname": "Julie Durand",
+        "pfp": "default.png",
+        "contact": 433,
+        "age": 57
+    },
+    "10": {
+        "password": "$2y$10$BHcyyKyDp9HO4Ng68\/vU2.GM51gJVJN.d6q2Bvnh7EcCIdZgPoMCC",
+        "email": "Antoine.Thomas@bigk.fr",
+        "groupes": [
+            "salarie",
+            "comptable"
+        ],
+        "username": "antoinethomas35",
+        "fullname": "Antoine Thomas",
+        "pfp": "default.png",
+        "contact": 436,
+        "age": 31
+    },
+    "11": {
+        "password": "$2y$10$VEytjWXuWEuSGx.Yjf6MwOVZRoqwFkCBTaFj8JSjEaQaRd9K7hi3K",
+        "email": "Val\u00e9rie.Michel@bigk.fr",
+        "groupes": [
+            "salarie",
+            "manager",
+            "comptable",
+            "dirigeant"
+        ],
+        "username": "val\u00e9riemichel64",
+        "fullname": "Val\u00e9rie Michel",
+        "pfp": "default.png",
+        "contact": 101,
+        "age": 24
+    },
+    "12": {
+        "password": "$2y$10$j566aSUOLWSIE1DlXxMHTOzgSC0dQaR3Uk7VNSSlDd.q.C4OoLc8.",
+        "email": "Luc.Martin@bigk.fr",
+        "groupes": [
+            "salarie",
+            "comptable",
+            "dirigeant"
+        ],
+        "username": "lucmartin56",
+        "fullname": "Luc Martin",
+        "pfp": "default.png",
+        "contact": 713,
+        "age": 32
+    },
+    "13": {
+        "password": "$2y$10$Xwlb4zCcgF1grn94r3V8guHQQJucsoDtuLhBWfp9uk2CM0ShOGF02",
+        "email": "Martin.Robert@bigk.fr",
+        "groupes": [
+            "salarie",
+            "manager"
+        ],
+        "username": "martinrobert81",
+        "fullname": "Martin Robert",
+        "pfp": "default.png",
+        "contact": 688,
+        "age": 27
+    },
+    "14": {
+        "password": "$2y$10$R1\/s7tEaEjzyuw\/zkEG8hesGlgEEpd5HVpLUOqlCj12Y64zEyYOtW",
+        "email": "Luc.Vincent@bigk.fr",
+        "groupes": [
+            "salarie",
+            "comptable"
+        ],
+        "username": "lucvincent23",
+        "fullname": "Luc Vincent",
+        "pfp": "default.png",
+        "contact": 276,
+        "age": 48
+    },
+    "15": {
+        "password": "$2y$10$0slsdsGZb1iOhq9lLQgP8.uab0tw4C9mXFqL.oHWwcuqhFxpP64n.",
+        "email": "Thomas.Petit@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "comptable",
+            "dirigeant"
+        ],
+        "username": "thomaspetit37",
+        "fullname": "Thomas Petit",
+        "pfp": "default.png",
+        "contact": 661,
+        "age": 32
+    },
+    "16": {
+        "password": "$2y$10$DuEIImAUu7SBoCv6sCuk8e2J69oMYdYWSjipj41\/MXE0fW\/IzUQ.q",
+        "email": "Nicolas.Fournier@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin"
+        ],
+        "username": "nicolasfournier32",
+        "fullname": "Nicolas Fournier",
+        "pfp": "default.png",
+        "contact": 488,
+        "age": 35
+    },
+    "17": {
+        "password": "$2y$10$BruoVSQqmvTe6wu7a8lzIuiwAzU9hsoUYdXPG.yIgNc9PzFpRQfxa",
+        "email": "Luc.David@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "comptable"
+        ],
+        "username": "lucdavid38",
+        "fullname": "Luc David",
+        "pfp": "default.png",
+        "contact": 986,
+        "age": 61
+    },
+    "18": {
+        "password": "$2y$10$ilc1iqfVfyT5pC03kY1.6O9aGoCZRLn0uclorIDPr6EnBhOpq9oYC",
+        "email": "Marie.Moreau@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "manager",
+            "dirigeant"
+        ],
+        "username": "mariemoreau49",
+        "fullname": "Marie Moreau",
+        "pfp": "default.png",
+        "contact": 104,
+        "age": 25
+    },
+    "19": {
+        "password": "$2y$10$ENvxYO1ZXlxV2O4sdraDf.dC8AKvXvz5rPtmCYQAkLmI6zE0gjwz6",
+        "email": "Val\u00e9rie.Bernard@bigk.fr",
+        "groupes": [
+            "salarie",
+            "manager"
+        ],
+        "username": "val\u00e9riebernard73",
+        "fullname": "Val\u00e9rie Bernard",
+        "pfp": "default.png",
+        "contact": 404,
+        "age": 56
+    },
+    "20": {
+        "password": "$2y$10$vTBVM6uuCEJKH5Eu4iLOiOq9MIj.dyiOXOKyeuE5Hv9oY4vNU9XS6",
+        "email": "Emilie.Durand@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "comptable",
+            "dirigeant"
+        ],
+        "username": "emiliedurand46",
+        "fullname": "Emilie Durand",
+        "pfp": "default.png",
+        "contact": 469,
+        "age": 27
+    },
+    "21": {
+        "password": "$2y$10$fNykjLngi945JUiXr\/aYwe.zcvyXHNvpT0pGMbvzsM3xRh\/85kLam",
+        "email": "Emilie.Martin@bigk.fr",
+        "groupes": [
+            "salarie",
+            "dirigeant"
+        ],
+        "username": "emiliemartin83",
+        "fullname": "Emilie Martin",
+        "pfp": "default.png",
+        "contact": 695,
+        "age": 28
+    },
+    "22": {
+        "password": "$2y$10$Mjaa.as5B8UQloJWJ1VFreYzClOiyY0PhLdFQy2FNRiLQR.6b.BGC",
+        "email": "Catherine.Lefebvre@bigk.fr",
+        "groupes": [
+            "salarie",
+            "manager",
+            "comptable"
+        ],
+        "username": "catherinelefebvre44",
+        "fullname": "Catherine Lefebvre",
+        "pfp": "default.png",
+        "contact": 785,
+        "age": 33
+    },
+    "23": {
+        "password": "$2y$10$JdJpW42SDukxAg0Y95S1r.aUqnaXTFkMxqdbJCwmPKLJjCxCBqNnm",
+        "email": "Alice.Bertrand@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "manager",
+            "comptable"
+        ],
+        "username": "alicebertrand22",
+        "fullname": "Alice Bertrand",
+        "pfp": "default.png",
+        "contact": 692,
+        "age": 56
+    },
+    "24": {
+        "password": "$2y$10$tFX\/o3qgq1z3gVBonv.cr.pOd.muuo42m3kq9zW4rbdlhJzKza7eO",
+        "email": "Alice.Dubois@bigk.fr",
+        "groupes": [
+            "salarie",
+            "manager",
+            "comptable"
+        ],
+        "username": "alicedubois50",
+        "fullname": "Alice Dubois",
+        "pfp": "default.png",
+        "contact": 651,
+        "age": 42
+    },
+    "25": {
+        "password": "$2y$10$7w4a77QKQi25K0PmSomB5On7ynIK5XaWfvzuH\/CtUi6TkBNB\/TTjm",
+        "email": "Pierre.Martin@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin"
+        ],
+        "username": "pierremartin24",
+        "fullname": "Pierre Martin",
+        "pfp": "default.png",
+        "contact": 654,
+        "age": 51
+    },
+    "26": {
+        "password": "$2y$10$ZzXOKdQIpqpu.J8iv.lHnOMTf6F0TANqu7iBSu25Y2nZOLTV6gNTG",
+        "email": "Fran\u00e7ois.Leroy@bigk.fr",
+        "groupes": [
+            "salarie",
+            "comptable"
+        ],
+        "username": "fran\u00e7oisleroy89",
+        "fullname": "Fran\u00e7ois Leroy",
+        "pfp": "default.png",
+        "contact": 537,
+        "age": 47
+    },
+    "27": {
+        "password": "$2y$10$76bKSkHE8Lhc9OGYu\/rSSe.p1lwAfBdPoMPcWk.89S5GrvykBe.qe",
+        "email": "Jean.Vincent@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "manager",
+            "comptable"
+        ],
+        "username": "jeanvincent35",
+        "fullname": "Jean Vincent",
+        "pfp": "default.png",
+        "contact": 386,
+        "age": 33
+    },
+    "28": {
+        "password": "$2y$10$kAQx2PpDuHSYpN8yeAAMVOs5u\/Ge91nmiPLiz6pA\/KyWcbNovA9Iu",
+        "email": "Alexandre.Bertrand@bigk.fr",
+        "groupes": [
+            "salarie",
+            "comptable"
+        ],
+        "username": "alexandrebertrand88",
+        "fullname": "Alexandre Bertrand",
+        "pfp": "default.png",
+        "contact": 731,
+        "age": 23
+    },
+    "29": {
+        "password": "$2y$10$aY7nGLHte5XUKs.iiqOPPeIzYw9i.OPFUm3Wy04ouD\/DS4WHfGnCi",
+        "email": "Alexandre.David@bigk.fr",
+        "groupes": [
+            "salarie",
+            "dirigeant"
+        ],
+        "username": "alexandredavid22",
+        "fullname": "Alexandre David",
+        "pfp": "default.png",
+        "contact": 664,
+        "age": 25
+    },
+    "30": {
+        "password": "$2y$10$X.Q68u7tu0.SrkEdPUB.L.UtjNM9OhFg8DCTDMM9nG8lPSpREYSCa",
+        "email": "Pierre.Vincent@bigk.fr",
+        "groupes": [
+            "salarie",
+            "dirigeant"
+        ],
+        "username": "pierrevincent33",
+        "fullname": "Pierre Vincent",
+        "pfp": "default.png",
+        "contact": 678,
+        "age": 38
+    },
+    "31": {
+        "password": "$2y$10$UzoO8KBvLeZnQsFxw\/A28Okxkzd8agwDgh\/v9yT7Puh.DAjON2XLe",
+        "email": "Julie.Leroy@bigk.fr",
+        "groupes": [
+            "salarie",
+            "manager",
+            "dirigeant"
+        ],
+        "username": "julieleroy29",
+        "fullname": "Julie Leroy",
+        "pfp": "default.png",
+        "contact": 683,
+        "age": 55
+    },
+    "32": {
+        "password": "$2y$10$K.LTwJ9We0ueJXAsRxVRwOrTpL.4w0GYXI75YfIQEX.1JlEAqelzm",
+        "email": "Alexandre.Lefebvre@bigk.fr",
+        "groupes": [
+            "salarie",
+            "dirigeant"
+        ],
+        "username": "alexandrelefebvre25",
+        "fullname": "Alexandre Lefebvre",
+        "pfp": "default.png",
+        "contact": 349,
+        "age": 30
+    },
+    "33": {
+        "password": "$2y$10$RaM.F94Ehgl2QO9ZERAnje0jeTN8buLlFPM3wYTpal4gZ84nOFNHm",
+        "email": "Thomas.Durand@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin"
+        ],
+        "username": "thomasdurand30",
+        "fullname": "Thomas Durand",
+        "pfp": "default.png",
+        "contact": 320,
+        "age": 32
+    },
+    "34": {
+        "password": "$2y$10$T1\/LpTE6MTX2i01LYvGW2uM1mF9MHWj\/wjuU9S09XmEHa\/ZFteIdK",
+        "email": "Elise.Moreau@bigk.fr",
+        "groupes": [
+            "salarie",
+            "comptable"
+        ],
+        "username": "elisemoreau47",
+        "fullname": "Elise Moreau",
+        "pfp": "default.png",
+        "contact": 603,
+        "age": 38
+    },
+    "35": {
+        "password": "$2y$10$UusW2LcVSwAiO828TcGPYeSvXAKaJ\/0Aj408w95oySVp610p2woTW",
+        "email": "Marie.Michel@bigk.fr",
+        "groupes": [
+            "salarie",
+            "dirigeant"
+        ],
+        "username": "mariemichel34",
+        "fullname": "Marie Michel",
+        "pfp": "default.png",
+        "contact": 373,
+        "age": 59
+    },
+    "36": {
+        "password": "$2y$10$74rWdWpaMjbv29eiLxnE1.kTEVhJJ.9Ou8F1\/KrgG6.m7lxVfjSXW",
+        "email": "Alexandre.Robert@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin"
+        ],
+        "username": "alexandrerobert76",
+        "fullname": "Alexandre Robert",
+        "pfp": "default.png",
+        "contact": 798,
+        "age": 55
+    },
+    "37": {
+        "password": "$2y$10$hnk9vMqGuoIFb.38ziApLubAIpe.aH4Y8FCdduYt1btvxhs3law9u",
+        "email": "Fran\u00e7ois.Lefebvre@bigk.fr",
+        "groupes": [
+            "salarie",
+            "manager"
+        ],
+        "username": "fran\u00e7oislefebvre42",
+        "fullname": "Fran\u00e7ois Lefebvre",
+        "pfp": "default.png",
+        "contact": 773,
+        "age": 30
+    },
+    "38": {
+        "password": "$2y$10$bIE2qFPtaukmYiVCKP3mzOtR79uvdn\/sOaZ6mrbp85iL12rJ1ihea",
+        "email": "Val\u00e9rie.David@bigk.fr",
+        "groupes": [
+            "salarie",
+            "manager",
+            "comptable",
+            "dirigeant"
+        ],
+        "username": "val\u00e9riedavid93",
+        "fullname": "Val\u00e9rie David",
+        "pfp": "default.png",
+        "contact": 454,
+        "age": 53
+    },
+    "39": {
+        "password": "$2y$10$jSQxSRTLkaEzIvhEr5LG7uSLkxzRL1JIZHA.rh.d5Bc.foGcZ\/j7a",
+        "email": "Fran\u00e7ois.Roux@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "manager",
+            "comptable"
+        ],
+        "username": "fran\u00e7oisroux73",
+        "fullname": "Fran\u00e7ois Roux",
+        "pfp": "default.png",
+        "contact": 186,
+        "age": 51
+    },
+    "40": {
+        "password": "$2y$10$Mlyw8cfW0UI.d2uMrJUCDOdhh3yFI1gQuUxeTsrug4Q7Z80MpkENa",
+        "email": "Antoine.Dubois@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "manager",
+            "comptable"
+        ],
+        "username": "antoinedubois15",
+        "fullname": "Antoine Dubois",
+        "pfp": "default.png",
+        "contact": 395,
+        "age": 39
+    },
+    "41": {
+        "password": "$2y$10$UrTHmtp96ZQWS1xlGar6TOy4iHqhlDcSI6PRfjuI6xks1zMgxMla6",
+        "email": "Sophie.Fournier@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "manager",
+            "dirigeant"
+        ],
+        "username": "sophiefournier76",
+        "fullname": "Sophie Fournier",
+        "pfp": "default.png",
+        "contact": 226,
+        "age": 23
+    },
+    "42": {
+        "password": "$2y$10$E0cwSvbLkdKKlXnxJZiwtuSU7n\/eESlm7RgNm43B2KXMLGx2XQzku",
+        "email": "Nicolas.Petit@bigk.fr",
+        "groupes": [
+            "salarie",
+            "manager"
+        ],
+        "username": "nicolaspetit38",
+        "fullname": "Nicolas Petit",
+        "pfp": "default.png",
+        "contact": 904,
+        "age": 60
+    },
+    "43": {
+        "password": "$2y$10$GO.k5pe05uhbq.ED.0O\/rexVAVjSoKgkeoP6y209UI0dvXlKlbFxG",
+        "email": "Luc.David@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "dirigeant"
+        ],
+        "username": "lucdavid19",
+        "fullname": "Luc David",
+        "pfp": "default.png",
+        "contact": 100,
+        "age": 36
+    },
+    "44": {
+        "password": "$2y$10$c0xm0csHj1fRzmvETK8iA.G9KVJwerH4moZCGIxfwKWVyVMB3FYSG",
+        "email": "Alice.Durand@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "manager"
+        ],
+        "username": "alicedurand23",
+        "fullname": "Alice Durand",
+        "pfp": "default.png",
+        "contact": 832,
+        "age": 37
+    },
+    "45": {
+        "password": "$2y$10$oHRQ5gxITxWBVNdn4e\/o0ucHuYdhcyYKj1106S0neZ2k.Rx82DZYS",
+        "email": "Martin.Durand@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "manager",
+            "comptable"
+        ],
+        "username": "martindurand24",
+        "fullname": "Martin Durand",
+        "pfp": "default.png",
+        "contact": 796,
+        "age": 39
+    },
+    "46": {
+        "password": "$2y$10$uaHJYfHPKzfxIJXtvcwUHOOI5KjUe\/nXSahbmu0nPohymnn4OmTIa",
+        "email": "Julie.Moreau@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "comptable",
+            "dirigeant"
+        ],
+        "username": "juliemoreau85",
+        "fullname": "Julie Moreau",
+        "pfp": "default.png",
+        "contact": 283,
+        "age": 29
+    },
+    "47": {
+        "password": "$2y$10$coRw53fJX6ay4zZgC1299.DGT0ExkYa37WibrlivAulR0clvmbwwW",
+        "email": "Isabelle.Michel@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "comptable"
+        ],
+        "username": "isabellemichel81",
+        "fullname": "Isabelle Michel",
+        "pfp": "default.png",
+        "contact": 119,
+        "age": 23
+    },
+    "48": {
+        "password": "$2y$10$PXuEcz8FdsYSlLBHA4jIBumiNd\/DwE6rXTXqU6W9lKUlGEUEIV2Gq",
+        "email": "Alice.Bertrand@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "comptable",
+            "dirigeant"
+        ],
+        "username": "alicebertrand76",
+        "fullname": "Alice Bertrand",
+        "pfp": "default.png",
+        "contact": 758,
+        "age": 53
+    },
+    "49": {
+        "password": "$2y$10$JyFN6z0E.quWambW.BHjtOBNqZx3w0t5290lOSUtH5j7g44MKZwKa",
+        "email": "Fran\u00e7ois.Richard@bigk.fr",
+        "groupes": [
+            "salarie",
+            "manager",
+            "comptable"
+        ],
+        "username": "fran\u00e7oisrichard51",
+        "fullname": "Fran\u00e7ois Richard",
+        "pfp": "default.png",
+        "contact": 201,
+        "age": 49
+    },
+    "50": {
+        "password": "$2y$10$7xWtv7zmJlS.dtzg9n.TW.m3\/ZyLK9gh3S.6MBeDqirRvZQtKR0AG",
+        "email": "Alexandre.Thomas@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "manager"
+        ],
+        "username": "alexandrethomas90",
+        "fullname": "Alexandre Thomas",
+        "pfp": "default.png",
+        "contact": 351,
+        "age": 41
+    },
+    "51": {
+        "password": "$2y$10$P0hCZ61IpRA7UjBVFZ5tmu8NuA5KS98E0g5yXKkb6iaMYuEJhA2om",
+        "email": "Val\u00e9rie.Fournier@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin",
+            "manager",
+            "comptable"
+        ],
+        "username": "val\u00e9riefournier89",
+        "fullname": "Val\u00e9rie Fournier",
+        "pfp": "default.png",
+        "contact": 419,
+        "age": 19
+    },
+    "52": {
+        "password": "$2y$10$HlWwrpso5zDRPa39AZD5nOsze\/vJ7k2BgyfknvGiX0XMVKFnB4s4O",
+        "email": "Fran\u00e7ois.Vincent@bigk.fr",
+        "groupes": [
+            "salarie",
+            "admin"
+        ],
+        "username": "fran\u00e7oisvincent52",
+        "fullname": "Fran\u00e7ois Vincent",
+        "pfp": "default.png",
+        "contact": 808,
+        "age": 57
     }
-]
+}

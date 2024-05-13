@@ -1,1 +1,2 @@
-<a href="../controllers/logout.php">Logout
+<?php ob_start();?>
+<?php $content = ob_get_clean(); ?>

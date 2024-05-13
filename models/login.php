@@ -8,7 +8,7 @@ new_pswd();
 
 $title="Connexion";
 
-if(isset($_SESSION["auth"]) && $_SESSION["auth"]==true){
+if(isset($_SESSION["auth"])){
     header("Location: index.php");
     exit();
 }
@@ -25,7 +25,6 @@ elseif (isset($GLOBALS['bad_id'])){//affiche message erreur si utilisateur tapé
     require_once('../templates/vue_login_forgotten_pswd.php'); //stocke affichage de la page login du mdp oublié
 }
 elseif (isset($GLOBALS['last_page'])){
-    echo $GLOBALS['last_page']; 
     require_once('../templates/vue_login_forgotten_pswd2.php');
 }
 elseif (isset($GLOBALS['error_pswd'])){//affiche message erreur si les mdp ne correspondent pas
