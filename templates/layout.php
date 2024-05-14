@@ -9,6 +9,7 @@
     <link href="..\style\bootstrap\css\bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../style/bootstrap/css/layout.css">
+    <link href="../style/bootstrap/js/bootstrap.min.js" rel="stylesheet">
     <script src="<?=$script?>"></script>
 </head>
 
