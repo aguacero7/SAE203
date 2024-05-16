@@ -5,7 +5,8 @@ class User
     public $username;
     public $pfp;
     public $email;
-    public $groupes = array();
+    public $fullname;
+    public $groupes = [];
     public $forbiddenPages;
     private $groupForbiddenPages = [
         "admin" => ["salaries.php"],
@@ -35,9 +36,11 @@ class User
         if (count($this->groupes) >= 2) {
             $forbidden = [];
             foreach ($this->groupes as $groupe) {
-                // ajouter les pages interdites en fonction du groupe
-
-                array_push($forbidden, $this->groupForbiddenPages[$groupe]);
+                // Vérifier si la clé existe dans $groupForbiddenPages avant de l'utiliser
+                if (array_key_exists($groupe, $this->groupForbiddenPages)) {
+                    // Ajouter les pages interdites en fonction du groupe
+                    $forbidden = array_merge($forbidden, $this->groupForbiddenPages[$groupe]);
+                }
             }
             $this->forbiddenPages = array_unique(array_filter($forbidden, "User::supOne"));
             $this->forbiddenPages = $this->forbiddenPages[0];

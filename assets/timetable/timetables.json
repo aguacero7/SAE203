@@ -1,0 +1,45 @@
+{
+    "activities": [
+      {
+        "id": 1,
+        "creator": "martindurand24",
+        "invited": ["alicedurand23"],
+        "invited_grp":["admin"],
+        "date": "2024-05-13",
+        "start_time": "09",
+        "end_time": "10",
+        "title": "Réunion Technique "
+      },
+      {
+        "id": 2,
+        "creator": "fran\u00e7oisrichard51",
+        "invited": ["juliemoreau85"],
+        "invited_grp":["admin"],
+        "date": "2024-05-17",
+        "start_time": "11",
+        "end_time": "20",
+        "title": "Client Presentation"
+      },
+      {
+        "id": 3,
+        "creator": "juliemoreau85",
+        "invited": ["fran\u00e7oisrichard51", "alicebertrand76"],
+        "invited_grp":["comptable"],
+        "date": "2024-05-18",
+        "start_time": "14",
+        "end_time": "16",
+        "title": "Project Review"
+      },
+      {
+       "id": 3,
+      "creator": "fran\u00e7oisrichard51",
+      "invited": ["juliemoreau85"],
+      "invited_grp":["admin"],
+      "date": "2024-05-13",
+      "start_time": "11",
+      "end_time": "14",
+      "title": "TESTUS"
+    }
+    ]
+}
+  
