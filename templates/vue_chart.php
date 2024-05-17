@@ -14,9 +14,10 @@
                         Trier par groupe
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="../models/organization_chart.php?group=all">Tous</a></li>
+                    <li><a class="dropdown-item" href="../models/organization_chart.php?group=salaries">Tous</a></li>
                         <?php foreach ($groups as $key => $groupe) {
-                            echo '<li><a class="dropdown-item" href="../models/organization_chart.php?group='.$groupe.'" >' . $groupe . '</a></li>';
+                            if($groupe!="salarie")
+                                echo '<li><a class="dropdown-item" href="../models/organization_chart.php?group='.$groupe.'" >' . $groupe . '</a></li>';
                         }
                         ?>
                     </ul>

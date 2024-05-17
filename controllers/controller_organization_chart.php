@@ -28,11 +28,12 @@ function generateCard($user)
 
 
 //-------------------------------------------------------------------Sort by group part-------------------------------------//
-
+if(isset($get["group"])){
 $group_input = $get['group'];
+}
 if (isset($group_input) && (in_array($group_input, $groups) || $group_input == "all")) {
     $sorted_users = [];
-    if ($group_input == "all") {
+    if ($group_input == "salaries") {
         $sorted_users = $users;
     } else {
         foreach ($users as $user) {
