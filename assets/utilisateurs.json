@@ -15,7 +15,7 @@
         "age": 45
     },
     "2": {
-        "password": "$2y$10$AMMvuIBEaNr5nj1SzJDoP.EvNtX532X5sNEwIapTyI8ihCDnXC4by",
+        "password": "$2y$10$sImLaISLY7MEUPpJOsW1kuscf\/ObB8dgKhkZobbsNPwaZogJ7rfRy",
         "email": "test@test.com",
         "groupes": [
             "admin",
