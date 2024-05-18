@@ -48,16 +48,52 @@ function checkPermissions($userOBJ){
     }
 }
 
-function checkID(){
+function checkLOGIN(){
+    
+    $GLOBALS['Connexion'] = null;
+    $GLOBALS['error_connexion'] = null;
+
     $GLOBALS['last_page'] = null;
     $GLOBALS['bad_id'] = null;
+
     $GLOBALS['error_pswd'] = null;
     $GLOBALS['pswd_changed'] = null;
+    
+    $usersList = json_decode(file_get_contents("../assets/utilisateurs.json"), true);
+
+    //if (is_array($usersList) || is_object($usersList)){ // cette ligne permet de ne pas afficher d'erreur
+        foreach ($usersList as $key => $value){
+            if(isset($_POST["loginButton"])){
+                echo 'ok';
+                if($_POST["loginID"] == $value["username"] && password_hash($_POST["loginPassword"], PASSWORD_DEFAULT) == $value["password"]){
+                    $GLOBALS['Connexion'] = '<div class="alert-1"><div class="alert alert-primary alert-dismissible fade show" role="alert">
+                    <strong>Tout est bon !</strong> Vous êtes connecté en tant que '.$_SESSION["user"].'.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div></div>';
+                $GLOBALS['error_connexion'] = null;
+                $_SESSION["user"] = $value["username"];
+
+                }
+                else{
+                    $GLOBALS['error_connexion'] = '<div class="alert-1"><div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Attention !</strong> Mauvais identifiant.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div></div>';
+                $GLOBALS['Connexion'] = null;
+                }
+            }
+        }
+    //}
+}
+
+function checkID(){
 
     $usersList = json_decode(file_get_contents("../assets/utilisateurs.json"), true);
 
     //if (is_array($usersList) || is_object($usersList)){ // cette ligne permet de ne pas afficher d'erreur
         foreach ($usersList as $key => $value){
+            //echo $_POST["answer"];
+            //echo ' ';
             if(isset($_POST["submit"])){
                 if($value["username"] == $_POST["loginId2"] and $value["question"] == $_POST["question"] and $value["answer"] == $_POST["answer"]){
                     $GLOBALS['last_page'] = "ok";
@@ -76,6 +112,7 @@ function checkID(){
 }
 
 function new_pswd(){
+    
     $usersList = json_decode(file_get_contents("../assets/utilisateurs.json"), true);
 
     //if (is_array($usersList) || is_object($usersList)){ // cette ligne permet de ne pas afficher d'erreur

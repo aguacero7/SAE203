@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Big K</title>
-    <link href="../style/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../style/bootstrap/js/bootstrap.min.js" rel="stylesheet">
-</head>
-
-<body>
+<?php ob_start(); ?>
 <div class="bg-success text-white">
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <a class="navbar-brand text-white" href="#">Big K</a>
@@ -59,6 +48,4 @@
         <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1234.5678901234567!2d-1.987174!3d48.6582371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480e8349143218df:0xfb5a23e824f9e950!2sBig+K!5e0!3m2!1sfr!2sfr!4v1671234567890!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>        </div>
     </div>
 </div>
-</body>
-
-</html>
+<?php $content = ob_get_clean(); ?>

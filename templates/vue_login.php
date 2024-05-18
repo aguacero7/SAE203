@@ -6,18 +6,19 @@
                 <div class="card bg-dark text-white" style="border-radius: 1rem; position: relative;">
                     <div class="card-body p-5 text-center">
 
+                    <form method="POST" name="connexion" action="login.php">
                         <div class="mb-md-5 mt-md-4">
 
                             <h2 class="fw-bold mb-2 text-uppercase">BIG K </h2>
                             <p class="text-white-50 mb-5">Entrez vos identifiants de connexion</p>
 
                             <div class="form-outline form-white mb-4">
-                                <input type="text" id="loginID" name="loginId" class="form-control form-control-lg" />
+                                <input type="text" id="loginID" name="loginID" class="form-control form-control-lg" />
                                 <label class="form-label" for="loginID">Identifiant</label>
                             </div>
 
                             <div class="form-outline form-white mb-4">
-                                <input type="password" id="loginPassword" name="loginPass"
+                                <input type="password" id="loginPassword" name="loginPassword"
                                     class="form-control form-control-lg" />
                                 <label class="form-label" for="loginPassword">Mot de passe</label>
                             </div>
@@ -26,8 +27,9 @@
 
                             </p>
 
-                            <button class="btn btn-outline-light btn-lg px-5" type="button" id="loginButton">Se
+                            <button class="btn btn-outline-light btn-lg px-5" type="submit" id="loginButton">Se
                                 connecter</button>
+                        </form>
 
                         </div>
                         <div class="alert alert-danger text-center mt-5" hidden role="alert">
