@@ -1,45 +1,118 @@
-{
-    "activities": [
-      {
+[
+    {
         "id": 1,
         "creator": "martindurand24",
-        "invited": ["alicedurand23"],
-        "invited_grp":["admin"],
+        "invited": [
+            "fran\u00e7oisvincent52"
+        ],
+        "invited_grp": [
+            "admin"
+        ],
         "date": "2024-05-13",
-        "start_time": "09",
-        "end_time": "10",
-        "title": "Réunion Technique "
-      },
-      {
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "title": "R\u00e9union Technique ",
+        "color": "primary"
+    },
+    {
         "id": 2,
         "creator": "fran\u00e7oisrichard51",
-        "invited": ["juliemoreau85"],
-        "invited_grp":["admin"],
+        "invited": [
+            "pierredubois58"
+        ],
+        "invited_grp": [
+            "admin",
+            "dirigeant"
+        ],
         "date": "2024-05-17",
-        "start_time": "11",
-        "end_time": "20",
-        "title": "Client Presentation"
-      },
-      {
+        "start_time": "11:00",
+        "end_time": "18:00",
+        "title": "Client Presentation !!! ",
+        "color": "danger"
+    },
+    {
         "id": 3,
         "creator": "juliemoreau85",
-        "invited": ["fran\u00e7oisrichard51", "alicebertrand76"],
-        "invited_grp":["comptable"],
+        "invited": [
+            "fran\u00e7oisrichard51",
+            "alicebertrand76"
+        ],
+        "invited_grp": [
+        ],
         "date": "2024-05-18",
-        "start_time": "14",
-        "end_time": "16",
-        "title": "Project Review"
-      },
-      {
-       "id": 3,
-      "creator": "fran\u00e7oisrichard51",
-      "invited": ["juliemoreau85"],
-      "invited_grp":["admin"],
-      "date": "2024-05-13",
-      "start_time": "11",
-      "end_time": "14",
-      "title": "TESTUS"
+        "start_time": "14:00",
+        "end_time": "16:00",
+        "title": "Project Review",
+        "color": "success"
+    },
+    {
+        "id": 4,
+        "creator": "fran\u00e7oisrichard51",
+        "invited": [
+            "administrateur",
+            "pierredubois58",
+            "isabelledavid57"
+        ],
+        "invited_grp": [
+            "admin",
+            "salarie",
+            "comptable"
+        ],
+        "date": "2024-05-13",
+        "start_time": "11:00:00",
+        "end_time": "17:00",
+        "title": "TESTUS",
+        "color": "warning"
+    },
+    {
+        "id": 5,
+        "creator": "fran\u00e7oisrichard51",
+        "invited": [
+            "administrateur",
+            "pierredubois58",
+            "isabelledavid57"
+        ],
+        "invited_grp": [
+            "admin",
+            "salarie",
+            "comptable"
+        ],
+        "date": "2024-05-13",
+        "start_time": "11:00:00",
+        "end_time": "14:00",
+        "title": "TESTUS",
+        "color": "dark"
+    },
+    {
+        "id": 5,
+        "creator": "pierredubois58",
+        "title": "sQSsqS",
+        "date": "2024-05-18",
+        "start_time": "14:00",
+        "end_time": "13:00",
+        "color": "primary",
+        "invited": [
+            "isabelledavid57",
+            "pierredubois58"
+        ],
+        "invited_grp": [
+            "admin"
+        ]
+    },
+    {
+        "id": 7,
+        "creator": "pierredubois58",
+        "title": "sQSsqS",
+        "date": "2024-05-18",
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "color": "primary",
+        "invited": [
+            "isabelledavid57",
+            "pierredubois58"
+        ],
+        "invited_grp": [
+            "admin"
+        ]
     }
-    ]
-}
-  
+]

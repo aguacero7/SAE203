@@ -11,7 +11,17 @@ class Activity
     public $date = [];
     public $start_time;
     public $end_time;
-
+    public $color;
+    public static $authorized_colors =  array(
+        "primary",
+        "secondary",
+        "success",
+        "danger",
+        "warning",
+        "info",
+        "light",
+        "dark"
+    );
     //contructor
     public function __construct($activity)
     {
@@ -23,7 +33,42 @@ class Activity
         $this->start_time = $activity['start_time'];
         $this->end_time = $activity['end_time'];
         $this->title = $activity["title"];
+        $this->color = $activity["color"];
     }
+
+    public static function get_activity_by_id($id){
+        $file=json_decode(file_get_contents("../assets/timetable/timetables.json"),true);
+        foreach ($file as $activity) {
+            if ($activity["id"] == $id) {
+                return new Activity($activity);
+            }
+        }
+        return null;
+
+    }
+    public static function edit_activity($id, $title, $date, $start_time, $end_time, $invited, $invited_grp, $color) {
+        $file_path = "../assets/timetable/timetables.json";
+        $file = json_decode(file_get_contents($file_path), true);
+    
+        foreach ($file as &$activity) {
+            if ($activity["id"] == $id) {
+                $activity["title"] = $title;
+                $activity["date"] = $date;
+                $activity["start_time"] = $start_time;
+                $activity["end_time"] = $end_time;
+                $activity["invited"] = explode(', ', $invited);
+                $activity["invited_grp"] = explode(', ', $invited_grp);
+                $activity["color"] = $color;
+    
+                // Sauvegarder les modifications dans le fichier JSON
+                file_put_contents($file_path, json_encode($file, JSON_PRETTY_PRINT));
+                return true;
+            }
+        }
+        return false; // Si l'activité n'a pas été trouvée
+    }
+    
+
 
 }
 
@@ -32,6 +77,7 @@ class Day
 {
     public $activites_par_heure = [];
     public $nom;
+    public $date;
     // constructeur
     public function __construct($date)
     {
@@ -49,6 +95,7 @@ class Day
         for ($i = 0; $i < 24; $i++) {
             $this->activites_par_heure[$i] = [];
         }
+        $this->date=$date;
     }
 
     public function ajouterActivite($heure, $activite)
@@ -83,7 +130,7 @@ class Timetable
     {
         $usr_activ = [];
         $data = json_decode(file_get_contents("../assets/timetable/timetables.json"), true);
-        foreach ($data["activities"] as $activite) {
+        foreach ($data as $activite) {
             if ($this->isUserInvited($activite)) {
                 array_push($usr_activ, new Activity($activite));
             }

@@ -12,7 +12,13 @@ class TimetableView
         </div>
 
         <div class="container">
+            <div class="col-md-6 text-align center">
+                <button type="button" onclick="createActivity()" class="btn btn-outline-success mx-2">
+                    Ajouter Activité
+                </button>
+            </div>
             <div class="row align-items-center">
+
                 <div class="col-md-6">
                     <!-- Boutons "Jour" -->
                     <button type="button" onclick="updatePageWithNewDate('prev')" id="prevButton"
@@ -44,31 +50,168 @@ class TimetableView
             <?= self::renderBootstrapTable($timetable) ?>
         </div>
 
-        <!-- Modal pour créer un nouvel évènement -->
-        <div class="modal fade" id="createEventModal" tabindex="-1" role="dialog" aria-labelledby="createEventModalLabel"
+        <!-- Modal pour créer une activité -->
+        <div class="modal fade" id="createActivityModal" tabindex="-1" role="dialog" aria-labelledby="createActivityModalLabel"
             aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="createEventModalLabel">Créer un nouvel évènement</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <h5 class="modal-title" id="createActivityModalLabel">Créer l'activité</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form id="createEventForm">
-                            <!-- Champs du formulaire pour créer un événement -->
-                            <div class="form-group">
-                                <label for="eventTitle">Titre :</label>
-                                <input type="text" id="eventTitle" name="eventTitle" class="form-control">
+                        <form id="createActivityForm" method="post">
+                            <input type="hidden" name="create" value="1">
+                            <div class="mb-3">
+                                <label for="createActivityTitle" class="form-label">Titre</label>
+                                <input type="text" class="form-control" id="createActivityTitle" name="title" required>
                             </div>
-                            <!-- Autres champs du formulaire (date, heure de début, heure de fin, etc.) -->
-                            <button type="submit" class="btn btn-primary">Créer</button>
+                            <div class="mb-3">
+                                <label for="createActivityDate" class="form-label">Date</label>
+                                <input type="date" class="form-control" id="createActivityDate" name="date"
+                                    value="<?= $timetable->date ?>" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="createActivityStartTime" class="form-label">Heure de début</label>
+                                <input type="time" class="form-control" id="createActivityStartTime" name="start_time" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="createActivityEndTime" class="form-label">Heure de fin</label>
+                                <input type="time" class="form-control" id="createActivityEndTime" name="end_time" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="createActivityColor" class="form-label">Couleur</label>
+                                <select class="form-control" id="createActivityColor" name="color" required>
+                                    <option value="primary">Bleu</option>
+                                    <option value="secondary">Gris</option>
+                                    <option value="success">Vert</option>
+                                    <option value="danger">Rouge</option>
+                                    <option value="warning">Jaune</option>
+                                    <option value="info">Cyan</option>
+                                    <option value="light">Blanc</option>
+                                    <option value="dark">Noir</option>
+                                </select>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <!-- Liste des utilisateurs -->
+                                    <label for="allUsers">Utilisateurs</label>
+                                    <select multiple id="allUsers" class="form-control">
+                                        <?= TimetableView::load_users(false) ?>
+                                    </select>
+                                    <br>
+                                    <!-- Liste des groupes -->
+                                    <label for="allGroups">Groupes</label>
+                                    <select multiple id="allGroups" class="form-control">
+                                        <?= TimetableView::load_groups(false) ?>
+                                    </select>
+                                </div>
+
+                                <div class="col">
+                                    <label for="selectedUsers">Utilisateurs sélectionnés</label>
+                                    <select multiple id="createActivityInvited" class="form-control">
+                                    </select>
+                                    <br>
+                                    <!-- Groupes choisis -->
+                                    <label for="selectedGroups">Groupes sélectionnés</label>
+                                    <select multiple id="createActivityInvitedGrp" class="form-control">
+                                    </select>
+                                </div>
+                            </div>
+                            <div hidden class="alert alert-danger" id="errorResult"></div>
+                            <br>
+                            <button type="submit" class="btn btn-primary">Enregistrer</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Modal pour editer un évènement -->
+        <div class="modal fade" id="editActivityModal" tabindex="-1" role="dialog" aria-labelledby="editActivityModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editActivityModalLabel">Modifier l'activité</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editActivityForm" method="post">
+                            <input type="hidden" id="editActivityId" name="id">
+                            <input type="hidden" id="edit" name="edit" value="">
+
+                            <div class="mb-3">
+                                <label for="editActivityTitle" class="form-label">Titre</label>
+                                <input type="text" class="form-control" id="editActivityTitle" name="title" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editActivityDate" class="form-label">Date</label>
+                                <input type="date" class="form-control" id="editActivityDate" name="date" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editActivityStartTime" class="form-label">Heure de début</label>
+                                <input type="time" class="form-control" id="editActivityStartTime" name="start_time" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editActivityEndTime" class="form-label">Heure de fin</label>
+                                <input type="time" class="form-control" id="editActivityEndTime" name="end_time" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editActivityColor" class="form-label">Couleur</label>
+                                <select class="form-control" id="editActivityColor" name="color" required>
+                                    <option value="primary">Bleu</option>
+                                    <option value="secondary">Gris</option>
+                                    <option value="success">Vert</option>
+                                    <option value="danger">Rouge</option>
+                                    <option value="warning">Jaune</option>
+                                    <option value="info">Cyan</option>
+                                    <option value="light">Blanc</option>
+                                    <option value="dark">Noir</option>
+                                </select>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <!-- Liste des utilisateurs -->
+                                    <label for="allUsers">Utilisateurs</label>
+                                    <select multiple id="allUsers" class="form-control">
+                                        <?= TimetableView::load_users(true) ?>
+                                    </select>
+                                    <br>
+                                    <!-- Liste des groupes -->
+                                    <label for="allGroups">Groupes</label>
+                                    <select multiple id="allGroups" class="form-control">
+                                        <?= TimetableView::load_groups(true) ?>
+                                    </select>
+                                </div>
+
+                                <div class="col">
+                                    <label for="selectedUsers">Utilisateurs sélectionnés</label>
+                                    <select multiple id="editActivityInvited" class="form-control">
+                                    </select>
+                                    <br>
+                                    <!-- Groupes choisis -->
+                                    <label for="selectedGroups">Groupes sélectionnés</label>
+                                    <select multiple id="editActivityInvitedGrp" class="form-control">
+                                    </select>
+                                </div>
+                            </div>
+                            <div hidden class="alert alert-danger" id="errorResult"></div>
+                            <BR>
+                            <button type="submit" class="btn btn-primary">Enregistrer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <?php
         $content = ob_get_clean();
 
@@ -107,18 +250,20 @@ class TimetableView
     {
         ob_start(); // Début de la mise en tampon de la sortie
         ?>
-        <table class="table table-bordered table-striped">
-            <thead class="thead-dark">
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="">
                 <tr>
                     <th style="width: 20%;">Heure</th>
-                    <th style="width: 80%;">Activités <?= $timetable->days[array_key_first($timetable->days)]->nom ?> <?= array_key_first($timetable->days) ?></th>
+                    <th style="width: 80%;">Activités <?= $timetable->days[array_key_first($timetable->days)]->nom ?>
+                        <?= array_key_first($timetable->days) ?>
+                    </th>
 
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="table-primary">
                 <?php
                 // Parcours de chaque heure de la journée
-                for ($hour = 7; $hour < 19; $hour++) {
+                for ($hour = 7; $hour < 21; $hour++) {
                     ?>
                     <tr>
                         <td><?= str_pad($hour, 2, "0", STR_PAD_LEFT) . ":00" ?></td>
@@ -127,7 +272,10 @@ class TimetableView
                             ?>
                         <td>
                             <?php foreach ($day->activites_par_heure[$hour] ?? [] as $activity): ?>
-                                <div><?= $activity->title ?></div>
+                                <a href="javascript:void(0);" onclick="editActivity(<?= $activity->id ?>)">
+                                        <span
+                                            class="badge text-bg-<?= $activity->color ?> <?= $activity->id ?>"><?= $activity->title ?></span>
+                                    </a>
                             <?php endforeach; ?>
                         </td>
                     </tr>
@@ -148,19 +296,19 @@ class TimetableView
         ob_start(); // Début de la mise en tampon de la sortie
         ?>
         <table class="table table-bordered table-striped">
-            <thead class="thead-dark">
+            <thead class="thead thead-dark">
                 <tr>
                     <th>Heure</th>
                     <?php
                     foreach ($timetable->days as $date => $day) {
-                        echo "<th>$day->nom</th>";
+                        echo "<th> <p class='text-secondary'>($day->date)</p>$day->nom</th>";
                     }
                     ?>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="table-primary">
                 <?php
-                for ($hour = 7; $hour < 20; $hour++) {
+                for ($hour = 7; $hour < 21; $hour++) {
                     ?>
                     <tr>
                         <td><?= str_pad($hour, 2, "0", STR_PAD_LEFT) . ":00" ?></td>
@@ -169,7 +317,10 @@ class TimetableView
                             ?>
                             <td>
                                 <?php foreach ($day->activites_par_heure[$hour] ?? [] as $activity): ?>
-                                    <div><?= $activity->title ?></div>
+                                    <a href="javascript:void(0);" onclick="editActivity(<?= $activity->id ?>)">
+                                        <span
+                                            class="badge text-bg-<?= $activity->color ?> <?= $activity->id ?>"><?= $activity->title ?></span>
+                                    </a>
                                 <?php endforeach; ?>
                             </td>
                             <?php
@@ -217,7 +368,33 @@ class TimetableView
 
         echo $content;
     }
+    private static function load_users($id)
+    {
+        $users = User::load_all();
+        foreach ($users as $user) {
+            if ($id) {
+                echo "<option class='all user-option' id='" . $user->username . "' value='" . $user->username . "'>" . $user->username . "</option>";
 
+            }
+            else{
+                echo "<option class='all user-option' value='" . $user->username . "'>" . $user->username . "</option>";
 
+            }
+        }
+    }
+
+    private static function load_groups($id)
+    {
+        $groupes = User::load_all_grp();
+        foreach ($groupes as $groupe) {
+            if ($id) {
+                echo "<option class='all group-option' id='$groupe' value='$groupe'>$groupe</option>";
+            }
+            else{
+                echo "<option class='all group-option' value='$groupe'>$groupe</option>";
+
+            }
+        }
+    }
 }
 
