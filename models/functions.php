@@ -1,9 +1,12 @@
 <?php
+//require_once('../models/classes/Error.php');   Pour les erreurs etc
+require_once("../models/classes/User.php");
 function checkConnection()
 {
     if (!isset($_SESSION["auth"])) {
         http_response_code(401);
-        header("Location: login.php");
+        header("Location: ../models/login.php");
+        //new RedirectedError(page:"");
         exit();
     }
     else{

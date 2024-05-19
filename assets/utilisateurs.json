@@ -3,10 +3,9 @@
         "password": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
         "email": "admin@admin.com",
         "groupes": [
-            "admin",
-            "prouterpro"
+            "admin"
         ],
-        "username": "admin",
+        "username": "administrateur",
         "fullname": "Admin Du Site",
         "pfp": "default.png",
         "question": "mere",
