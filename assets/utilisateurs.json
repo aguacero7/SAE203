@@ -33,7 +33,6 @@
         "email": "Pierre.Dubois@bigk.fr",
         "groupes": [
             "salarie",
-            "admin",
             "manager",
             "comptable"
         ],
@@ -90,7 +89,6 @@
         "password": "$2y$10$nTh2Sb2R1Vx863sDDpbQkul7JehVw.gVYPbKMF8BhoFUW9CSYaMx2",
         "email": "Nicolas.Laurent@bigk.fr",
         "groupes": [
-            "salarie",
             "admin"
         ],
         "username": "nicolaslaurent71",

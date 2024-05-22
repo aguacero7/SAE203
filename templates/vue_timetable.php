@@ -295,7 +295,7 @@ class TimetableView
     {
         ob_start(); // Début de la mise en tampon de la sortie
         ?>
-        <table class="table table-bordered table-striped">
+        <table class="table table-bordered table-striped ">
             <thead class="thead thead-dark">
                 <tr>
                     <th>Heure</th>

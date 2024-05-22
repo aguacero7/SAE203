@@ -106,20 +106,21 @@
 
             <?php if (!in_array("administration.php", $user->forbiddenPages)) { ?>
               <li class="nav-item">
-                <a class="nav-link" href="../models/administration.php">
+                <a class="nav-link" href="../controllers/administration.php">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="feather feather-layers" aria-hidden="true">
-                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                    <polyline points="2 17 12 22 22 17"></polyline>
-                    <polyline points="2 12 12 17 22 12"></polyline>
+                    class="feather feather-settings" aria-hidden="true">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path
+                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-.99 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-.99H3a2 2 0 0 1 0-4h.09c.7 0 1.34-.37 1.51-.99a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06c.48.48 1.14.64 1.82.33H11a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09c0 .7.37 1.34.99 1.51a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V11c0 .7.37 1.34.99 1.51H21a2 2 0 0 1 0 4h-.09c-.7 0-1.34.37-1.51.99z">
+                    </path>
                   </svg>
                   Administration
                 </a>
               </li>
-            <? } ?>
+            <?php } ?>
             <li class="nav-item">
-              <a class="nav-link" href="../controllers/timetable_controller.php?user=<?=$user->username?>">
+              <a class="nav-link" href="../controllers/timetable_controller.php?user=<?= $user->username ?>">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="feather feather-calendar" aria-hidden="true">

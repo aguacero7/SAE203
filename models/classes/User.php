@@ -11,14 +11,11 @@ class User
 
     private $groupForbiddenPages = [
         "admin" => ["salaries.php"],
-        "salarie" => ["administration.php", "imports.php", "compta.php", 'salaries.php'],
+        "salarie" => ["administration.php", "imports.php", "compta.php"],
         "manager" => ["administration.php"],
-        "direction" => ["administration.php"]
+        "direction" => ["administration.php"],
+        "comptable" => ["administration.php"]
     ];
-    static function supOne($val)
-    {
-        return ($val >= 1 ? true : false);
-    }
     static public function load_all()
     {
         $list = [];
@@ -64,7 +61,12 @@ class User
                     $forbidden = array_merge($forbidden, $this->groupForbiddenPages[$groupe]);
                 }
             }
-            $this->forbiddenPages = array_unique(array_filter($forbidden, "User::supOne"));
+            $this->forbiddenPages = array_count_values($forbidden);
+            foreach($this->forbiddenPages as $key =>$page){
+                if($page!=count($this->groupes))
+                    unset($this->forbiddenPages[$key]);
+            }
+            $this->forbiddenPages=array_keys($this->forbiddenPages);
         } else {
             $this->forbiddenPages = $this->groupForbiddenPages[$this->groupes[0]];
         }
