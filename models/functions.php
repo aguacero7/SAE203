@@ -4,9 +4,9 @@ require_once("../models/classes/User.php");
 function checkConnection()
 {
     if (!isset($_SESSION["auth"])) {
-        http_response_code(401);
-        header("Location: ../models/login.php");
-        //new RedirectedError(page:"");
+        //http_response_code(401);
+        //header("Location: ../models/login.php");
+        new RedirectedError(page:"../models/login.php");
         exit();
     }
     else{
@@ -44,6 +44,7 @@ function checkPermissions($userOBJ){
 
     if(in_array($path[array_key_last($path)],$pages))     // si la page fait partie des interdites de l'utilisateur
     {
+
         http_response_code(403);
         require_once("../templates/vue_forbidden.php");
         require_once("../templates/login_layout.php");

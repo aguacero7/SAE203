@@ -5,7 +5,7 @@
 class Error {
     protected $code;
     protected $log_text;
-    protected $log_file /*= PATH*/;
+    protected $log_file ="../assets/logs.txt";
     protected $error_type;
 
     public const HTTP_CODES = [
@@ -23,9 +23,11 @@ class Error {
         'SERVICE_UNAVAILABLE' => 503,
     ];
 
-    /* TODO function logit() {
+    public function logit() {
+        $ip=$_SERVER["remote_addr"];
+        
         // Implementation de la fonction logit()
-    } */
+    } 
 
     public function __construct(int $code = 200, string $page = "", string $texte = "", Exception $error = null) {
         $this->code = $code;
@@ -42,6 +44,7 @@ class RedirectedError extends Error { // s'appelle avec new RedirectedError({cod
     public function __construct(int $code = Error::HTTP_CODES['FORBIDDEN'], string $page, string $texte = "", Exception $error = null) {
         $this->error_type = "REDIRECTED_ERROR";
         $this->page = $page;
+        $this->log_text=$this->error_type."AHAAAAAAAAAAAAAAAAAA";
         parent::__construct($code, $page, $texte, $error); 
         http_response_code($this->code);
         header("Location: " . $this->page);

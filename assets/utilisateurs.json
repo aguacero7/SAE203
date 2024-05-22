@@ -686,7 +686,8 @@
         "groupes": [
             "salarie",
             "admin",
-            "manager"
+            "manager",
+            "pdg"
         ],
         "username": "alexandrethomas90",
         "fullname": "Alexandre Thomas",
