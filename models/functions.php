@@ -15,7 +15,6 @@ function checkConnection()
 }
 function checkOverload()
 {
-    session_start();
 
     $delaiMinimum = 1; // seconde
 

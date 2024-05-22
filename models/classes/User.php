@@ -7,7 +7,7 @@ class User
     public $email;
     public $fullname;
     public $groupes = [];
-    public $forbiddenPages;
+    public $forbiddenPages=[];
 
     private $groupForbiddenPages = [
         "admin" => ["salaries.php"],
@@ -65,8 +65,6 @@ class User
                 }
             }
             $this->forbiddenPages = array_unique(array_filter($forbidden, "User::supOne"));
-            $this->forbiddenPages = $this->forbiddenPages[0];
-
         } else {
             $this->forbiddenPages = $this->groupForbiddenPages[$this->groupes[0]];
         }
