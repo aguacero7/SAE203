@@ -82,37 +82,5 @@
         "end_time": "14:00",
         "title": "TESTUS",
         "color": "dark"
-    },
-    {
-        "id": 5,
-        "creator": "pierredubois58",
-        "title": "sQSsqS",
-        "date": "2024-05-18",
-        "start_time": "14:00",
-        "end_time": "13:00",
-        "color": "primary",
-        "invited": [
-            "isabelledavid57",
-            "pierredubois58"
-        ],
-        "invited_grp": [
-            "admin"
-        ]
-    },
-    {
-        "id": 7,
-        "creator": "pierredubois58",
-        "title": "sQSsqS",
-        "date": "2024-05-18",
-        "start_time": "13:00",
-        "end_time": "14:00",
-        "color": "primary",
-        "invited": [
-            "isabelledavid57",
-            "pierredubois58"
-        ],
-        "invited_grp": [
-            "admin"
-        ]
     }
 ]

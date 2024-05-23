@@ -8,10 +8,12 @@ $users_json = file_get_contents('../assets/utilisateurs.json');
 $users = json_decode($users_json, true);
 
 $groupes = ["admin","manager","comptable","dirigeant"];
-$prenoms = ['Jean', 'Paul', 'Marie', 'Pierre', 'Luc', 'Sophie', 'Alice', 'Antoine', 'Julie', 'Alexandre', 'Nicolas', 'Isabelle', 'Christophe', 'Emilie', 'François', 'Valérie', 'Thomas', 'Catherine', 'Martin', 'Elise'];
-$noms = ['Dubois', 'Martin', 'Bernard', 'Thomas', 'Petit', 'Robert', 'Richard', 'Durand', 'Leroy', 'Moreau', 'Simon', 'Laurent', 'Lefebvre', 'Michel', 'Garcia', 'David', 'Bertrand', 'Roux', 'Vincent', 'Fournier'];
+$prenoms = ['Jean', 'Paul', 'Marie', 'Pierre', 'Luc','Yassine','Noé', 'Sophie', 'Alice', 'Antoine','Arda','Bruno','Omer','Homer', 'Julie', 'Alexandre', 'Nicolas', 'Isabelle', 'Christophe', 'Emilie', 'François','Mathilde',"Alice",'Jeanne','Marie', 'Valérie', 'Thomas', 'Catherine', 'Martin', 'Elise'];
+$noms = ['Dubois',"Malherre",'Fernandes','Garnacho','Ronaldo','Yilmaz', 'Martin', 'Bernard', 'Thomas', 'Petit','Mbappe', 'Robert','Simpsons', 'Richard', 'Durand', 'Leroy', 'Moreau', 'Simon', 'Laurent', 'Lefebvre', 'Michel', 'Garcia', 'David', 'Bertrand', 'Roux', 'Vincent', 'Fournier'];
 
 function generate_username($prenom, $nom) {
+    $prenom = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $prenom);
+    $nom = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $nom);
 
     $random_number = mt_rand(10, 95);
     return strtolower($prenom) . strtolower($nom) . $random_number;
@@ -24,6 +26,23 @@ function contact_exists($contact, $users) {
     }
     return false;
 }
+function generateRandomBirthday() {
+    $currentYear = date('Y');
+    
+    $earliestYear = $currentYear - 65;
+    $latestYear = $currentYear - 17;
+    
+    $randomYear = rand($earliestYear, $latestYear);
+    
+    $randomMonth = rand(1, 12);
+    $randomDay = rand(1, 28);
+    
+    $randomDate = sprintf('%04d-%02d-%02d', $randomYear, $randomMonth, $randomDay);
+    
+    return $randomDate;
+}
+
+
 
 for($i=0;$i<50;$i++){
     $random_prenom = $prenoms[array_rand($prenoms)];
@@ -56,7 +75,7 @@ for($i=0;$i<50;$i++){
         "fullname" => $random_prenom . ' ' . $random_nom,
         "pfp" => "default.png",
         "contact" => mt_rand(100, 999),
-        "age" => mt_rand(18, 65)
+        "birthday" => generateRandomBirthday()
     ];
 
     

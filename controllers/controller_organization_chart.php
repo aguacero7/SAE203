@@ -20,7 +20,7 @@ function generateCard($user)
             <h4 class="card-title"><?= $user["fullname"] ?></h4>
             <h6 class="card-text">Contact:</h6>
             <p class="card-text"><?= $user["contact"] ?></p>
-            <p class="card-text"><?= $user["age"] ?> ans</p>
+            <p class="card-text"><?= User::calculateAge($user["birthday"]) ?> ans</p>
         </div>
     </div>
     <?php return ob_get_clean();
