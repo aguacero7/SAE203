@@ -3,7 +3,9 @@
         "password": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
         "email": "admin@admin.com",
         "groupes": [
-            "admin"
+            "admin",
+            "salarie",
+            "manager"
         ],
         "username": "administrateur",
         "fullname": "Admin Du Site",
@@ -26,6 +28,20 @@
         "question": "plat",
         "answer": "ratatouille",
         "contact": "001",
+        "birthday": "1999-05-05"
+    },
+    "3": {
+        "password": "$2y$10$6aAJNcnTOC42hNvpJxKdVOLFm0hjdPFlQe6380imQIcsXsLTsVzA2",
+        "email": "lilian@cool.com",
+        "groupes": [
+            "admin"
+        ],
+        "username": "lilian",
+        "fullname": "lilian",
+        "pfp": "default.png",
+        "question": "plat",
+        "answer": "ratatouille",
+        "contact": "002",
         "birthday": "1999-05-05"
     },
     "5": {

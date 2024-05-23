@@ -8,7 +8,7 @@ class User
     public $fullname;
     public $groupes = [];
     public $forbiddenPages=[];
-
+    public $contact;
     public $age;
     public $naissance;
     private static $groupForbiddenPages = [
@@ -18,7 +18,17 @@ class User
         "direction" => ["administration.php"],
         "comptable" => ["administration.php"]
     ];
+    static public function get_user($username)
+    {
+        $list = [];
+        $users = json_decode(file_get_contents("../assets/utilisateurs.json"), true);
+        foreach ($users as $user) {
+            if($user["username"]==$username)
+                return new User($username,true);
+        }
+        return null;
 
+    }
     public static function calculateAge($birthday) {
         $birthdate = new DateTime($birthday);
         $today = new DateTime('today');
@@ -39,7 +49,7 @@ class User
         $list = [];
         $users = json_decode(file_get_contents("../assets/tempusers.json"), true);
         foreach ($users as $user) {
-            array_push($list, new User($user['username']));
+            array_push($list, new User($user['username'],true));
         }
         return $list;
     }
@@ -49,7 +59,7 @@ class User
         $users = json_decode(file_get_contents("../assets/tempusers.json"), true);
         foreach ($users as $user) {
             if(in_array($grp,$user["groupes"]))
-                array_push($list, new User($user['username']));
+                array_push($list, new User($user['username'],true));
         }
         return $list;
     }
@@ -79,11 +89,25 @@ class User
         }
         return $list;
     }
-    public function __construct($username)
+    static public function checkNumber($number){
+        $users = json_decode(file_get_contents("../assets/tempusers.json"), true);
+        foreach ($users as $user) {
+            if($user["contact"]==$number)
+                return false;
+        }
+        return true;
+    }
+    static public function checkUser($user){
+
+    }
+    public function __construct($username,$tmp=false)
     {
         $this->username = $username;
-        //gestion des infos du profils
-        $users = json_decode(file_get_contents("../assets/utilisateurs.json"), true);
+        //gestion des infos du profils*
+        if($tmp)
+            $users = json_decode(file_get_contents("../assets/tempusers.json"), true);
+        else
+            $users = json_decode(file_get_contents("../assets/utilisateurs.json"), true);
         foreach ($users as $user) {
             if ($user["username"] == $username) {
                 $this->pfp = $user["pfp"];
@@ -91,6 +115,7 @@ class User
                 $this->groupes = $user["groupes"];
                 $this->email = $user["email"];
                 $this->naissance=$user["birthday"];
+                $this->contact=$user["contact"];
                 $this->age =User::calculateAge($this->naissance);
             }
         }
@@ -111,7 +136,12 @@ class User
             }
             $this->forbiddenPages=array_keys($this->forbiddenPages);
         } else {
-            $this->forbiddenPages = User::$groupForbiddenPages[$this->groupes[0]];
+            if(count($this->groupes)!=0){
+                $this->forbiddenPages = User::$groupForbiddenPages[$this->groupes[0]];
+            }
+            else
+                $this->forbiddenPages = [""];
+
         }
     }
 }

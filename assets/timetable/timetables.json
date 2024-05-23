@@ -37,8 +37,7 @@
             "fran\u00e7oisrichard51",
             "alicebertrand76"
         ],
-        "invited_grp": [
-        ],
+        "invited_grp": [],
         "date": "2024-05-18",
         "start_time": "14:00",
         "end_time": "16:00",
@@ -82,5 +81,19 @@
         "end_time": "14:00",
         "title": "TESTUS",
         "color": "dark"
+    },
+    {
+        "id": 6,
+        "creator": "lilian",
+        "title": "Fin",
+        "date": "2024-05-23",
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "color": "light",
+        "invited": [
+            "lucsimpsons88",
+            "lucrichard49"
+        ],
+        "invited_grp": []
     }
 ]
