@@ -1,6 +1,6 @@
 {
     "0": {
-        "password": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
+        "password": "$2y$10$OjsOHUttTARO1hO\/m1gvG.y3\/2542ROlmd5hoiqgOJ37NgtYK\/.8y",
         "email": "admin@admin.com",
         "groupes": [
             "admin",
@@ -9,14 +9,12 @@
         ],
         "username": "administrateur",
         "fullname": "Admin Du Site",
-        "pfp": "default.png",
-        "question": "mere",
-        "answer": "delphine",
+        "pfp": "administrateur.jpg",
         "contact": "000",
         "birthday": "1789-07-14"
     },
     "2": {
-        "password": "$2y$10$sImLaISLY7MEUPpJOsW1kuscf\/ObB8dgKhkZobbsNPwaZogJ7rfRy",
+        "password": "$2y$10$mlRPasT818ItOJmEdykZnOgbGG1Hp6gFJ2.HmZKQlJPCEu017dl7q",
         "email": "test@test.com",
         "groupes": [
             "admin",
@@ -25,22 +23,18 @@
         "username": "test",
         "fullname": "Testeur",
         "pfp": "default.png",
-        "question": "plat",
-        "answer": "ratatouille",
         "contact": "001",
         "birthday": "1999-05-05"
     },
     "3": {
-        "password": "$2y$10$6aAJNcnTOC42hNvpJxKdVOLFm0hjdPFlQe6380imQIcsXsLTsVzA2",
+        "password": "$2y$10$gAuv3H9FAFfsmkGF.NgztOZpSPtnJ\/D1O3kkV8FXq190dEzG6Jij.",
         "email": "lilian@cool.com",
         "groupes": [
             "admin"
         ],
         "username": "lilian",
         "fullname": "lilian",
-        "pfp": "default.png",
-        "question": "plat",
-        "answer": "ratatouille",
+        "pfp": "lilian.jpg",
         "contact": "002",
         "birthday": "1999-05-05"
     },
@@ -87,16 +81,16 @@
         "birthday": "1979-06-13"
     },
     "8": {
-        "password": "$2y$10$t702HkZz1AlBzQEQ1sYXjumtvXh0Uill42nR8A6dFycQnin\/qZxFO",
+        "password": "$2y$10$aNA3bF1MiznDFuFNCI657OpWCpQ2KiYxO.2YJjSAPYQMnIDLcKkUe",
         "email": "Catherine.Thomas@bigk.fr",
         "groupes": [
-            "salarie",
-            "admin"
+            "admin",
+            "salarie"
         ],
         "username": "catherinethomas43",
         "fullname": "Catherine Thomas",
-        "pfp": "default.png",
-        "contact": 902,
+        "pfp": "catherinethomas43.jpg",
+        "contact": "902",
         "birthday": "1991-05-16"
     },
     "9": {

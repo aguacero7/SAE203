@@ -18,10 +18,14 @@ class User
         "direction" => ["administration.php"],
         "comptable" => ["administration.php"]
     ];
-    static public function get_user($username)
+    static public function get_user($username,$tmp=false)
     {
         $list = [];
-        $users = json_decode(file_get_contents("../assets/utilisateurs.json"), true);
+        if($tmp)
+            $users = json_decode(file_get_contents("../assets/tempusers.json"), true);
+        else
+            $users = json_decode(file_get_contents("../assets/utilisateurs.json"), true);
+
         foreach ($users as $user) {
             if($user["username"]==$username)
                 return new User($username,true);
@@ -29,6 +33,7 @@ class User
         return null;
 
     }
+    
     public static function calculateAge($birthday) {
         $birthdate = new DateTime($birthday);
         $today = new DateTime('today');

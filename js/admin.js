@@ -52,9 +52,7 @@ function cancelChanges() {
             });
     }
 }
-function editUser(username) {
-    
-}
+
 
 function deleteUser(username) {
     if (confirm('Are you sure you want to delete user: ' + username + '?')) {
@@ -163,15 +161,42 @@ function saveUser() {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            location.reload();  // Recharger la page
+            location.reload(); 
         } else {
+            Object.keys(data.errors).forEach(fieldName => {
+                let errorMsg = data.errors[fieldName];
+                let field = document.getElementById(fieldName);
+                field.classList.add('is-invalid');
+                let errorFeedback = field.nextElementSibling; 
+                errorFeedback.innerText = errorMsg; 
+            });
+            alert('Des erreurs se sont produites. Veuillez vérifier le formulaire.');
         }
     })
     .catch(error => {
         alert('An error occurred: ' + error.message);
     });
 }
+function resetForm() {
+    document.getElementById("currentProfilePicture").src = "../assets/pfp/default.png";
+    document.getElementById('edit').value = "";
+    document.getElementById("modalTitle").innerText = "";
+    document.getElementById('username').disabled = false;
+    document.getElementById('hidden_usr').value = "";
+    document.getElementById('username').value = "";
+    document.getElementById('gen').disabled = false;
+    document.getElementById('gen').onclick = function() { /* définir une fonction si nécessaire */ };
 
+    document.getElementById('fullname').value = "";
+    document.getElementById('email').value = "";
+    document.getElementById('contact').value = "";
+    document.getElementById('birthday').value = "";
+
+    let groupesCheckboxes = document.querySelectorAll('input[name="groupes[]"]');
+    groupesCheckboxes.forEach(checkbox => {
+        checkbox.checked = false;
+    });
+}
 function editUser(username) {
     fetch(`../controllers/c_admin.php?username=${username}`)
         .then(response => {
@@ -182,14 +207,19 @@ function editUser(username) {
         })
         .then(data => {
             if (data.success) {
+                resetForm();
                 let user = data.user;
                 document.getElementById("currentProfilePicture").src = "../assets/pfp/"+user.pfp;
                 document.getElementById('edit').value ="edit";
                 document.getElementById("modalTitle").innerText = "Modifier l'utilisateur " + username;
-                document.getElementById('username').value = user.username;
+                document.getElementById('username').disabled=true;
+                document.getElementById('hidden_usr').value=username;
+                document.getElementById('username').value=username;
+                document.getElementById('gen').disabled=true;
+                document.getElementById('gen').onclick="";
+
                 document.getElementById('fullname').value = user.fullname;
                 document.getElementById('email').value = user.email;
-                document.getElementById('pfp').value = user.pfp;
                 document.getElementById('contact').value = user.contact;
                 document.getElementById('birthday').value = user.naissance;
 
@@ -209,7 +239,6 @@ function editUser(username) {
 }
 function tryPfp(){
     let fileInput = document.getElementById('profilePicture');
-    document.getElementById('edit').value ="create";
 
     if (fileInput.files && fileInput.files[0]) {
         // Créer un objet URL pour l'image téléchargée
@@ -220,6 +249,8 @@ function tryPfp(){
     }
 }
 function addUser() {
+    resetForm();
+    document.getElementById('edit').value ="create";
     document.getElementById("currentProfilePicture").src = "../assets/pfp/default.png";
     document.getElementById("modalTitle").innerText="Ajouter un utilisateur"
     new bootstrap.Modal(document.getElementById('userModal')).show();

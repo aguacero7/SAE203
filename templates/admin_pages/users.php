@@ -78,8 +78,8 @@ class VueAdminUsers extends VueAdminPanel
                             <?php foreach ($this->user_list as $user): ?>
 
                                 <tr>
-                                    <td><img src="../assets/pfp/<?= htmlspecialchars($user->pfp) ?>" class="img-fluid"
-                                            alt="Profile Picture" width="50px"></td>
+                                    <td><img src="../assets/pfp/<?= htmlspecialchars($user->pfp) ?>" class="rounded"
+                                            alt="Profile Picture" width="50px" height="50px"></td>
                                     <td><?= htmlspecialchars($user->fullname) ?></td>
                                     <td><?= htmlspecialchars($user->username) ?></td>
                                     <td><?= htmlspecialchars($user->email) ?></td>
@@ -165,10 +165,11 @@ class VueAdminUsers extends VueAdminPanel
                                 <div class="input-group">
                                     <input type="disabled" class="form-control" id="username" name="username"
                                         placeholder="homersimpsons24">
-                                    <button type="button" class="btn btn-outline-secondary" onclick="genUsername()">
+                                    <button type="button" class="btn btn-outline-secondary" id="gen" onclick="genUsername()">
                                         <i class="fa-solid fa-dice"></i>
                                     </button>
                                 </div>
+                                <small class="form-text text-muted">Le nom d'utilisateur ne peut pas être changé !!</small>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Mot de passe</label>
@@ -185,14 +186,10 @@ class VueAdminUsers extends VueAdminPanel
                                 <input type="email" class="form-control" id="email" name="email">
                             </div>
                             <div class="mb-3">
-                                <label for="pfp" class="form-label">Photo de profil</label>
-                                <input type="text" class="form-control" id="pfp" name="pfp">
-                            </div>
-                            <div class="mb-3">
                                 <label for="contact" class="form-label">Contact</label>
                                 <div class="input-group">
                                     <input type="text" class="form-control" id="contact" name="contact">
-                                    <button type="button" class="btn btn-outline-secondary" onclick="genNumber()">
+                                    <button type="button"  class="btn btn-outline-secondary" onclick="genNumber()">
                                         <i class="fa-solid fa-dice"></i>
                                     </button>
                                 </div>
@@ -225,6 +222,7 @@ class VueAdminUsers extends VueAdminPanel
                                 </div>
                             </div>
                             <input type="hidden" id="edit" name="action">
+                            <input type="hidden" id="hidden_usr" name="username">
                         </form>
                     </div>
                     <div class="modal-footer">

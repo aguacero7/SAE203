@@ -116,7 +116,7 @@ if (isset($_POST["delete"])) {
         }
         file_put_contents("../assets/tempusers.json", json_encode($data, JSON_PRETTY_PRINT));
 
-        $response = array("success" => true, "message" => "Le rollback a été effectué avec succès !");
+        $response = array("success" => true, "message" => "L'utilisateur a été supprimé avec succès");
         echo json_encode($response);
         exit();
 
@@ -133,14 +133,111 @@ if(isset($_GET["number"])){
         exit();
 }
 if(isset($_GET["username"])){
-    if($user=User::get_user($_GET["username"])){
+    if($user=User::get_user($_GET["username"],true)){
         $response = array("success" => true,"user"=> $user);
         echo json_encode($response);
         exit();}
 }
-if(isset($_POST["action"])){
-    
+
+
+if (isset($_POST["action"])) {
+    $action = $_POST["action"];
+    $errors = []; 
+
+    // Vérifier si l'action est "create" ou "edit"
+    if ($action === "create" || $action === "edit") {
+
+        $requiredFields = ["username", "fullname", "email", "contact", "birthday"];
+        foreach ($requiredFields as $field) {
+            if (!isset($_POST[$field]) || empty(trim($_POST[$field]))) {
+                $errors[$field] = "Le champ $field est requis.";
+            }
+        }
+
+        if ($action === "create" && isset($_POST["username"])) {
+            $existingUser = User::get_user($_POST["username"],true);
+            if ($existingUser) {
+                $errors["username"] = "L'utilisateur existe déjà.";
+            }
+        }
+
+        if ($action === "edit" && isset($_POST["username"])) {
+            $existingUser = User::get_user($_POST["username"],true);
+            if (!$existingUser) {
+                $errors["username"] = "L'utilisateur n'existe pas.";
+            }
+        }
+        $profilePicturePath="../assets/pfp/default.png";
+        // Gestion de l'image de profil
+        $profilePicturePath = "default.png";
+        if (isset($_FILES["profilePicture"]) && $_FILES["profilePicture"]["error"] === UPLOAD_ERR_OK) {
+            $fileType = exif_imagetype($_FILES["profilePicture"]["tmp_name"]);
+            if ($fileType !== false) {
+                $targetDir = "../assets/pfp/";
+                $profilePicturePath = $_POST["username"] . ".jpg"; // Nom du fichier
+                $targetFile = $targetDir . $profilePicturePath;
+                if (!move_uploaded_file($_FILES["profilePicture"]["tmp_name"], $targetFile)) {
+                    $errors["profilePicture"] = "Une erreur s'est produite lors du téléchargement du fichier.";
+                }
+            } else {
+                $errors["profilePicture"] = "Le fichier n'est pas une image.";
+            }
+        }
+        
+
+        // Si des erreurs existent, retourner les erreurs
+        if (!empty($errors)) {
+            echo json_encode(["success" => false, "errors" => $errors]);
+            exit;
+        }
+
+        // Charger les utilisateurs existants
+        $users = json_decode(file_get_contents("../assets/tempusers.json"), true);
+
+        // Préparer les données de l'utilisateur
+        if(isset($_POST["password"]))
+            $pass= password_hash($_POST["password"], PASSWORD_DEFAULT);
+        else
+            $pass=$existingUser["password"];
+            $user = [
+                "password" => $pass,
+                "email" => $_POST["email"],
+                "groupes" => $_POST["groupes"],
+                "username" => $_POST["username"],
+                "fullname" => $_POST["fullname"],
+                "pfp" => $profilePicturePath,
+                "contact" => $_POST["contact"],
+                "birthday" => $_POST["birthday"]
+            ];
+        
+
+        if ($action === "create") {
+            // Ajouter un nouvel utilisateur
+            array_push($users,$user);
+        } elseif ($action === "edit") {
+            // Mettre à jour l'utilisateur existant
+            foreach ($users as &$existingUser) {
+                if ($existingUser["username"] == $_POST["username"]) {
+                    $existingUser = $user;
+                    break;
+                }
+            }
+        }
+
+        file_put_contents("../assets/tempusers.json", json_encode($users, JSON_PRETTY_PRINT));
+
+        echo json_encode(["success" => true]);
+    } else {
+        // L'action n'est ni "create" ni "edit"
+        $errors["action"] = "Action non valide.";
+        echo json_encode(["success" => false, "errors" => $errors]);
+    }
+    exit();
 }
+
+
+
+
 
 
 

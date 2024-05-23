@@ -14,8 +14,10 @@ $groups = array_unique($groups);
 function generateCard($user)
 {
     ob_start(); ?>
-    <div class="card ml-2 d-flex" style="width:250px; position: relative;" id="<?= $user["fullname"] ?>">
-        <img class="card-img-top" src="../assets/pfp/<?= $user["pfp"] ?>" alt="<?= $user["fullname"] ?>">
+    <div class="card ml-2 d-flex" style="width:200px; position: relative;" id="<?= $user["fullname"] ?>">
+        <div class="card-img-wrapper">
+            <img class="card-img-top" src="../assets/pfp/<?= $user["pfp"] ?>" alt="<?= $user["fullname"] ?>">
+        </div>
         <div class="card-body">
             <h4 class="card-title"><?= $user["fullname"] ?></h4>
             <h6 class="card-text">Contact:</h6>
@@ -23,6 +25,19 @@ function generateCard($user)
             <p class="card-text"><?= User::calculateAge($user["birthday"]) ?> ans</p>
         </div>
     </div>
+    <style>
+.card-img-wrapper {
+    width: 100%;
+    height: 210px; /* Hauteur fixe pour toutes les images */
+    overflow: hidden; /* Pour s'assurer que les images ne débordent pas */
+}
+
+.card-img-top {
+    width: 100%; /* Largeur de 100% pour s'adapter à la carte */
+    height: 100%; /* Hauteur de 100% pour remplir la boîte du conteneur */
+    object-fit: cover; /* Pour ajuster l'image sans déformation */
+}
+</style>
     <?php return ob_get_clean();
 }
 
