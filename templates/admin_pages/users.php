@@ -30,8 +30,8 @@ class VueAdminUsers extends VueAdminPanel
             <h1 class="mb-4">Gestion des utilisateurs</h1>
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <div>
-                    <label for="search" class="col-form-label text-md-end">Chercher un utilisateur :</label>
-                    <input type="text" id="search" class="form-control" placeholder="Recherche par username">
+                    <label for="search"  class="col-form-label text-md-end">Chercher un utilisateur :</label>
+                    <input type="text" oninput="searchTmpUser(this.value)" id="search" class="form-control" placeholder="Recherche par username">
                 </div>
                 <div class="col-md-6">
                     <form id="groupFilterForm">
@@ -60,6 +60,7 @@ class VueAdminUsers extends VueAdminPanel
                     <i class="fa-solid fa-user-plus"></i> Ajouter utilisateur
                 </button>
             </div>
+            <div id="searchResults" class="mt-3"></div>
             <div class="row">
                 <div class="col-md-12">
                     <table class="table table-striped table-bordered">
@@ -77,7 +78,7 @@ class VueAdminUsers extends VueAdminPanel
                         <tbody>
                             <?php foreach ($this->user_list as $user): ?>
 
-                                <tr>
+                                <tr id="<?=$user->username?>">
                                     <td><img src="../assets/pfp/<?= htmlspecialchars($user->pfp) ?>" class="rounded"
                                             alt="Profile Picture" width="50px" height="50px"></td>
                                     <td><?= htmlspecialchars($user->fullname) ?></td>

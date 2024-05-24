@@ -8,7 +8,7 @@ class VueAdminPanel
     {
         ob_start();
 ?>
-        <div class="container ">
+        <div class="container mt-5 pl-3 pr-3">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h1 class="text-center mb-0">Administration</h1>
                 <div class="d-flex">

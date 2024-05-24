@@ -18,6 +18,14 @@ class User
         "direction" => ["administration.php"],
         "comptable" => ["administration.php"]
     ];
+    public static $pagesAlias = [
+        "Administration" => ["c_admin.php","c_admin_group.php"],
+        "Emploi du temps" => ["timetable_controller.php"],
+        "Annuaire" => ["organization_chart.php"],
+        "Commandes" => ["commandes.php"],
+        "Compabilité" => ["compta.php"],
+        "Salaires"=>["salaries.php"]
+    ];
     static public function get_user($username,$tmp=false)
     {
         $list = [];

@@ -1,0 +1,17 @@
+{
+    "SuperUtilisateur": {
+        "categories_interdites": []
+    },
+    "Dirigeant": {
+        "categories_interdites": ["admin"]
+    },
+    "Manager": {
+        "categories_interdites": ["admin", "dirigeant", "salarie", "comptable"]
+    },
+    "Salarie": {
+        "categories_interdites": ["admin", "dirigeant", "manager", "comptable"]
+    },
+    "Comptable": {
+        "categories_interdites": ["admin", "dirigeant", "manager", "salarie"]
+    }
+}

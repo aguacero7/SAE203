@@ -6,8 +6,8 @@ session_start();
 Récupérer les fonctions communes à toutes les pages
 */
 
-require_once ("../models/functions.php");
-require_once ("../models/admin.php");
+require_once("../models/functions.php");
+require_once("../models/admin.php");
 
 
 
@@ -16,7 +16,7 @@ checkPermissions($_SESSION["user"]);
 
 $title = "Interface Administrateur";
 $script = "../js/admin.js";
-require_once ("../templates/vue_admin.php");
+require_once("../templates/vue_admin.php");
 
 //modification d'un groupe
 if (isset($_POST["update"])) {
@@ -81,7 +81,6 @@ if (isset($_POST["save"])) {
         $response = array("success" => true, "message" => "La sauvegarde a été effectuée avec succès !");
         echo json_encode($response);
         exit();
-
     } catch (Exception $e) {
         $response = array("success" => false, "error" => $e->getMessage());
         echo json_encode($response);
@@ -98,7 +97,6 @@ if (isset($_POST["rollback"])) {
         $response = array("success" => true, "message" => "Le rollback a été effectué avec succès !");
         echo json_encode($response);
         exit();
-
     } catch (Exception $e) {
         $response = array("success" => false, "error" => $e->getMessage());
         echo json_encode($response);
@@ -114,35 +112,47 @@ if (isset($_POST["delete"])) {
                 unset($data[$key]);
             }
         }
+        $tables = json_decode(file_get_contents("../assets/timetable/tmp.json"), true);
+        foreach ($tables as $key => $activity) {
+            if ($activity["creator"] == $_POST["delete"]) {
+                unset($tables[$key]);
+            }
+            foreach ($activity["invited"] as $cle => $invit) {
+                if ($invit == $_POST["delete"]) {
+                    unset($tables[$key]["invited"][$cle]);
+                }
+            }
+        }
         file_put_contents("../assets/tempusers.json", json_encode($data, JSON_PRETTY_PRINT));
+        file_put_contents("../assets/timetable/tmp.json", json_encode($tables, JSON_PRETTY_PRINT));
 
         $response = array("success" => true, "message" => "L'utilisateur a été supprimé avec succès");
         echo json_encode($response);
         exit();
-
     } catch (Exception $e) {
         $response = array("success" => false, "error" => $e->getMessage());
         echo json_encode($response);
         exit();
     }
 }
-if(isset($_GET["number"])){
-    if(User::checkNumber($_GET["number"]))
+if (isset($_GET["number"])) {
+    if (User::checkNumber($_GET["number"]))
         $response = array("success" => true);
+    echo json_encode($response);
+    exit();
+}
+if (isset($_GET["username"])) {
+    if ($user = User::get_user($_GET["username"], true)) {
+        $response = array("success" => true, "user" => $user);
         echo json_encode($response);
         exit();
-}
-if(isset($_GET["username"])){
-    if($user=User::get_user($_GET["username"],true)){
-        $response = array("success" => true,"user"=> $user);
-        echo json_encode($response);
-        exit();}
+    }
 }
 
 
 if (isset($_POST["action"])) {
     $action = $_POST["action"];
-    $errors = []; 
+    $errors = [];
 
     // Vérifier si l'action est "create" ou "edit"
     if ($action === "create" || $action === "edit") {
@@ -155,19 +165,19 @@ if (isset($_POST["action"])) {
         }
 
         if ($action === "create" && isset($_POST["username"])) {
-            $existingUser = User::get_user($_POST["username"],true);
+            $existingUser = User::get_user($_POST["username"], true);
             if ($existingUser) {
                 $errors["username"] = "L'utilisateur existe déjà.";
             }
         }
 
         if ($action === "edit" && isset($_POST["username"])) {
-            $existingUser = User::get_user($_POST["username"],true);
+            $existingUser = User::get_user($_POST["username"], true);
             if (!$existingUser) {
                 $errors["username"] = "L'utilisateur n'existe pas.";
             }
         }
-        $profilePicturePath="../assets/pfp/default.png";
+        $profilePicturePath = "../assets/pfp/default.png";
         // Gestion de l'image de profil
         $profilePicturePath = "default.png";
         if (isset($_FILES["profilePicture"]) && $_FILES["profilePicture"]["error"] === UPLOAD_ERR_OK) {
@@ -183,9 +193,8 @@ if (isset($_POST["action"])) {
                 $errors["profilePicture"] = "Le fichier n'est pas une image.";
             }
         }
-        
 
-        // Si des erreurs existent, retourner les erreurs
+
         if (!empty($errors)) {
             echo json_encode(["success" => false, "errors" => $errors]);
             exit;
@@ -195,25 +204,25 @@ if (isset($_POST["action"])) {
         $users = json_decode(file_get_contents("../assets/tempusers.json"), true);
 
         // Préparer les données de l'utilisateur
-        if(isset($_POST["password"]))
-            $pass= password_hash($_POST["password"], PASSWORD_DEFAULT);
+        if (isset($_POST["password"]))
+            $pass = password_hash($_POST["password"], PASSWORD_DEFAULT);
         else
-            $pass=$existingUser["password"];
-            $user = [
-                "password" => $pass,
-                "email" => $_POST["email"],
-                "groupes" => $_POST["groupes"],
-                "username" => $_POST["username"],
-                "fullname" => $_POST["fullname"],
-                "pfp" => $profilePicturePath,
-                "contact" => $_POST["contact"],
-                "birthday" => $_POST["birthday"]
-            ];
-        
+            $pass = $existingUser["password"];
+        $user = [
+            "password" => $pass,
+            "email" => $_POST["email"],
+            "groupes" => $_POST["groupes"],
+            "username" => $_POST["username"],
+            "fullname" => $_POST["fullname"],
+            "pfp" => $profilePicturePath,
+            "contact" => $_POST["contact"],
+            "birthday" => $_POST["birthday"]
+        ];
+
 
         if ($action === "create") {
             // Ajouter un nouvel utilisateur
-            array_push($users,$user);
+            array_push($users, $user);
         } elseif ($action === "edit") {
             // Mettre à jour l'utilisateur existant
             foreach ($users as &$existingUser) {
@@ -246,7 +255,7 @@ if (isset($_GET["action"])) {
     $action = $_GET["action"];
     switch ($action) {
         case "users":
-            require_once ("../templates/admin_pages/users.php");
+            require_once("../templates/admin_pages/users.php");
             if (isset($_GET["group"]))
                 $vue = new VueAdminUsers($_GET["group"]);
             else
@@ -254,13 +263,16 @@ if (isset($_GET["action"])) {
             $content = $vue->tabs_html;
             break;
         case "logs":
-            require_once ("../templates/admin_pages/logs.php");
+            require_once("../templates/admin_pages/logs.php");
             break;
         case "groups":
-            require_once ("../templates/admin_pages/groups.php");
+            require_once("../templates/admin_pages/groups.php");
+            $vue = new VueAdminGroups();
+            $content = $vue->tabs_html;
+
             break;
         case "files":
-            require_once ("../templates/admin_pages/files.php");
+            require_once("../templates/admin_pages/files.php");
             break;
         default:
             $content = "Action non reconnue.";
@@ -269,7 +281,7 @@ if (isset($_GET["action"])) {
     }
 } else {
     // Action par défaut si aucune action n'est spécifiée
-    require_once ("../templates/admin_pages/users.php");
+    require_once("../templates/admin_pages/users.php");
     $vue = new VueAdminUsers("all");
     $content = $vue->tabs_html;
 }
@@ -278,4 +290,4 @@ if (isset($_GET["action"])) {
 /*
  La page qui contient le layout c'est à dire la navbar et la sidebar
 */
-require_once ("../templates/layout.php");
+require_once("../templates/layout.php");
