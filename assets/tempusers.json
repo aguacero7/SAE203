@@ -4,8 +4,7 @@
         "email": "admin@admin.com",
         "groupes": [
             "admin",
-            "salarie",
-            "manager"
+            "salarie"
         ],
         "username": "administrateur",
         "fullname": "Admin Du Site",
@@ -14,7 +13,7 @@
         "birthday": "1789-07-14"
     },
     "2": {
-        "password": "$2y$10$mlRPasT818ItOJmEdykZnOgbGG1Hp6gFJ2.HmZKQlJPCEu017dl7q",
+        "password": "$2y$10$6DeoeUwRloKf0V7ap9r59euydp3K424qRcwwwSaJjiPjmwr5kiT6K",
         "email": "test@test.com",
         "groupes": [
             "admin",
@@ -22,7 +21,7 @@
         ],
         "username": "test",
         "fullname": "Testeur",
-        "pfp": "default.png",
+        "pfp": "test.jpg",
         "contact": "001",
         "birthday": "1999-05-05"
     },
@@ -39,18 +38,18 @@
         "birthday": "1999-05-05"
     },
     "5": {
-        "password": "$2y$10$Ox.Vn\/yukBNRJZnUgOar1eExdxlZos0JVlS7axDD9Kp1JikAOwX3K",
+        "password": "$2y$10$UNFIURD\/hgBUcBXputXpYu93aZyIE\/kH0CjDEzA9hCeZ3dj06HdZq",
         "email": "Paul.Lefebvre@bigk.fr",
         "groupes": [
-            "salarie",
             "admin",
+            "salarie",
             "manager",
             "dirigeant"
         ],
         "username": "paullefebvre51",
-        "fullname": "Paul Lefebvre",
+        "fullname": "prouteur pro",
         "pfp": "default.png",
-        "contact": 543,
+        "contact": "543",
         "birthday": "1964-10-02"
     },
     "6": {

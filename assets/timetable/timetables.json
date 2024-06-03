@@ -95,5 +95,19 @@
             "lucrichard49"
         ],
         "invited_grp": []
+    },
+    {
+        "id": 7,
+        "creator": "lilian",
+        "title": "proutos",
+        "date": "2024-05-27",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "color": "info",
+        "invited": [
+            "administrateur",
+            "jeannegarcia90"
+        ],
+        "invited_grp": []
     }
 ]

@@ -15,7 +15,6 @@ function checkConnection()
 }
 function checkOverload()
 {
-
     $delaiMinimum = 1; // seconde
 
     // Récupérer l'adresse IP de l'utilisateur

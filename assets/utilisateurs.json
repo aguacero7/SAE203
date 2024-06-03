@@ -4,8 +4,7 @@
         "email": "admin@admin.com",
         "groupes": [
             "admin",
-            "salarie",
-            "manager"
+            "salarie"
         ],
         "username": "administrateur",
         "fullname": "Admin Du Site",
@@ -14,7 +13,7 @@
         "birthday": "1789-07-14"
     },
     "2": {
-        "password": "$2y$10$mlRPasT818ItOJmEdykZnOgbGG1Hp6gFJ2.HmZKQlJPCEu017dl7q",
+        "password": "$2y$10$6DeoeUwRloKf0V7ap9r59euydp3K424qRcwwwSaJjiPjmwr5kiT6K",
         "email": "test@test.com",
         "groupes": [
             "admin",
@@ -22,7 +21,7 @@
         ],
         "username": "test",
         "fullname": "Testeur",
-        "pfp": "default.png",
+        "pfp": "test.jpg",
         "contact": "001",
         "birthday": "1999-05-05"
     },
