@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
-<?php $user = json_decode($_SESSION["user"]); ?>
+<?php $user = json_decode($_SESSION["user"]); $user->forbiddenPages = (array)$user->forbiddenPages;$forbiddenPagesArray = (array)$user->forbiddenPages;
+
+// Extraire les pages interdites si elles sont imbriquées
+$forbiddenPages = [];
+foreach ($forbiddenPagesArray as $page) {
+    if (is_object($page) || is_array($page)) {
+        foreach ($page as $p) {
+            $forbiddenPages[] = $p;
+        }
+    } else {
+        $forbiddenPages[] = $page;
+    }
+}?>
 
 <head>
   <meta charset="UTF-8">
@@ -10,6 +22,7 @@
   <link href="..\style\bootstrap\css\bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="../style/bootstrap/css/layout.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="<?= $script ?>"></script>
 </head>
 
@@ -30,7 +43,7 @@
 
   <div class="container-fluid">
     <div class="row">
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" style="">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
         <div class="position-sticky pt-3">
           <ul class="nav flex-column">
             <li class="nav-item">
@@ -44,7 +57,7 @@
                 Dashboard
               </a>
             </li>
-            <?php if (!in_array("orders.php", $user->forbiddenPages)) { ?>
+            <?php if (!in_array("Commandes", $user->forbiddenPages)) { ?>
               <li class="nav-item">
                 <a class="nav-link" href="../models/orders.php">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -56,9 +69,9 @@
                   Commandes
                 </a>
               </li>
-            <? } ?>
+            <?php } ?>
 
-            <?php if (!in_array("stocks.php", $user->forbiddenPages)) { ?>
+            <?php if (!in_array("Stocks", $user->forbiddenPages)) { ?>
               <li class="nav-item">
                 <a class="nav-link" href="../models/stocks.php">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -71,9 +84,9 @@
                   Stocks
                 </a>
               </li>
-            <? } ?>
+            <?php } ?>
 
-            <?php if (!in_array("organization_chart.php", $user->forbiddenPages)) { ?>
+            <?php if (!in_array("Annuaire", $user->forbiddenPages)) { ?>
               <li class="nav-item">
                 <a class="nav-link" href="../models/organization_chart.php">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -87,9 +100,9 @@
                   Annuaire
                 </a>
               </li>
-            <? } ?>
+            <?php } ?>
 
-            <?php if (!in_array("compta.php", $user->forbiddenPages)) { ?>
+            <?php if (!in_array("Comptabilité", $user->forbiddenPages)) { ?>
               <li class="nav-item">
                 <a class="nav-link" href="../models/compta.php">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -102,24 +115,26 @@
                   Comptabilité
                 </a>
               </li>
-            <? } ?>
+            <?php } ?>
 
-            <?php if (!in_array("administration.php", $user->forbiddenPages)) { ?>
+            <?php if (!in_array("Administration", $user->forbiddenPages)) { ?>
               <li class="nav-item">
-                <a class="nav-link" href="../models/administration.php">
+                <a class="nav-link" href="../controllers/c_admin.php">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="feather feather-layers" aria-hidden="true">
-                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                    <polyline points="2 17 12 22 22 17"></polyline>
-                    <polyline points="2 12 12 17 22 12"></polyline>
+                    class="feather feather-settings" aria-hidden="true">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path
+                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-.99 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-.99H3a2 2 0 0 1 0-4h.09c.7 0 1.34-.37 1.51-.99a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06c.48.48 1.14.64 1.82.33H11a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09c0 .7.37 1.34.99 1.51a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V11c0 .7.37 1.34.99 1.51H21a2 2 0 0 1 0 4h-.09c-.7 0-1.34.37-1.51.99z">
+                    </path>
                   </svg>
                   Administration
                 </a>
               </li>
-            <? } ?>
+            <?php } ?>
+
             <li class="nav-item">
-              <a class="nav-link" href="../controllers/timetable_controller.php?user=<?=$user->username?>">
+              <a class="nav-link" href="../controllers/timetable_controller.php?user=<?= $user->username ?>">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="feather feather-calendar" aria-hidden="true">

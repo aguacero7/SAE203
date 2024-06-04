@@ -115,6 +115,9 @@ class Timetable
     public $date;
     private function isUserInvited($activity)
     {
+        if ($this->user->username==$activity['creator']) {
+            return true;
+        }
         if (in_array($this->user->username, $activity['invited'])) {
             return true;
         }

@@ -37,8 +37,7 @@
             "fran\u00e7oisrichard51",
             "alicebertrand76"
         ],
-        "invited_grp": [
-        ],
+        "invited_grp": [],
         "date": "2024-05-18",
         "start_time": "14:00",
         "end_time": "16:00",
@@ -84,35 +83,48 @@
         "color": "dark"
     },
     {
-        "id": 5,
-        "creator": "pierredubois58",
-        "title": "sQSsqS",
-        "date": "2024-05-18",
-        "start_time": "14:00",
-        "end_time": "13:00",
-        "color": "primary",
+        "id": 6,
+        "creator": "lilian",
+        "title": "Fin",
+        "date": "2024-05-23",
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "color": "light",
         "invited": [
-            "isabelledavid57",
-            "pierredubois58"
+            "lucsimpsons88",
+            "lucrichard49"
         ],
-        "invited_grp": [
-            "admin"
-        ]
+        "invited_grp": []
     },
     {
         "id": 7,
-        "creator": "pierredubois58",
-        "title": "sQSsqS",
-        "date": "2024-05-18",
-        "start_time": "13:00",
-        "end_time": "14:00",
+        "creator": "lilian",
+        "title": "proutos",
+        "date": "2024-05-27",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "color": "info",
+        "invited": [
+            "administrateur",
+            "jeannegarcia90"
+        ],
+        "invited_grp": []
+    },
+    {
+        "id": 8,
+        "creator": "lilian",
+        "title": "blabla",
+        "date": "2024-06-03",
+        "start_time": "14:00",
+        "end_time": "16:00",
         "color": "primary",
         "invited": [
-            "isabelledavid57",
-            "pierredubois58"
+            "lilian",
+            "paullefebvre51",
+            "christopheronaldo61"
         ],
         "invited_grp": [
-            "admin"
+            "manager"
         ]
     }
 ]

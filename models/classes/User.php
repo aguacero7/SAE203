@@ -8,16 +8,41 @@ class User
     public $fullname;
     public $groupes = [];
     public $forbiddenPages=[];
-
-    private $groupForbiddenPages = [
-        "admin" => ["salaries.php"],
-        "salarie" => ["administration.php", "imports.php", "compta.php", 'salaries.php'],
-        "manager" => ["administration.php"],
-        "direction" => ["administration.php"]
+    public $contact;
+    public $age;
+    public $naissance;
+    private static $groupForbiddenPages = [
     ];
-    static function supOne($val)
+    public static $pagesAlias = [
+        "Administration" => ["c_admin.php","c_admin_group.php"],
+        "Emploi du temps" => ["timetable_controller.php"],
+        "Annuaire" => ["organization_chart.php"],
+        "Commandes" => ["commandes.php"],
+        "Salaires"=>["salaries.php"],
+        "Stocks"=>["stocks.php"],
+        "Comptabilité"=>["compta.php"]
+    ];
+    static public function get_user($username,$tmp=false)
     {
-        return ($val >= 1 ? true : false);
+        $list = [];
+        if($tmp)
+            $users = json_decode(file_get_contents("../assets/tempusers.json"), true);
+        else
+            $users = json_decode(file_get_contents("../assets/utilisateurs.json"), true);
+
+        foreach ($users as $user) {
+            if($user["username"]==$username)
+                return new User($username,true);
+        }
+        return null;
+
+    }
+    
+    public static function calculateAge($birthday) {
+        $birthdate = new DateTime($birthday);
+        $today = new DateTime('today');
+        $age = $birthdate->diff($today)->y;
+        return $age;
     }
     static public function load_all()
     {
@@ -28,45 +53,118 @@ class User
         }
         return $list;
     }
-    static public function load_all_grp()
+    static public function tmp_load_all()
     {
         $list = [];
-        $users = json_decode(file_get_contents("../assets/utilisateurs.json"), true);
+        $users = json_decode(file_get_contents("../assets/tempusers.json"), true);
         foreach ($users as $user) {
-            foreach ($user["groupes"] as $grp) {
-                if (!in_array($grp, $list)) {
-                    array_push($list, $grp);
-                }
-            }
+            array_push($list, new User($user['username'],true));
         }
         return $list;
     }
-    public function __construct($username)
+    static public function tmp_load_by_grp($grp)
     {
+        $list = [];
+        $users = json_decode(file_get_contents("../assets/tempusers.json"), true);
+        foreach ($users as $user) {
+            if(in_array($grp,$user["groupes"]))
+                array_push($list, new User($user['username'],true));
+        }
+        return $list;
+    }
+    static public function load_all_grp()
+    {
+        $list = [];
+        $groups = json_decode(file_get_contents("../assets/groups.json"), true);
+        foreach ($groups as $group => $details) {
+            $list[] = $group;
+        }
+        return $list;
+    }
+    
+    static public function tmp_load_all_grp()
+    {
+        $list = [];
+        $groups = json_decode(file_get_contents("../assets/tempgroups.json"), true);
+        foreach ($groups as $group => $details) {
+            $list[] = $group;
+        }
+        return $list;
+    }
+    
+    static public function checkNumber($number){
+        $users = json_decode(file_get_contents("../assets/tempusers.json"), true);
+        foreach ($users as $user) {
+            if($user["contact"]==$number)
+                return false;
+        }
+        return true;
+    }
+    static public function checkUser($user){
+
+    }
+    public static function updateForbiddenGroups() {
+        $groups = json_decode(file_get_contents("../assets/groups.json"), true);
+        User::$groupForbiddenPages = [];
+        
+        foreach ($groups as $key => $grp) {
+            User::$groupForbiddenPages[$key] = $grp["categories_interdites"];
+        }
+    }
+    
+    public function __construct($username, $tmp = false) {
         $this->username = $username;
-        //gestion des infos du profils
-        $users = json_decode(file_get_contents("../assets/utilisateurs.json"), true);
+        // gestion des infos du profil
+        if ($tmp) {
+            $users = json_decode(file_get_contents("../assets/tempusers.json"), true);
+        } else {
+            $users = json_decode(file_get_contents("../assets/utilisateurs.json"), true);
+        }
         foreach ($users as $user) {
             if ($user["username"] == $username) {
                 $this->pfp = $user["pfp"];
                 $this->fullname = $user["fullname"];
                 $this->groupes = $user["groupes"];
                 $this->email = $user["email"];
+                $this->naissance = $user["birthday"];
+                $this->contact = $user["contact"];
+                $this->age = User::calculateAge($this->naissance);
             }
         }
-        // Gestion des permissions
+        User::updateForbiddenGroups();
+        // Gestion des permissions  
         if (count($this->groupes) >= 2) {
             $forbidden = [];
             foreach ($this->groupes as $groupe) {
-                // Vérifier si la clé existe dans $groupForbiddenPages avant de l'utiliser
-                if (array_key_exists($groupe, $this->groupForbiddenPages)) {
+                if (array_key_exists($groupe, User::$groupForbiddenPages)) {
                     // Ajouter les pages interdites en fonction du groupe
-                    $forbidden = array_merge($forbidden, $this->groupForbiddenPages[$groupe]);
+                    $forbidden = array_merge($forbidden, User::$groupForbiddenPages[$groupe]);
                 }
             }
-            $this->forbiddenPages = array_unique(array_filter($forbidden, "User::supOne"));
+    
+            // Supprimer les doublons et ne conserver que les pages interdites dans tous les groupes
+            $forbidden = array_unique($forbidden);
+            $this->forbiddenPages = [];
+            foreach ($forbidden as $page) {
+                $count = 0;
+                foreach ($this->groupes as $groupe) {
+                    if (in_array($page, User::$groupForbiddenPages[$groupe])) {
+                        $count++;
+                    }
+                }
+                if ($count == count($this->groupes)) {
+                    $this->forbiddenPages[] = $page;
+                }
+            }
         } else {
-            $this->forbiddenPages = $this->groupForbiddenPages[$this->groupes[0]];
+            if (count($this->groupes) != 0) {
+                $this->forbiddenPages = User::$groupForbiddenPages[$this->groupes[0]];
+                $this->forbiddenPages = (array)$this->forbiddenPages;
+
+            } else {
+                $this->forbiddenPages = [""];
+            }
         }
     }
+    
 }

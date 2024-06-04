@@ -1,0 +1,50 @@
+{
+    "SuperUtilisateur": {
+        "categories_interdites": [
+            ""
+        ]
+    },
+    "Dirigeant": {
+        "categories_interdites": [
+            "Administration",
+            "Comptabilit\u00e9"
+        ]
+    },
+    "Manager": {
+        "categories_interdites": [
+            "Administration",
+            "dirigeant",
+            "Commandes",
+            "Comptabilit\u00e9"
+        ]
+    },
+    "Salarie": {
+        "categories_interdites": [
+            "Administration",
+            "Stocks",
+            "Comptabilit\u00e9",
+            "Commandes",
+            "Compabilit\u00e9"
+        ]
+    },
+    "Comptable": {
+        "categories_interdites": [
+            "Administration",
+            "Stocks",
+            "Commandes",
+            "Compabilit\u00e9",
+            "Emploi du temps"
+        ]
+    },
+    "pobreza": {
+        "categories_interdites": {
+            "0": "Administration",
+            "2": "Annuaire",
+            "3": "Commandes",
+            "4": "Compabilit\u00e9",
+            "5": "Stocks",
+            "6": "Comptabilit\u00e9",
+            "7": "Salaires"
+        }
+    }
+}
