@@ -109,5 +109,22 @@
             "jeannegarcia90"
         ],
         "invited_grp": []
+    },
+    {
+        "id": 8,
+        "creator": "lilian",
+        "title": "blabla",
+        "date": "2024-06-03",
+        "start_time": "14:00",
+        "end_time": "16:00",
+        "color": "primary",
+        "invited": [
+            "lilian",
+            "paullefebvre51",
+            "christopheronaldo61"
+        ],
+        "invited_grp": [
+            "manager"
+        ]
     }
 ]

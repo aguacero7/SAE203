@@ -229,14 +229,12 @@ document.addEventListener("DOMContentLoaded", function() {
             
         }
         
-        // Récupérer toutes les options du select group, sélectionnées ou non
         var selectedGroups = document.getElementById("createActivityInvitedGrp");
         var selectedValues2 = [];
         for (var i = 0; i < selectedGroups.options.length; i++) {
             selectedValues2.push(selectedGroups.options[i].value);
         }
         
-        // Créer un objet FormData et y ajouter les valeurs
         var formData = new FormData(this);
         formData.append('invited', JSON.stringify(selectedValues));
         formData.append('invited_grp', JSON.stringify(selectedValues2));

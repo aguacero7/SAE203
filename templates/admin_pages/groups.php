@@ -23,110 +23,148 @@ class VueAdminGroups extends VueAdminPanel
     }
 
     private function renderPage()
-    {
-        ob_start(); ?>
-    
-        <div class="container mt-3">
-            <h1 class="mb-4">Gestion des groupes</h1>
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <button class="btn btn-success" onclick="addGroup()"><i class="fas fa-plus"></i></button>
-            </div>
-            <div class="row" id="groupCardsContainer">
-                <?php
-                // Récupérer et décoder le JSON
-                $json = file_get_contents("../assets/tempgroups.json");
-                $groupData = json_decode($json, true);
-    
-                // Générer le code HTML pour chaque groupe
-                foreach ($groupData as $groupName => $groupDetails) {
-                    ?>
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <div class="card-body">
+{
+    $pagesAlias = User::$pagesAlias;
+    ob_start(); ?>
+
+    <div class="container mt-3">
+    <div class="d-flex justify-content-between align-items-center">
+            <h1>Gestion des groupes</h1>
+            <button class="btn btn-primary" onclick="createGroup()">Créer un groupe</button>
+        </div>
+        <h3 class="mb-4">Sélectionnez des catégories du site à interdire à certains groupes</h3>
+        <div class="row" id="groupCardsContainer">
+            <?php
+            $json = file_get_contents("../assets/tempgroups.json");
+            $groupData = json_decode($json, true);
+            
+            foreach ($groupData as $groupName => $groupDetails) {
+                ?>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
                                 <h5 class="card-title"><?php echo $groupName; ?></h5>
-                                <ul class="list-group" id="<?php echo $groupName; ?>Categories">
-                                    <?php
-                                    // Afficher les catégories interdites
-                                    foreach ($groupDetails['categories_interdites'] as $category) {
-                                        echo "<li class='list-group-item'>$category <button class='btn btn-sm btn-danger' onclick='deleteCategory(\"$groupName\", \"$category\")'><i class='fas fa-trash'></i></button></li>";
-                                    }
-                                    ?>
-                                </ul>
+                                <?php if ($groupName !== 'SuperUtilisateur') { ?>
+                                    <button class="btn btn-danger btn-sm" onclick="deleteGroup('<?php echo $groupName; ?>')">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                <?php } ?>
+                            </div>
+                            <ul class="list-group" id="<?php echo $groupName; ?>Categories">
                                 <?php
-                                // Afficher le champ d'entrée pour ajouter une catégorie interdite
-                                if ($groupName !== 'SuperUser') {
-                                    echo "<div class='input-group mt-2'>
-                                            <input type='text' class='form-control' id='$groupName" . "CategoryInput' placeholder='Nouvelle catégorie'>
-                                            <div class='input-group-append'>
-                                                <button class='btn btn-primary' onclick='addCategory(\"$groupName\")'><i class='fas fa-plus'></i></button>
-                                            </div>
-                                        </div>";
+                                if ($groupName === 'SuperUtilisateur') {
+                                    echo "<li class='list-group-item'>Aucune interdiction pour ce groupe</li>";
+                                } else {
+                                    foreach ($pagesAlias as $category => $pages) {
+                                        $isChecked = in_array($category, $groupDetails['categories_interdites']) ? 'checked' : '';
+                                        $isDisabled = $isChecked ? 'checked' : '';
+                                        echo "<li class='list-group-item'>
+                                                <input type='checkbox' class='category-checkbox' data-group='$groupName' data-category='$category' $isChecked $isDisabled> $category
+                                              </li>";
+                                    }
                                 }
                                 ?>
-                                <?php
-                                ?>
-                            </div>
+                            </ul>
                         </div>
                     </div>
-                <?php } ?>
-            </div>
+                </div>
+            <?php } ?>
         </div>
-    
-        <script>
-            function addCategory(groupName) {
-                // Récupérer la nouvelle catégorie interdite
-                var newCategory = document.getElementById(groupName + "CategoryInput").value;
-                if (newCategory.trim() !== "") {
-                    // Envoyer une requête AJAX pour ajouter la nouvelle catégorie interdite
-                    fetch("../controllers/c_admin_groups", {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            group: groupName,
-                            category: newCategory
-                        })
-                    }).then(response => {
-                        // Actualiser la page si nécessaire
-                        if (response.ok) {
-                            window.location.reload();
-                        }
-                    }).catch(error => console.error('Erreur lors de l\'ajout de la catégorie:', error));
-                }
-            }
-    
-            function deleteCategory(groupName, category) {
-                // Envoyer une requête AJAX pour supprimer la catégorie interdite
-                fetch("../controllers/c_admin_groups", {
-                    method: 'DELETE',
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const checkboxes = document.querySelectorAll('.category-checkbox');
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const group = this.getAttribute('data-group');
+                const category = this.getAttribute('data-category');
+                const action = this.checked ? 'add' : 'remove';
+
+                fetch('c_admin_groups.php', {
+                    method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        group: groupName,
+                        action: action,
+                        group: group,
                         category: category
                     })
-                }).then(response => {
-                    // Actualiser la page si nécessaire
-                    if (response.ok) {
-                        window.location.reload();
-                    }
-                }).catch(error => console.error('Erreur lors de la suppression de la catégorie:', error));
-            }
-    
-            function addGroup() {
-                // Code pour ajouter un groupe via AJAX
-            }
-    
-            function deleteGroup(groupName) {
-                // Code pour supprimer un groupe via AJAX
-            }
-        </script>
-    
-        <?php
-        return ob_get_clean();
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {}
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+        });
+    });
+
+    function deleteGroup(groupName) {
+        if (confirm(`Etes vous sur de vouloir supprimer le groupe ?: ${groupName}?`)) {
+            fetch('c_admin_groups.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    action: 'deleteGroup',
+                    group: groupName
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(`Group ${groupName} supprimé`);
+                    location.reload(); 
+                } else {
+                    alert(`Failed to delete group ${groupName}.`);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
     }
+    function createGroup() {
+        const groupName = prompt("Entrez le nom du nouveau groupe:");
+        if (groupName) {
+            fetch('c_admin_groups.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    action: 'createGroup',
+                    group: groupName
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(`Group ${groupName} created successfully!`);
+                    location.reload(); 
+                } else {
+                    alert(`Failed to create group ${groupName}.`);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    }
+    </script>
+
+    <?php
+    return ob_get_clean();
+}
+
+    
 
 
 }

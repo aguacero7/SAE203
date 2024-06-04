@@ -4,11 +4,7 @@ $users = json_decode($users_json, true);
 
 
 // Get all unique groups
-$groups = [];
-foreach ($users as $user) {
-    $groups = array_merge($groups, $user["groupes"]);
-}
-$groups = array_unique($groups);
+$groups=User::load_all_grp();
 
 
 function generateCard($user)
@@ -43,12 +39,15 @@ function generateCard($user)
 
 
 //-------------------------------------------------------------------Sort by group part-------------------------------------//
+$all_groups = User::load_all_grp(); // Utilisation de la fonction pour récupérer tous les groupes
+
 if(isset($get["group"])){
-$group_input = $get['group'];
+    $group_input = $get['group'];
 }
-if (isset($group_input) && (in_array($group_input, $groups) || $group_input == "all")) {
+
+if (isset($group_input) && (in_array($group_input, $all_groups) || $group_input == "all")) {
     $sorted_users = [];
-    if ($group_input == "salaries") {
+    if ($group_input == "all") {
         $sorted_users = $users;
     } else {
         foreach ($users as $user) {
@@ -59,9 +58,8 @@ if (isset($group_input) && (in_array($group_input, $groups) || $group_input == "
     }
     
     $all_cards = array_map("generateCard", $sorted_users);
-    
-    
-}//-------------------------------------------------------------------END Sort by group part-------------------------------------//
+}
+//-------------------------------------------------------------------END Sort by group part-------------------------------------//
 else {
     $all_cards = array_map("generateCard", $users);
 

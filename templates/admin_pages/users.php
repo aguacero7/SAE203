@@ -78,7 +78,7 @@ class VueAdminUsers extends VueAdminPanel
                         <tbody>
                             <?php foreach ($this->user_list as $user): ?>
 
-                                <tr id="<?=$user->username?>">
+                                <tr id="<?=$user->fullname?>">
                                     <td><img src="../assets/pfp/<?= htmlspecialchars($user->pfp) ?>" class="rounded"
                                             alt="Profile Picture" width="50px" height="50px"></td>
                                     <td><?= htmlspecialchars($user->fullname) ?></td>
@@ -223,7 +223,8 @@ class VueAdminUsers extends VueAdminPanel
                                 </div>
                             </div>
                             <input type="hidden" id="edit" name="action">
-                            <input type="hidden" id="hidden_usr" name="username">
+                            <input type="hidden" id="hiddenusr" >
+
                         </form>
                     </div>
                     <div class="modal-footer">

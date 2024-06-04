@@ -78,6 +78,9 @@ if (isset($_POST["save"])) {
         $path = "../assets/utilisateurs.json";
         file_put_contents($path, json_encode($data, JSON_PRETTY_PRINT));
 
+        $data = json_decode(file_get_contents("../assets/tempgroups.json"), true);
+        $path = "../assets/groups.json";
+        file_put_contents($path, json_encode($data, JSON_PRETTY_PRINT));
         $response = array("success" => true, "message" => "La sauvegarde a été effectuée avec succès !");
         echo json_encode($response);
         exit();

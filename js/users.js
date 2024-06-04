@@ -39,6 +39,7 @@ function searchUser(input) {
 
     }
 }
+
 function makeRequest(url, method, data, callback) {
     var xhr = new XMLHttpRequest();
     xhr.open(method, url);

@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
-<?php $user = json_decode($_SESSION["user"]); ?>
+<?php $user = json_decode($_SESSION["user"]); $user->forbiddenPages = (array)$user->forbiddenPages;$forbiddenPagesArray = (array)$user->forbiddenPages;
+
+// Extraire les pages interdites si elles sont imbriquées
+$forbiddenPages = [];
+foreach ($forbiddenPagesArray as $page) {
+    if (is_object($page) || is_array($page)) {
+        foreach ($page as $p) {
+            $forbiddenPages[] = $p;
+        }
+    } else {
+        $forbiddenPages[] = $page;
+    }
+}?>
 
 <head>
   <meta charset="UTF-8">
@@ -31,7 +43,7 @@
 
   <div class="container-fluid">
     <div class="row">
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" >
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
         <div class="position-sticky pt-3">
           <ul class="nav flex-column">
             <li class="nav-item">
@@ -45,7 +57,7 @@
                 Dashboard
               </a>
             </li>
-            <?php if (!in_array("orders.php", $user->forbiddenPages)) { ?>
+            <?php if (!in_array("Commandes", $user->forbiddenPages)) { ?>
               <li class="nav-item">
                 <a class="nav-link" href="../models/orders.php">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -57,9 +69,9 @@
                   Commandes
                 </a>
               </li>
-            <? } ?>
+            <?php } ?>
 
-            <?php if (!in_array("stocks.php", $user->forbiddenPages)) { ?>
+            <?php if (!in_array("Stocks", $user->forbiddenPages)) { ?>
               <li class="nav-item">
                 <a class="nav-link" href="../models/stocks.php">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -72,9 +84,9 @@
                   Stocks
                 </a>
               </li>
-            <? } ?>
+            <?php } ?>
 
-            <?php if (!in_array("organization_chart.php", $user->forbiddenPages)) { ?>
+            <?php if (!in_array("Annuaire", $user->forbiddenPages)) { ?>
               <li class="nav-item">
                 <a class="nav-link" href="../models/organization_chart.php">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -88,9 +100,9 @@
                   Annuaire
                 </a>
               </li>
-            <? } ?>
+            <?php } ?>
 
-            <?php if (!in_array("compta.php", $user->forbiddenPages)) { ?>
+            <?php if (!in_array("Comptabilité", $user->forbiddenPages)) { ?>
               <li class="nav-item">
                 <a class="nav-link" href="../models/compta.php">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -103,9 +115,9 @@
                   Comptabilité
                 </a>
               </li>
-            <? } ?>
+            <?php } ?>
 
-            <?php if (!in_array("administration.php", $user->forbiddenPages)) { ?>
+            <?php if (!in_array("Administration", $user->forbiddenPages)) { ?>
               <li class="nav-item">
                 <a class="nav-link" href="../controllers/c_admin.php">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -120,6 +132,7 @@
                 </a>
               </li>
             <?php } ?>
+
             <li class="nav-item">
               <a class="nav-link" href="../controllers/timetable_controller.php?user=<?= $user->username ?>">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"

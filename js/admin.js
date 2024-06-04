@@ -127,7 +127,48 @@ function genNumber() {
             console.error('Error:', error);
         });
 }
+function searchTmpUser(input) {
+    function isolate(){
+        var verts = document.getElementsByClassName("table-success")
+        if(verts.length>=1){
+        for (var i = 0; i < verts.length; i++) {
+            verts[i].classList.remove("table-success")
+        }}
+    }
+    if (input.trim() !== '' && input.length >= 3) {
+        var searchResults = document.getElementById("searchResults");
+        searchResults.innerHTML = '';
 
+        fetch('../assets/tempusers.json')
+            .then(response => response.json())
+            .then(users => {
+                console.log(users);
+                var usersArray = Object.values(users);
+
+                var filteredUsers = usersArray.filter(user => user.fullname.toLowerCase().includes(input.toLowerCase()));
+
+                filteredUsers.forEach(user => {
+                    var resultItem = document.createElement("button");
+                    resultItem.classList.add("btn", "mb-2");
+                    resultItem.textContent = user.fullname;
+                    resultItem.onclick = function () {
+                        isolate();
+                        window.location.href = "#" + user.fullname;
+                        var element = document.getElementById(user.fullname);
+                        element.classList.add("table-success");
+                    }
+                    searchResults.appendChild(resultItem);
+
+                });
+            });
+    }
+    else {
+        var searchResults = document.getElementById("searchResults");
+        searchResults.innerHTML = '';
+        isolate();
+
+    }
+}
 
 
 function genUsername() {
@@ -153,7 +194,12 @@ function genUsername() {
 
 function saveUser() {
     let formData = new FormData(document.getElementById('userForm'));
+    let editMode = formData.get('action');
 
+    if (editMode === 'edit') {
+        let username = document.getElementById('hiddenusr').value;
+        formData.append('username', username);
+    }
     fetch('../controllers/c_admin.php', {
         method: 'POST',
         body: formData
@@ -182,10 +228,8 @@ function resetForm() {
     document.getElementById('edit').value = "";
     document.getElementById("modalTitle").innerText = "";
     document.getElementById('username').disabled = false;
-    document.getElementById('hidden_usr').value = "";
     document.getElementById('username').value = "";
     document.getElementById('gen').disabled = false;
-    document.getElementById('gen').onclick = function() { /* définir une fonction si nécessaire */ };
 
     document.getElementById('fullname').value = "";
     document.getElementById('email').value = "";
@@ -213,10 +257,8 @@ function editUser(username) {
                 document.getElementById('edit').value ="edit";
                 document.getElementById("modalTitle").innerText = "Modifier l'utilisateur " + username;
                 document.getElementById('username').disabled=true;
-                document.getElementById('hidden_usr').value=username;
-                document.getElementById('username').value=username;
+                document.getElementById('hiddenusr').value=username;
                 document.getElementById('gen').disabled=true;
-                document.getElementById('gen').onclick="";
 
                 document.getElementById('fullname').value = user.fullname;
                 document.getElementById('email').value = user.email;

@@ -1,6 +1,9 @@
 <?php
 //require_once('../models/classes/Error.php');   Pour les erreurs etc
 require_once("../models/classes/User.php");
+User::updateForbiddenGroups();
+
+
 function checkConnection()
 {
     if (!isset($_SESSION["auth"])) {
@@ -35,13 +38,28 @@ function checkOverload()
 
 }
 
-function checkPermissions($userOBJ){     
-    $user=json_decode($userOBJ);
-    $pages= $user->forbiddenPages;
-    $path=explode("/",$_SERVER["SCRIPT_NAME"]);         //chemin du fichier
+function checkPermissions($userOBJ) {
+    User::updateForbiddenGroups();
+    $user = json_decode($userOBJ);
 
-    if(in_array($path[array_key_last($path)],$pages))     // si la page fait partie des interdites de l'utilisateur
-    {
+    // Convertir les forbiddenPages en tableau
+    $pages = (array)$user->forbiddenPages;
+
+    // Extraire les éléments si c'est un tableau imbriqué
+    $flattenedPages = [];
+    foreach ($pages as $page) {
+        if (is_object($page) || is_array($page)) {
+            foreach ($page as $p) {
+                $flattenedPages[] = $p;
+            }
+        } else {
+            $flattenedPages[] = $page;
+        }
+    }
+
+    $path = explode("/", $_SERVER["SCRIPT_NAME"]); // chemin du fichier
+
+    if (in_array($path[array_key_last($path)], $flattenedPages)) { // si la page fait partie des interdites de l'utilisateur
         http_response_code(403);
         require_once("../templates/vue_forbidden.php");
         require_once("../templates/login_layout.php");
