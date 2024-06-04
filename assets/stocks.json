@@ -1,0 +1,164 @@
+{
+    "0": { 
+        "username": "CHEESE"
+        }, 
+    "1" : {
+        "username": "DOUBLE CHEESE"
+        },
+    "2" : {
+        "username": "TRIPLE CHEESE"
+    }, 
+    "3" : {
+        "username": "BIG K 180"
+    }, 
+    "4" : {
+        "username": "BIG K 360"
+    }, 
+    "5" : {
+        "username": "EGG CHEESE"
+    }, 
+    "6" : {
+        "username": "LE ROSTI"
+    }, 
+    "7" : {
+        "username": "BIG MIX"
+    }, 
+    "8" : {
+        "username": "LE CHICKEN"
+    }, 
+    "9" : {
+        "username": "LE BIG CRISPY"
+    }, 
+    "10" : {
+        "username": "LE CRISPY"
+    }, 
+    "11" : {
+        "username": "KEBAB"
+    }, 
+    "12" : {
+        "username": "LE SUPREME"
+    }, 
+    "13" : {
+        "username": "LE PHENOMENE"
+    }, 
+    "14" : {
+        "username": "SANDWICH"
+    }, 
+    "15" : {
+        "username": "ESCALOPE DE POULET"
+    }, 
+    "16" : {
+        "username": "CHICKEN TANDOORI"
+    }, 
+    "17" : {
+        "username": "CHICKEN CURRY"
+    }, 
+    "18" : {
+        "username": "LE CRISPY"
+    }, 
+    "19" : {
+        "username": "MERGUEZ"
+    }, 
+    "20" : {
+        "username": "KOFTE"
+    }, 
+    "21" : {
+        "username": "LE MIX"
+    }, 
+    "22" : {
+        "username": "CORDON BLEU"
+    }, 
+    "23" : {
+        "username": "L'IMPERIAL"
+    }, 
+    "24" : {
+        "username": "TRIPLEX"
+    }, 
+    "25" : {
+        "username": "L'ORIENTAL"
+    }, 
+    "26" : {
+        "username": "LE VEGETARIEN"
+    }, 
+    "27" : {
+        "username": "FALAFELS"
+    }, 
+    "28" : {
+        "username": "LE ROSTI"
+    }, 
+    "29" : {
+        "username": "1 VIANDE"
+    }, 
+    "30" : {
+        "username": "2 VIANDES"
+    }, 
+    "31" : {
+        "username": "3 VIANDES"
+    }, 
+    "32" : {
+        "username": "PANINI"
+    }, 
+    "33" : {
+        "username": "KEBAB"
+    }, 
+    "34" : {
+        "username": "POULET"
+    }, 
+    "35" : {
+        "username": "STEAK"
+    }, 
+    "36" : {
+        "username": "3 FROMAGES"
+    }, 
+    "37" : {
+        "username": "TOMATE MOZZA"
+    }, 
+    "38" : {
+        "username": "TACOS 1 VIANDE"
+    }, 
+    "39" : {
+        "username": "TACOS 2 VIANDES"
+    }, 
+    "40" : {
+        "username": "TACOS 3 VIANDES"
+    }, 
+    "41" : {
+        "username": "KIDZ MENU"
+    }, 
+    "42" : {
+        "username": "OIGNON RINGS"
+    }, 
+    "43" : {
+        "username": "TENDERS"
+    }, 
+    "44" : {
+        "username": "MOZZA STICKS"
+    }, 
+    "45" : {
+        "username": "BOUCHE CAMEMBERT"
+    }, 
+    "46" : {
+        "username": "NUGGETS"
+    }, 
+    "47" : {
+        "username": "BARQUETTE DE VIANDE"
+    }, 
+    "48" : {
+        "username": "FRITES"
+    }, 
+    "49" : {
+        "username": "BOX MELANGE"
+    }, 
+    "50" : {
+        "username": "CRISPY WINGS"
+    }, 
+    "51" : {
+        "username": "PANINI AU NUTELLA"
+    }, 
+    "52" : {
+        "username": "TIRAMISU"
+    }, 
+    "53" : {
+        "username": "TARTE AU DAIM"
+    }
+}
