@@ -45,27 +45,37 @@ function checkPermissions($userOBJ) {
     // Convertir les forbiddenPages en tableau
     $pages = (array)$user->forbiddenPages;
 
-    // Extraire les éléments si c'est un tableau imbriqué
-    $flattenedPages = [];
-    foreach ($pages as $page) {
-        if (is_object($page) || is_array($page)) {
-            foreach ($page as $p) {
-                $flattenedPages[] = $p;
-            }
-        } else {
-            $flattenedPages[] = $page;
+    // Tableau des alias de pages
+    $pagesAlias = [
+        "Administration" => ["c_admin.php", "c_admin_group.php"],
+        "Emploi du temps" => ["timetable_controller.php"],
+        "Annuaire" => ["organization_chart.php"],
+        "Commandes" => ["commandes.php"],
+        "Salaires" => ["salaries.php"],
+        "Stocks" => ["stocks.php"],
+        "Comptabilité" => ["compta.php"]
+    ];
+
+    // Créer une liste de fichiers interdits
+    $forbiddenFiles = [];
+    foreach ($pages as $forbiddenPage) {
+        if (array_key_exists($forbiddenPage, $pagesAlias)) {
+            $forbiddenFiles = array_merge($forbiddenFiles, $pagesAlias[$forbiddenPage]);
         }
     }
 
     $path = explode("/", $_SERVER["SCRIPT_NAME"]); // chemin du fichier
+    $currentPage = end($path); // obtenir la page actuelle
 
-    if (in_array($path[array_key_last($path)], $flattenedPages)) { // si la page fait partie des interdites de l'utilisateur
+
+    if (in_array($currentPage, $forbiddenFiles)) { // si la page fait partie des interdites de l'utilisateur
         http_response_code(403);
         require_once("../templates/vue_forbidden.php");
         require_once("../templates/login_layout.php");
         exit();
     }
 }
+
 
 function checkLOGIN(){
     
