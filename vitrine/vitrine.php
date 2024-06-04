@@ -1,10 +1,8 @@
 <?php
 session_start();
 
-require_once("../models/functions.php");
+//require_once("models/functions.php");
 
 $title = "Vitrine";
 
-require_once("../templates/layout.php");
-
-require_once("vue_vitrine.php");
+require_once("templates/layout.php");
