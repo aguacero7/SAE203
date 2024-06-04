@@ -1,5 +1,8 @@
 <?php $title = "Menu";?>
 
+<div class="row">
+<div class="col-md-4">
+
 <div class="card bg-dark text-white">
     <h2>Tacos 1 viande</h2>
     <p>Choisissez une viandes :</p>
