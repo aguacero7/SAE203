@@ -11,6 +11,11 @@ $groupes = ["admin","manager","comptable","dirigeant"];
 $prenoms = ['Jean', 'Paul', 'Marie', 'Pierre', 'Luc', 'Sophie', 'Alice', 'Antoine', 'Julie', 'Alexandre', 'Nicolas', 'Isabelle', 'Christophe', 'Emilie', 'François', 'Valérie', 'Thomas', 'Catherine', 'Martin', 'Elise'];
 $noms = ['Dubois', 'Martin', 'Bernard', 'Thomas', 'Petit', 'Robert', 'Richard', 'Durand', 'Leroy', 'Moreau', 'Simon', 'Laurent', 'Lefebvre', 'Michel', 'Garcia', 'David', 'Bertrand', 'Roux', 'Vincent', 'Fournier'];
 
+$question = ['mere','plat','voiture'];
+$plat = ['ratatouille','pizza','hamburger','tacos','kebab','poutine']; 
+$mere = ['Dupont','Martin','Bernard','Ronaldo','Messi'];
+$voiture = ['Aventador','Urus','Supra','Scenic','Fiesta','C1','Ami'];
+
 function generate_username($prenom, $nom) {
 
     $random_number = mt_rand(10, 95);
@@ -26,6 +31,18 @@ function contact_exists($contact, $users) {
 }
 
 for($i=0;$i<50;$i++){
+    $random_question = $question[array_rand($question)];
+
+    if ($random_question == 'mere'){
+        $random_answer = $mere[array_rand($mere)];
+    }
+    elseif ($random_question == 'plat'){
+        $random_answer = $plat[array_rand($plat)];
+    }
+    elseif ($random_question == 'voiture'){
+        $random_answer = $voiture[array_rand($voiture)];
+    }
+
     $random_prenom = $prenoms[array_rand($prenoms)];
     $random_nom = $noms[array_rand($noms)];
     $username = generate_username($random_prenom, $random_nom);
@@ -54,6 +71,8 @@ for($i=0;$i<50;$i++){
         "groupes" => $user_groupes,
         "username" => $username,
         "fullname" => $random_prenom . ' ' . $random_nom,
+        "question" => $random_question,
+        "answer" => $random_answer,
         "pfp" => "default.png",
         "contact" => mt_rand(100, 999),
         "age" => mt_rand(18, 65)
