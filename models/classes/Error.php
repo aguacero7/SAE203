@@ -7,6 +7,7 @@ class Error {
     protected $log_text;
     protected $log_file ="../assets/logs.txt";
     protected $error_type;
+    protected $log_message;
 
     public const HTTP_CODES = [
         'OK' => 200,
@@ -27,11 +28,20 @@ class Error {
         $ip=$_SERVER["remote_addr"];
         
         // Implementation de la fonction logit()
+        $log_text = date('Y-m-d H:i:s') . $ip . $this->$code . $this->$error_type . $this->$log_message ." blablabla.\n";
+
+        if (file_put_contents($log_file, $log_text, FILE_APPEND | LOCK_EX) === FALSE) {
+            echo "Impossible d'écrire dans le fichier de log";
+        } else {
+            echo "Message écrit dans le fichier de log";
+        }
+       
     } 
 
     public function __construct(int $code = 200, string $page = "", string $texte = "", Exception $error = null) {
         $this->code = $code;
         // TODO : log l'erreur 
+       $this->logit();
     }
 }
 
@@ -75,7 +85,7 @@ class InternalError extends Error {
 
     public function __construct(int $code = Error::HTTP_CODES['INTERNAL_SERVER_ERROR'], string $page = "", string $texte = "", Exception $error = null) {
         parent::__construct($code, $page, $texte, $error); 
-    }
+    }0
 }
 
 /*
