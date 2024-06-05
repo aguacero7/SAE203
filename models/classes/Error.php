@@ -85,7 +85,7 @@ class InternalError extends Error {
 
     public function __construct(int $code = Error::HTTP_CODES['INTERNAL_SERVER_ERROR'], string $page = "", string $texte = "", Exception $error = null) {
         parent::__construct($code, $page, $texte, $error); 
-    }0
+    }
 }
 
 /*
