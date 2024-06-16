@@ -1,100 +1,460 @@
 [
     {
-        "utilisateur": "admin",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "aa",
-        "email": "aa",
-        "role": "admin"
+        "password": "$2y$10$.p2mAeFVQPe6afmESnHYGeBtbwFmlxjX7\/LBltUubn1vn8foozW6K",
+        "email": "Christophe.Fournier@gmail.com",
+        "username": "christophefournier40",
+        "fullname": "Christophe Fournier",
+        "contact": 154,
+        "age": 50,
+        "fidelite": 63
     },
     {
-        "utilisateur": "user",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "mini",
-        "email": "user@user.com",
-        "role": "user"
+        "password": "$2y$10$CIUJVRXp.3.POhBF3iLb4.cskSMFhD\/.twCtM9riw3zx0wsDoufu2",
+        "email": "Pierre.Roux@gmail.com",
+        "username": "pierreroux90",
+        "fullname": "Pierre Roux",
+        "contact": 817,
+        "age": 32,
+        "fidelite": 87
     },
     {
-        "utilisateur": "modo",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "dacia",
-        "email": "modo@modo.com",
-        "role": "modo"
+        "password": "$2y$10$EFPhhyHJzvqaEbSqFySloeq1dDDBfnHDkE6vr8iE\/nD4y1uVHJV4W",
+        "email": "Christophe.Fournier@gmail.com",
+        "username": "christophefournier10",
+        "fullname": "Christophe Fournier",
+        "contact": 657,
+        "age": 80,
+        "fidelite": 50
     },
     {
-        "utilisateur": "anonymous",
-        "motdepasse": "$2y$10$KjUbubNiOZMWhx4pCTE39.Y3X6aveHLCCqBEohBZ71D.r2YY5mrGy",
-        "vehicule": "none",
-        "email": "",
-        "role": "visitor"
+        "password": "$2y$10$B2tTilmGCWzbsJQWmPStrumRmmHDDDqEy.VjUtD\/F0xARnaCfH.Mq",
+        "email": "Alexandre.Lefebvre@gmail.com",
+        "username": "alexandrelefebvre25",
+        "fullname": "Alexandre Lefebvre",
+        "contact": 561,
+        "age": 73,
+        "fidelite": 29
     },
     {
-        "utilisateur": "aucaijoir",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "citroen",
-        "email": "aucaijoir@aucaijoir.com",
-        "role": "user"
+        "password": "$2y$10$gkzLOSYZavAlMWmyC\/3njeQ4aptxB11aI4R9C9lhU3s6BVvKSbPSW",
+        "email": "Fran\u00e7ois.Moreau@gmail.com",
+        "username": "fran\u00e7oismoreau18",
+        "fullname": "Fran\u00e7ois Moreau",
+        "contact": 475,
+        "age": 74,
+        "fidelite": 48
     },
     {
-        "utilisateur": "qalaicou",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "citroen",
-        "email": "qalaicou@qalaicou.com",
-        "role": "user"
+        "password": "$2y$10$GkiyzRPiiGBZLx9\/ECVhUeSBMAlzKpUHpy45Oq0nkWVDaowR5yOAi",
+        "email": "Fran\u00e7ois.Bertrand@gmail.com",
+        "username": "fran\u00e7oisbertrand95",
+        "fullname": "Fran\u00e7ois Bertrand",
+        "contact": 926,
+        "age": 40,
+        "fidelite": 29
     },
     {
-        "utilisateur": "mopovaf",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "bmw",
-        "email": "mopovaf@mopovaf.com",
-        "role": "user"
+        "password": "$2y$10$mlm3bjsyNTGtnb6.42RUUum5\/SOBcCxxsaqzvn51yPuVaqPiyoLRK",
+        "email": "Fran\u00e7ois.Bernard@gmail.com",
+        "username": "fran\u00e7oisbernard81",
+        "fullname": "Fran\u00e7ois Bernard",
+        "contact": 622,
+        "age": 36,
+        "fidelite": 59
     },
     {
-        "utilisateur": "moiqauzi",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "bmw",
-        "email": "moiqauzi@moiqauzi.com",
-        "role": "user"
+        "password": "$2y$10$S2kps0kuv6BUoEDEh.yvIuWUKByz6qrDHgxIR6VhD8No5xLqRtvSm",
+        "email": "Fran\u00e7ois.Michel@gmail.com",
+        "username": "fran\u00e7oismichel85",
+        "fullname": "Fran\u00e7ois Michel",
+        "contact": 677,
+        "age": 80,
+        "fidelite": 91
     },
     {
-        "utilisateur": "odeuvoipoif",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "lada",
-        "email": "odeuvoipoif@odeuvoipoif.com",
-        "role": "user"
+        "password": "$2y$10$Eb51ctQDEdZZ4DBO3E1SeOewjetl2Mg1qOL4A6K4J3lb56eijJ.72",
+        "email": "Julie.Garcia@gmail.com",
+        "username": "juliegarcia28",
+        "fullname": "Julie Garcia",
+        "contact": 741,
+        "age": 47,
+        "fidelite": 64
     },
     {
-        "utilisateur": "atoipeneu",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "ford",
-        "email": "atoipeneu@atoipeneu.com",
-        "role": "user"
+        "password": "$2y$10$iqj12iAjWMSsvJdl5jlKW.p2Kx\/SpOd0rcsi\/.P3dqE0ZcjiN.rT2",
+        "email": "Fran\u00e7ois.Dubois@gmail.com",
+        "username": "fran\u00e7oisdubois39",
+        "fullname": "Fran\u00e7ois Dubois",
+        "contact": 779,
+        "age": 22,
+        "fidelite": 69
     },
     {
-        "utilisateur": "noifaumau",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "ferrari",
-        "email": "noifaumau@noifaumau.com",
-        "role": "user"
+        "password": "$2y$10$A0kEmFrK.iEJr.iRLm2meODYW6cM9Ato43xPvLWuvTmEzmLfyk24m",
+        "email": "Elise.Fournier@gmail.com",
+        "username": "elisefournier13",
+        "fullname": "Elise Fournier",
+        "contact": 585,
+        "age": 65,
+        "fidelite": 51
     },
     {
-        "utilisateur": "neuhagal",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "lancia",
-        "email": "neuhagal@neuhagal.com",
-        "role": "user"
+        "password": "$2y$10$y6KaMs4WEf9iQoL67TPzuOa8wOBgzqjod2i3o93uPzS9iMpUfgubC",
+        "email": "Isabelle.Bernard@gmail.com",
+        "username": "isabellebernard75",
+        "fullname": "Isabelle Bernard",
+        "contact": 842,
+        "age": 22,
+        "fidelite": 51
     },
     {
-        "utilisateur": "beukaita",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "renault",
-        "email": "beukaita@beukaita.com",
-        "role": "user"
+        "password": "$2y$10$0r0xR6Lt7Lf730Od9iBVXu.ZqH495yzEHYEHkGdQgGO8TfA2GDSPW",
+        "email": "Nicolas.Dubois@gmail.com",
+        "username": "nicolasdubois85",
+        "fullname": "Nicolas Dubois",
+        "contact": 254,
+        "age": 35,
+        "fidelite": 87
     },
     {
-        "utilisateur": "rezetar",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "vehicule": "volkswagen",
-        "email": "rezetar@rezetar.com",
-        "role": "user"
+        "password": "$2y$10$UB\/FEJIkyTSV.5eFc8UAvui0RvLeEuDdrIfcA9Yd7R4A9W.rYc7vK",
+        "email": "Alexandre.Fournier@gmail.com",
+        "username": "alexandrefournier58",
+        "fullname": "Alexandre Fournier",
+        "contact": 321,
+        "age": 65,
+        "fidelite": 15
+    },
+    {
+        "password": "$2y$10$oNJ8XS1lRzFjC\/tiLjrweuCWMzQaTwJJQZi.qiZby6GLqi5NWiANy",
+        "email": "Alexandre.Richard@gmail.com",
+        "username": "alexandrerichard86",
+        "fullname": "Alexandre Richard",
+        "contact": 525,
+        "age": 78,
+        "fidelite": 10
+    },
+    {
+        "password": "$2y$10$xeia0ShoAnrIz6ehdMdF\/OpKEkJY6PrBkQx7YQf8OaS9Ga72OysMO",
+        "email": "Alice.Simon@gmail.com",
+        "username": "alicesimon10",
+        "fullname": "Alice Simon",
+        "contact": 564,
+        "age": 52,
+        "fidelite": 46
+    },
+    {
+        "password": "$2y$10$JoqykIHPrtpYYVYbehNx\/Oh0mpxecCNsJkOPLLNGkWv8TtUthcvFC",
+        "email": "Julie.Leroy@gmail.com",
+        "username": "julieleroy40",
+        "fullname": "Julie Leroy",
+        "contact": 391,
+        "age": 18,
+        "fidelite": 5
+    },
+    {
+        "password": "$2y$10$ArmzAR55dXW6kHan76SLbOa3rlFFMlp9Id1PJmPvKgQMP7IDiZpb.",
+        "email": "Sophie.Thomas@gmail.com",
+        "username": "sophiethomas88",
+        "fullname": "Sophie Thomas",
+        "contact": 329,
+        "age": 70,
+        "fidelite": 53
+    },
+    {
+        "password": "$2y$10$X3v5N51ajcaPmZSLzVLUN.0yCuJKHWgpjpgYFZTpoYJ.CQ0jYE9Ny",
+        "email": "Paul.David@gmail.com",
+        "username": "pauldavid36",
+        "fullname": "Paul David",
+        "contact": 221,
+        "age": 30,
+        "fidelite": 82
+    },
+    {
+        "password": "$2y$10$5mm1p69IHfHDsz2u3xmYYOXoZThXwMD5QGGl4P1vtZszw1Iz7ycca",
+        "email": "Catherine.Moreau@gmail.com",
+        "username": "catherinemoreau55",
+        "fullname": "Catherine Moreau",
+        "contact": 363,
+        "age": 46,
+        "fidelite": 73
+    },
+    {
+        "password": "$2y$10$qzFNlHrhpoYUXLEemdZqh.o24c8UxEZ5GPStDlIRTnZeYEZX1ibCi",
+        "email": "Christophe.David@gmail.com",
+        "username": "christophedavid13",
+        "fullname": "Christophe David",
+        "contact": 973,
+        "age": 31,
+        "fidelite": 76
+    },
+    {
+        "password": "$2y$10$ZxTxuWVb\/neOH1tVDwxag.SzbFQtF44gLWDifpsUyS6TfT3\/wCeSK",
+        "email": "Emilie.Petit@gmail.com",
+        "username": "emiliepetit10",
+        "fullname": "Emilie Petit",
+        "contact": 669,
+        "age": 54,
+        "fidelite": 44
+    },
+    {
+        "password": "$2y$10$qTVd32C0LR42.VtLdDmyOu3LMA5ImhHy2BErpXAaBWSfPqCE5tpgy",
+        "email": "Pierre.Roux@gmail.com",
+        "username": "pierreroux32",
+        "fullname": "Pierre Roux",
+        "contact": 571,
+        "age": 50,
+        "fidelite": 22
+    },
+    {
+        "password": "$2y$10$vGyDzGedEst0icjAMpfmZ.9ZzkFj0lIOz50Y68QQlY6QuOhNt42ti",
+        "email": "Julie.Dubois@gmail.com",
+        "username": "juliedubois11",
+        "fullname": "Julie Dubois",
+        "contact": 628,
+        "age": 72,
+        "fidelite": 74
+    },
+    {
+        "password": "$2y$10$Zwwh73Bu.Mn\/0mU8pzm.aOcGXg4iwjLT.JzyTuRzxe4whMtVxtQZe",
+        "email": "Antoine.Garcia@gmail.com",
+        "username": "antoinegarcia17",
+        "fullname": "Antoine Garcia",
+        "contact": 881,
+        "age": 30,
+        "fidelite": 95
+    },
+    {
+        "password": "$2y$10$ax5l3gBqozXVovmo\/bG0neML0w8LiAlvgR9VJ8jCDUn1\/1HdzSPIq",
+        "email": "Antoine.Bertrand@gmail.com",
+        "username": "antoinebertrand67",
+        "fullname": "Antoine Bertrand",
+        "contact": 450,
+        "age": 57,
+        "fidelite": 66
+    },
+    {
+        "password": "$2y$10$2S1yyoI27FfLUGbQREjIs.oLoZ4ne0egDwtBarSmIaai3u26IRqty",
+        "email": "Emilie.Robert@gmail.com",
+        "username": "emilierobert31",
+        "fullname": "Emilie Robert",
+        "contact": 547,
+        "age": 38,
+        "fidelite": 29
+    },
+    {
+        "password": "$2y$10$wqROJLy\/rJXVwQG819Vn0.MSHA.4VIi1MjI3Mde0dIvA4LTDAsg9G",
+        "email": "Paul.Martin@gmail.com",
+        "username": "paulmartin81",
+        "fullname": "Paul Martin",
+        "contact": 554,
+        "age": 38,
+        "fidelite": 84
+    },
+    {
+        "password": "$2y$10$sym6EmybzvdIZ5tbZtrx7.\/VUDCHZVS2YLcuTOBlNXHBGn.kcbrdO",
+        "email": "Marie.Vincent@gmail.com",
+        "username": "marievincent90",
+        "fullname": "Marie Vincent",
+        "contact": 637,
+        "age": 72,
+        "fidelite": 48
+    },
+    {
+        "password": "$2y$10$W1\/NM2mMo\/HyMYbZ8suDie6dWZyudmUqiqm.Xsz0wbqvOlWTcBPqq",
+        "email": "Catherine.Robert@gmail.com",
+        "username": "catherinerobert36",
+        "fullname": "Catherine Robert",
+        "contact": 770,
+        "age": 37,
+        "fidelite": 3
+    },
+    {
+        "password": "$2y$10$TssryFH.MKezzmkbeo..eOtG14BNikBkQQgfmcpbJXVqTWgvMfWE6",
+        "email": "Catherine.Martin@gmail.com",
+        "username": "catherinemartin75",
+        "fullname": "Catherine Martin",
+        "contact": 225,
+        "age": 47,
+        "fidelite": 77
+    },
+    {
+        "password": "$2y$10$dEhVcTegAmgir71G3G\/P1uDDqNiDmfLmS7C4ifu8cQPFQ5eM74SNy",
+        "email": "Thomas.Dubois@gmail.com",
+        "username": "thomasdubois47",
+        "fullname": "Thomas Dubois",
+        "contact": 681,
+        "age": 59,
+        "fidelite": 60
+    },
+    {
+        "password": "$2y$10$1tH32hVudpZEenuY7x6iTuEOkPPxaSH\/UCUr3zgG0wav.6rjlPHha",
+        "email": "Marie.Richard@gmail.com",
+        "username": "marierichard94",
+        "fullname": "Marie Richard",
+        "contact": 536,
+        "age": 49,
+        "fidelite": 46
+    },
+    {
+        "password": "$2y$10$WhHPLVpYFv.inN0G7Sboe.hAYeM48BUDXhkmOzwpkCrRrzG2DHsfO",
+        "email": "Julie.Roux@gmail.com",
+        "username": "julieroux67",
+        "fullname": "Julie Roux",
+        "contact": 208,
+        "age": 45,
+        "fidelite": 32
+    },
+    {
+        "password": "$2y$10$z9q\/H7vTf3cWT4JuwlTYiemrX\/2Fs2kKt4XRPuI31vv5CZm7d8GiW",
+        "email": "Emilie.Roux@gmail.com",
+        "username": "emilieroux36",
+        "fullname": "Emilie Roux",
+        "contact": 810,
+        "age": 68,
+        "fidelite": 98
+    },
+    {
+        "password": "$2y$10$XTmj1wwiV9K3lu10Osqx9.IRRimvUPX4nL37Nt.H\/FUC5nWAHz4i6",
+        "email": "Val\u00e9rie.Bertrand@gmail.com",
+        "username": "val\u00e9riebertrand41",
+        "fullname": "Val\u00e9rie Bertrand",
+        "contact": 693,
+        "age": 32,
+        "fidelite": 99
+    },
+    {
+        "password": "$2y$10$qzxGTwPQoz9h9wajDD3\/W.gYwgMDf8umi8QYBualC3lDmX\/y5uV0S",
+        "email": "Isabelle.Richard@gmail.com",
+        "username": "isabellerichard71",
+        "fullname": "Isabelle Richard",
+        "contact": 962,
+        "age": 66,
+        "fidelite": 72
+    },
+    {
+        "password": "$2y$10$HFuU6Ii5Exidrml9Ndc3x.LihrPR3dV\/Y8ekRpai7Rm25MSdPEEVi",
+        "email": "Pierre.Dubois@gmail.com",
+        "username": "pierredubois84",
+        "fullname": "Pierre Dubois",
+        "contact": 397,
+        "age": 23,
+        "fidelite": 7
+    },
+    {
+        "password": "$2y$10$WWlE7O9g64NRyQiVr7VnYeAusazYDBP55w\/4tFuntWFMdoqMdeyHO",
+        "email": "Antoine.Martin@gmail.com",
+        "username": "antoinemartin68",
+        "fullname": "Antoine Martin",
+        "contact": 618,
+        "age": 79,
+        "fidelite": 4
+    },
+    {
+        "password": "$2y$10$ISxDQUj6rS3rVwK7FkG1HOIuS0nIzoXkKLiGTr.EJ6Xq2mBfWe7BO",
+        "email": "Val\u00e9rie.Garcia@gmail.com",
+        "username": "val\u00e9riegarcia58",
+        "fullname": "Val\u00e9rie Garcia",
+        "contact": 797,
+        "age": 44,
+        "fidelite": 94
+    },
+    {
+        "password": "$2y$10$Z4nKw8T\/dB54DC3MmGYcD.kbLH6PaL\/ne.1CGEtP7gSyiJjvx4Z6q",
+        "email": "Catherine.David@gmail.com",
+        "username": "catherinedavid45",
+        "fullname": "Catherine David",
+        "contact": 255,
+        "age": 63,
+        "fidelite": 89
+    },
+    {
+        "password": "$2y$10$xPTpKNmR6JeICk\/v7iBUAOnnQfCHF\/WmVBhy.uQCP9S.FC.e7hnhu",
+        "email": "Thomas.Michel@gmail.com",
+        "username": "thomasmichel59",
+        "fullname": "Thomas Michel",
+        "contact": 400,
+        "age": 70,
+        "fidelite": 10
+    },
+    {
+        "password": "$2y$10$Gd82o4OfMknKJDcS46XH0uY.mFCRxrx4KwtSslFVwbYO2AanToMM2",
+        "email": "Martin.Moreau@gmail.com",
+        "username": "martinmoreau15",
+        "fullname": "Martin Moreau",
+        "contact": 576,
+        "age": 72,
+        "fidelite": 2
+    },
+    {
+        "password": "$2y$10$ceUlF7vsNtXOZ9iEddPedeTguePulj33g07Y18yckTP.CJlJJPdnS",
+        "email": "Isabelle.Michel@gmail.com",
+        "username": "isabellemichel32",
+        "fullname": "Isabelle Michel",
+        "contact": 402,
+        "age": 77,
+        "fidelite": 78
+    },
+    {
+        "password": "$2y$10$Rj1NeAzfcbx.h6grDpVlBO6gA2kNFsBvSx1foMgRd7u1\/4oP.6MLC",
+        "email": "Pierre.Martin@gmail.com",
+        "username": "pierremartin56",
+        "fullname": "Pierre Martin",
+        "contact": 520,
+        "age": 69,
+        "fidelite": 72
+    },
+    {
+        "password": "$2y$10$qvupOnqsO1br9EegBT5\/IOVP\/7xP.wFkrjpYeOI.PRXCmZEf12MYS",
+        "email": "Christophe.Martin@gmail.com",
+        "username": "christophemartin44",
+        "fullname": "Christophe Martin",
+        "contact": 299,
+        "age": 39,
+        "fidelite": 84
+    },
+    {
+        "password": "$2y$10$biUqkjpMISz.TOgkerb0vePibHg.CuFxknlsvdd0oJeXmmLb1o0z.",
+        "email": "Julie.Lefebvre@gmail.com",
+        "username": "julielefebvre30",
+        "fullname": "Julie Lefebvre",
+        "contact": 873,
+        "age": 65,
+        "fidelite": 19
+    },
+    {
+        "password": "$2y$10$qeQarHpNXgoMFjza.tX2HO.8ye7P8oQif7Fk6owtqn3RpPerwVpS6",
+        "email": "Luc.Simon@gmail.com",
+        "username": "lucsimon47",
+        "fullname": "Luc Simon",
+        "contact": 259,
+        "age": 70,
+        "fidelite": 73
+    },
+    {
+        "password": "$2y$10$R7A3K4hv7hI6Ynh8d23O1ObdkVBdMsYe.tEu32D5gl.78b8UN5rku",
+        "email": "Marie.Garcia@gmail.com",
+        "username": "mariegarcia82",
+        "fullname": "Marie Garcia",
+        "contact": 611,
+        "age": 18,
+        "fidelite": 36
+    },
+    {
+        "password": "$2y$10$MekafhcOoOvbEta5yE\/JIeUunVdvn.5KUnw8X.zkAqpMObT2mx8KG",
+        "email": "Thomas.Garcia@gmail.com",
+        "username": "thomasgarcia94",
+        "fullname": "Thomas Garcia",
+        "contact": 669,
+        "age": 34,
+        "fidelite": 87
+    },
+    {
+        "password": "$2y$10$.e93cMloLZO00AEaBCGRXuu39XxAzRMf3CuOiYRZGrTwjzboYDluq",
+        "email": "test@gmail.com",
+        "username": "test",
+        "fullname": "test",
+        "age": "20",
+        "fidelite": 0
     }
 ]

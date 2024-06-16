@@ -9,17 +9,17 @@
 <div class="container mt-3">
   <h3>Créer votre compte :</h3>
     
-  <form action="vitrine.php" class="was-validated" method="POST">
+  <form action="vitrine.php?inscription=inscription" class="was-validated" method="POST">
   <div class = "row">
     <div class="mb-3 mt-3 col">
-      <label for="utilisateur" class="form-label">Pseudo :</label>
-      <input type="text" class="form-control" id="utilisateur" placeholder="Entrez votre identifiant" name="utilisateur" required>
+      <label for="fullname" class="form-label">Prénom Nom :</label>
+      <input type="text" class="form-control" id="fullname" placeholder="Entrez votre prénom et votre nom" name="fullname" required>
       <div class="valid-feedback">Valide.</div>
       <div class="invalid-feedback">Remplissez ce champ avant de continuer</div>
     </div>
     <div class="mb-3 mt-3 col">
-      <label for="vehicule" class="form-label">Véhicule :</label>
-      <input type="text" class="form-control" id="vehicule" placeholder="Entrez la marque de votre véhicule" name="vehicule" required>
+      <label for="username" class="form-label">Pseudo :</label>
+      <input type="text" class="form-control" id="username" placeholder="Entrez votre pseudo" name="username" required>
       <div class="valid-feedback">Valide.</div>
       <div class="invalid-feedback">Remplissez ce champ avant de continuer</div>
     </div>
@@ -31,16 +31,22 @@
       <div class="valid-feedback">Valide.</div>
       <div class="invalid-feedback">Remplissez ce champ avant de continuer</div>
     </div>
+    <div class="mb-3 mt-3 col">
+      <label for="age" class="form-label">Âge :</label>
+      <input type="text" class="form-control" id="age" placeholder="Entrez votre âge" name="age" required>
+      <div class="valid-feedback">Valide.</div>
+      <div class="invalid-feedback">Remplissez ce champ avant de continuer</div>
+    </div>
     <div class = "row">
         <div class="mb-3 mt-3 col">
-            <label for="motdepasse" class="form-label">Mot de passe :</label>
-            <input type="password" class="form-control" id="motdepasse" placeholder="Entrez votre mot de passe" name="motdepasse" required>
+            <label for="password" class="form-label">Mot de passe :</label>
+            <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe" name="password" required>
             <div class="valid-feedback">Valide.</div>
             <div class="invalid-feedback">Remplissez ce champ avant de continuer</div>
     </div>
     <div class="mb-3 mt-3 col">
-            <label for="motdepasse" class="form-label">Confirmation de mot de passe :</label>
-            <input type="password" class="form-control" id="motdepasse" placeholder="Entrez le même mot de passe" name="confirmation" required>
+            <label for="password" class="form-label">Confirmation de mot de passe :</label>
+            <input type="password" class="form-control" id="password" placeholder="Entrez le même mot de passe" name="confirmation" required>
             <div class="valid-feedback">Valide.</div>
             <div class="invalid-feedback">Remplissez ce champ avant de continuer</div>
     </div>
@@ -60,13 +66,13 @@
 
     $tableau = array();
     foreach ($jsonData as $key => $value){
-    $value = $jsonData[$key]['utilisateur'];
+    $value = $jsonData[$key]['username'];
     array_push($tableau, $value);
     }
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST" and isset($_POST['submit']) and isset($_POST['motdepasse']) and isset($_POST['utilisateur'])) {
-        $newData = array('utilisateur'=>$_POST['utilisateur'],'motdepasse' => password_hash($_POST['motdepasse'], PASSWORD_DEFAULT),'vehicule'=>$_POST['vehicule'],'email'=>$_POST['email'],'role'=>'user');
-            if(in_array($_POST['utilisateur'], $tableau)){
+    if ($_SERVER["REQUEST_METHOD"] == "POST" and isset($_POST['submit']) and isset($_POST['password']) and isset($_POST['username'])) {
+        $newData = array('password'=>password_hash($_POST['password'], PASSWORD_DEFAULT),'email' => $_POST['email'], 'username'=>$_POST['username'],'fullname'=>$_POST['fullname'],'age'=>$_POST['age'],'fidelite'=> 0);
+            if(in_array($_POST['username'], $tableau)){
             echo "
             <br>
             <div class='alert alert-success alert-dismissible fade show'>
@@ -74,7 +80,7 @@
             <strong>Attention !</strong> Nom d'utilisateur déjà utilisé
             </div>";
             }
-            elseif($_POST['motdepasse'] != $_POST['confirmation']){
+            elseif($_POST['password'] != $_POST['confirmation']){
             echo "
             <br>
             <div class='alert alert-success alert-dismissible fade show'>

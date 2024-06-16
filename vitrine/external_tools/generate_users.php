@@ -16,6 +16,7 @@ function generate_username($prenom, $nom) {
     return strtolower($prenom) . strtolower($nom) . $random_number;
 }
 
+/*
 function contact_exists($contact, $users) {
     foreach ($users as $user) {
         if ($user["contact"] == $contact) {
@@ -24,6 +25,7 @@ function contact_exists($contact, $users) {
     }
     return false;
 }
+*/
 
 for($i=0;$i<50;$i++){
     $random_prenom = $prenoms[array_rand($prenoms)];
@@ -31,18 +33,18 @@ for($i=0;$i<50;$i++){
     $username = generate_username($random_prenom, $random_nom);
     $hashed_password = generate_hashed_password();
 
-
+/*
     do {                //verifier le n° de contact
          $contact = mt_rand(100, 999);
     } while (contact_exists($contact, $users));
-
+*/
 
     $new_user = [
         "password" => $hashed_password,
         "email" => $random_prenom . '.' . $random_nom . '@gmail.com',
         "username" => $username,
         "fullname" => $random_prenom . ' ' . $random_nom,
-        "contact" => mt_rand(100, 999),
+        //"contact" => mt_rand(100, 999),
         "age" => mt_rand(18, 80),
         "fidelite" => mt_rand(0, 99)
     ];

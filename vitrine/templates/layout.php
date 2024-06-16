@@ -121,6 +121,18 @@ echo '<!DOCTYPE html>
                     }
                     
                     echo '</li>
+                    <li class="nav-item">';
+
+
+                    if (isset($_SESSION["idf"])){
+                        echo '<a class="nav-link" href="vitrine.php?panier=panier">Profil
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-secondary">+99 
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
+                        </a>';
+                    }
+                    
+                    echo '</li>
                     <li class="nav-item">
                     <a class="nav-link text-white " href="vitrine.php?menu=menu">Menu <span class="sr-only"></span></a>
                     </li>

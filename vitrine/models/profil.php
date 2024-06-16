@@ -4,7 +4,7 @@ $title = "Profil";
 
 session_start();
 
-$path = 'data/utilisateurs.json';
+$path = 'assets/utilisateurs.json';
 $jsonString = file_get_contents($path);
 $jsonData = json_decode($jsonString, true);
 
@@ -15,22 +15,22 @@ $compteur = 0;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   foreach ($jsonData as $key => $value){
     echo 'ok';
-    if ($_SESSION['idf'] == $jsonData[$key]['utilisateur']){
-      $jsonData[$key]['utilisateur'] = $_POST['utilisateur'];
-      $jsonData[$key]['vehicule'] = $_POST['vehicule'];
+    if ($_SESSION['idf'] == $jsonData[$key]['username']){
       $jsonData[$key]['email'] = $_POST['email'];
-      $jsonData[$key]['role'] = $jsonData[$key]['role'];
+      $jsonData[$key]['username'] = $_POST['username'];
+      $jsonData[$key]['fullname'] = $_POST['fullname'];
+      $jsonData[$key]['age'] = $jsonData[$key]['age'];
       $_SESSION['idf'] = $jsonData[$key]['utilisateur'];
 
       $data = json_encode($jsonData, JSON_PRETTY_PRINT);
       file_put_contents($path, $data);
-      header("Location: profil.php");
+      header("Location: vitrine.php");
     }
   }
 }
 
 foreach ($jsonData as $key => $value){
-  if ($_SESSION['idf'] == $jsonData[$key]['utilisateur']){
+  if ($_SESSION['idf'] == $jsonData[$key]['username']){
 
     echo '
     <style>
@@ -56,17 +56,17 @@ foreach ($jsonData as $key => $value){
         <div class="col-md-8">
           <div class="card-body">
             <p class="card-text">
-            <form action="profil.php" class="was-validated" method="POST">
+            <form action="vitrine.php" class="was-validated" method="POST">
             <div class = "row">
             <div class="mb-3 mt-3 col">
-          <label for="utilisateur" class="form-label">Pseudo :</label>
-          <input type="text" class="form-control" id="utilisateur" placeholder="'.$jsonData[$key]['utilisateur'].'" name="utilisateur" required>
+          <label for="fullname" class="form-label">Prénom Nom :</label>
+          <input type="text" class="form-control" id="fullname" placeholder="'.$jsonData[$key]['fullname'].'" name="fullname" required>
           <div class="valid-feedback">Valide.</div>
           <div class="invalid-feedback">Remplissez ce champ si vous voulez modifier votre profil</div>
         </div>
         <div class="mb-3 mt-3 col">
-          <label for="vehicule" class="form-label">Véhicule :</label>
-          <input type="text" class="form-control" id="vehicule" placeholder="'.$jsonData[$key]['vehicule'].'" name="vehicule" required>
+          <label for="username" class="form-label">Pseudo :</label>
+          <input type="text" class="form-control" id="username" placeholder="'.$jsonData[$key]['username'].'" name="username" required>
           <div class="valid-feedback">Valide.</div>
           <div class="invalid-feedback">Remplissez ce champ si vous voulez modifier votre profil</div>
         </div>
@@ -81,10 +81,18 @@ foreach ($jsonData as $key => $value){
         </div>
         <div class = "row">
             <div class="mb-3 mt-3 col">
-                <label for="role" class="form-label">Rôle :</label>
-                <input type="text" class="form-control" id="role" placeholder="'.$jsonData[$key]['role'].'" name="role" disabled>
+                <label for="age" class="form-label">Âge :</label>
+                <input type="text" class="form-control" id="age" placeholder="'.$jsonData[$key]['age'].'" name="age" required>
             </div>
             </div>
+            <div class = "row">
+        <div class="mb-3 mt-3 col">
+          <label for="fidelite" class="form-label">Points de fidélités :</label>
+          <input type="text" class="form-control" id="fidelite" placeholder="'.$jsonData[$key]['fidelite'].'" name="fidelite" disabled>
+          <div class="valid-feedback">Valide.</div>
+          <div class="invalid-feedback">Remplissez ce champ si vous voulez modifier votre profil</div>
+        </div>
+        </div>
             <br>
             <button type="submit" class="btn btn-danger">Modifier</button>
             <p class="card-text"><small class="text-body-secondary">Vous pouvez modifier votre profil</small></p>
