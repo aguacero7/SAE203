@@ -15,7 +15,11 @@ elseif (isset($_GET['localisation']) && $_GET['localisation']=='localisation'){
     echo '2';
     require_once("models/localisation.php");
 }
-else{
+elseif (isset($_GET['panier']) && $_GET['panier']=='panier'){
     echo '3';
+    require_once("models/panier.php");
+}
+else{
+    echo '4';
     require_once("models/home.php");
 }
