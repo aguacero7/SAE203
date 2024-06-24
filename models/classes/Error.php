@@ -25,12 +25,12 @@ class Erreur {
     ];
 
     public function logit() {
-        $ip=$_SERVER["remote_addr"];
+        $ip=$_SERVER["REMOTE_ADDR"];
         
         // Implementation de la fonction logit()
-        $log_text = date('Y-m-d H:i:s') . $ip . $this->$code . $this->$error_type . $this->$log_message ."\n";
+        $log_text = date('Y-m-d H:i:s') . $ip . $this->code . $this->error_type . $this->log_message ."\n";
 
-        if (file_put_contents($log_file, $log_text, FILE_APPEND | LOCK_EX) === FALSE) {
+        if (file_put_contents($this->log_file, $log_text, FILE_APPEND | LOCK_EX) === FALSE) {
             echo "Impossible d'écrire dans le fichier de log";
         } else {
             echo "Message écrit dans le fichier de log";
@@ -89,11 +89,23 @@ class InternalError extends Erreur {
 /*
     Classe pour logger une erreur dans un but de debgug avec un certain texte
 */
-class DebugError extends Erreur { // s'appelle avec new DebugError({texte}); Facultatif : tout ?
+class DebugError extends Erreur { // s'appelle avec new DebugError({texte}); 
     protected $error_type = "DEBUG_ERROR";
-    public function __construct(string $texte = "") {
-        $code=100;
+    public function logit() {
+        $ip=$_SERVER["REMOTE_ADDR"];
+        
+        // Implementation de la fonction logit()
+        $log_text = date('Y-m-d H:i:s') ." ".$this->error_type." ".$this->log_message ."\n";
 
-        parent::logit();
+        if (file_put_contents($this->log_file, $log_text, FILE_APPEND | LOCK_EX) === FALSE) {
+            echo "Impossible d'écrire dans le fichier de log";
+        } else {
+            echo "Message écrit dans le fichier de log";
+        }
+       
+    } 
+    public function __construct(string $texte) {
+        $this->log_message=$texte;
+        $this->logit();
     }
 }
