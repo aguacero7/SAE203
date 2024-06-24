@@ -1,3 +1,4 @@
 <?php 
 require_once("../models/classes/Error.php");
-$erreur=new DebugError($texte="testos");
+new DebugError($texte="rpout");
+$erreur2= new ErrorPage(200,"mama");
