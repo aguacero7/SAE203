@@ -2,7 +2,7 @@
 /*
     Classe principale dont hériteront toutes les erreurs
 */
-class Error {
+class Erreur {
     protected $code;
     protected $log_text;
     protected $log_file ="../assets/logs.txt";
@@ -28,7 +28,7 @@ class Error {
         $ip=$_SERVER["remote_addr"];
         
         // Implementation de la fonction logit()
-        $log_text = date('Y-m-d H:i:s') . $ip . $this->$code . $this->$error_type . $this->$log_message ." blablabla.\n";
+        $log_text = date('Y-m-d H:i:s') . $ip . $this->$code . $this->$error_type . $this->$log_message ."\n";
 
         if (file_put_contents($log_file, $log_text, FILE_APPEND | LOCK_EX) === FALSE) {
             echo "Impossible d'écrire dans le fichier de log";
@@ -40,7 +40,6 @@ class Error {
 
     public function __construct(int $code = 200, string $page = "", string $texte = "", Exception $error = null) {
         $this->code = $code;
-        // TODO : log l'erreur 
        $this->logit();
     }
 }
@@ -48,13 +47,13 @@ class Error {
 /*
     Classe pour rediriger vers une autre page avec un code de retour
 */
-class RedirectedError extends Error { // s'appelle avec new RedirectedError({code},{page}); Facultatif : error 
+class RedirectedError extends Erreur { // s'appelle avec new RedirectedError({code},{page}); Facultatif : error 
     private $page;
 
     public function __construct(int $code = Error::HTTP_CODES['FORBIDDEN'], string $page, string $texte = "", Exception $error = null) {
         $this->error_type = "REDIRECTED_ERROR";
         $this->page = $page;
-        $this->log_text=$this->error_type."AHAAAAAAAAAAAAAAAAAA";
+        $this->log_text=$this->error_type."";
         parent::__construct($code, $page, $texte, $error); 
         http_response_code($this->code);
         header("Location: " . $this->page);
@@ -64,7 +63,7 @@ class RedirectedError extends Error { // s'appelle avec new RedirectedError({cod
 /*
     Classe pour afficher une page d'erreur avec un code de retour indiqué ainsi qu'un certain texte
 */
-class ErrorPage extends Error { // s'appelle avec new ErrorPage({code},{texte}); Facultatif : error
+class ErrorPage extends Erreur { // s'appelle avec new ErrorPage({code},{texte}); Facultatif : error
     public $texte;
     protected $error_type = "ERROR_PAGE";
 
@@ -72,7 +71,6 @@ class ErrorPage extends Error { // s'appelle avec new ErrorPage({code},{texte});
         $this->texte = $texte;
         parent::__construct($code, $page, $texte, $error); 
         http_response_code($this->code);
-        // TODO : log l'erreur
         require_once("../templates/vue_error.php");
     }
 }
@@ -80,7 +78,7 @@ class ErrorPage extends Error { // s'appelle avec new ErrorPage({code},{texte});
 /*
     Classe pour logger une erreur du serveur (dans le traitement etc)
 */
-class InternalError extends Error {
+class InternalError extends Erreur {
     protected $error_type = "INTERNAL_ERROR";
 
     public function __construct(int $code = Error::HTTP_CODES['INTERNAL_SERVER_ERROR'], string $page = "", string $texte = "", Exception $error = null) {
@@ -91,10 +89,11 @@ class InternalError extends Error {
 /*
     Classe pour logger une erreur dans un but de debgug avec un certain texte
 */
-class DebugError extends Error { // s'appelle avec new DebugError({texte}); Facultatif : tout ?
+class DebugError extends Erreur { // s'appelle avec new DebugError({texte}); Facultatif : tout ?
     protected $error_type = "DEBUG_ERROR";
+    public function __construct(string $texte = "") {
+        $code=100;
 
-    public function __construct(int $code = 200, string $page = "", string $texte = "", Exception $error = null) {
-        parent::__construct($code, $page, $texte, $error); 
+        parent::logit();
     }
 }
