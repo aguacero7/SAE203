@@ -28,10 +28,10 @@ class VueAdminPanel
                     <a class="nav-link <?php if ($activeTab === 'groups') echo 'active'; ?>" id="groups-tab" data-toggle="tab" href="?action=groups" role="tab" aria-controls="groups" aria-selected="<?php echo $activeTab === 'groups' ? 'true' : 'false'; ?>">Gestion des groupes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php if ($activeTab === 'logs') echo 'active'; ?>" id="logs-tab" data-toggle="tab" href="?action=logs" role="tab" aria-controls="logs" aria-selected="<?php echo $activeTab === 'logs' ? 'true' : 'false'; ?>">Visualisation des logs</a>
+                    <a class="nav-link text-secondary <?php if ($activeTab === 'logs') echo 'active'; ?>" onclick="alert('En développement')" id="logs-tab" data-toggle="tab" href="#" role="tab" aria-controls="logs" aria-selected="<?php echo $activeTab === 'logs' ? 'true' : 'false'; ?>">Visualisation des logs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-secondary <?php if ($activeTab === 'files') echo 'active'; ?>" id="files-tab" onclick="alert('todo')" data-toggle="tab" href="?action=files" role="tab" aria-controls="files" aria-selected="<?php echo $activeTab === 'files' ? 'true' : 'false'; ?>">Gestion des fichiers</a>
+                    <a class="nav-link text-secondary <?php if ($activeTab === 'files') echo 'active'; ?>" id="files-tab" onclick="alert('En développement')" data-toggle="tab" href="#" role="tab" aria-controls="files" aria-selected="<?php echo $activeTab === 'files' ? 'true' : 'false'; ?>">Gestion des fichiers</a>
                 </li>
 
             </ul>
