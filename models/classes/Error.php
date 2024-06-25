@@ -82,11 +82,7 @@ class DebugError extends Erreur {
         // Implementation de la fonction logit()
         $log_text = date('Y-m-d H:i:s') . " " . $this->error_type . " " . $this->log_message . "\n";
 
-        if (file_put_contents($this->log_file, $log_text, FILE_APPEND | LOCK_EX) === FALSE) {
-            echo "Impossible d'écrire dans le fichier de log";
-        } else {
-            echo "Message écrit dans le fichier de log";
-        }
+        file_put_contents($this->log_file, $log_text, FILE_APPEND);
     }
 
     public function __construct(string $texte) {
