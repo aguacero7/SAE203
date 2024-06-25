@@ -1,0 +1,130 @@
+[
+    {
+        "id": 1,
+        "creator": "martindurand24",
+        "invited": [
+            "fran\u00e7oisvincent52"
+        ],
+        "invited_grp": [
+            "admin"
+        ],
+        "date": "2024-05-13",
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "title": "R\u00e9union Technique ",
+        "color": "primary"
+    },
+    {
+        "id": 2,
+        "creator": "fran\u00e7oisrichard51",
+        "invited": [
+            "pierredubois58"
+        ],
+        "invited_grp": [
+            "admin",
+            "dirigeant"
+        ],
+        "date": "2024-05-17",
+        "start_time": "11:00",
+        "end_time": "18:00",
+        "title": "Client Presentation !!! ",
+        "color": "danger"
+    },
+    {
+        "id": 3,
+        "creator": "juliemoreau85",
+        "invited": [
+            "fran\u00e7oisrichard51",
+            "alicebertrand76"
+        ],
+        "invited_grp": [],
+        "date": "2024-05-18",
+        "start_time": "14:00",
+        "end_time": "16:00",
+        "title": "Project Review",
+        "color": "success"
+    },
+    {
+        "id": 4,
+        "creator": "fran\u00e7oisrichard51",
+        "invited": [
+            "administrateur",
+            "pierredubois58",
+            "isabelledavid57"
+        ],
+        "invited_grp": [
+            "admin",
+            "salarie",
+            "comptable"
+        ],
+        "date": "2024-05-13",
+        "start_time": "11:00:00",
+        "end_time": "17:00",
+        "title": "TESTUS",
+        "color": "warning"
+    },
+    {
+        "id": 5,
+        "creator": "fran\u00e7oisrichard51",
+        "invited": [
+            "administrateur",
+            "pierredubois58",
+            "isabelledavid57"
+        ],
+        "invited_grp": [
+            "admin",
+            "salarie",
+            "comptable"
+        ],
+        "date": "2024-05-13",
+        "start_time": "11:00:00",
+        "end_time": "14:00",
+        "title": "TESTUS",
+        "color": "dark"
+    },
+    {
+        "id": 6,
+        "creator": "lilian",
+        "title": "Fin",
+        "date": "2024-05-23",
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "color": "light",
+        "invited": [
+            "lucsimpsons88",
+            "lucrichard49"
+        ],
+        "invited_grp": []
+    },
+    {
+        "id": 7,
+        "creator": "lilian",
+        "title": "proutos",
+        "date": "2024-05-27",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "color": "info",
+        "invited": [
+            "administrateur",
+            "jeannegarcia90"
+        ],
+        "invited_grp": []
+    },
+    {
+        "id": 8,
+        "creator": "lilian",
+        "title": "blabla",
+        "date": "2024-06-03",
+        "start_time": "14:00",
+        "end_time": "16:00",
+        "color": "primary",
+        "invited": [
+            "lilian",
+            "paullefebvre51",
+            "christopheronaldo61"
+        ],
+        "invited_grp": [
+            "manager"
+        ]
+    }
+]

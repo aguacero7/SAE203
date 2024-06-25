@@ -35,17 +35,5 @@
         "pfp": "lilian.jpg",
         "contact": "002",
         "birthday": "1999-05-05"
-    },
-    "4": {
-        "password": "$2y$10$U08MqzH2haZgfQ2LppE0r.jKRVxxN09HfSVIrlHddHkV1R6X.RFPW",
-        "email": "aaa@aaa.aad",
-        "groupes": [
-            "pobreza"
-        ],
-        "username": "frappeduquartier41",
-        "fullname": "Frappe Du Quartier",
-        "pfp": "default.png",
-        "contact": "5168",
-        "birthday": "2024-06-05"
     }
 }
