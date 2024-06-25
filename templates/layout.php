@@ -59,7 +59,7 @@ foreach ($forbiddenPagesArray as $page) {
             </li>
             <?php if (!in_array("Commandes", $user->forbiddenPages)) { ?>
               <li class="nav-item">
-                <a class="nav-link" href="../models/orders.php">
+                <a class="nav-link" href="../controllers/commandes_controller.php">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="feather feather-file" aria-hidden="true">
@@ -73,7 +73,7 @@ foreach ($forbiddenPagesArray as $page) {
 
             <?php if (!in_array("Stocks", $user->forbiddenPages)) { ?>
               <li class="nav-item">
-                <a class="nav-link" href="../models/stocks.php">
+                <a class="nav-link" href="../controllers/stocks_controller.php">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="feather feather-shopping-cart" aria-hidden="true">
@@ -104,7 +104,7 @@ foreach ($forbiddenPagesArray as $page) {
 
             <?php if (!in_array("Comptabilité", $user->forbiddenPages)) { ?>
               <li class="nav-item">
-                <a class="nav-link" href="../models/compta.php">
+                <a class="nav-link" href="../controllers/compta_controller.php">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="feather feather-bar-chart-2" aria-hidden="true">
