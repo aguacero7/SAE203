@@ -10,4 +10,5 @@ $title = "Stocks";
 
 require_once("../models/stocks.php");
 require_once("../templates/vue_stocks.php");
+$content = renderPage();
 require_once("../templates/layout.php");
