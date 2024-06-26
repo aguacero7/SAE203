@@ -1,5 +1,5 @@
 <?php
-//require_once('../models/classes/Error.php');   Pour les erreurs etc
+require_once('../models/classes/Error.php'); 
 require_once("../models/classes/User.php");
 User::updateForbiddenGroups();
 
@@ -9,7 +9,7 @@ function checkConnection()
     if (!isset($_SESSION["auth"])) {
         //http_response_code(401);
         //header("Location: ../models/login.php");
-        new RedirectedError(page:"../models/login.php");
+        new RedirectedError("../models/login.php");
         exit();
     }
     else{
