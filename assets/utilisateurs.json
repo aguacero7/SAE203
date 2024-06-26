@@ -12,7 +12,7 @@
         "birthday": "1789-07-14"
     },
     "2": {
-        "password": "$2y$10$6DeoeUwRloKf0V7ap9r59euydp3K424qRcwwwSaJjiPjmwr5kiT6K",
+        "password": "$2y$10$dJpUECEAxwmvS3eJvG6UBO1w2UE2J.UNkD9KS4jwzZblQN1RTOllO",
         "email": "test@test.com",
         "groupes": [
             "SuperUtilisateur",
@@ -20,7 +20,7 @@
         ],
         "username": "test",
         "fullname": "Testeur",
-        "pfp": "test.jpg",
+        "pfp": "default.png",
         "contact": "001",
         "birthday": "1999-05-05"
     },
@@ -39,9 +39,7 @@
     "4": {
         "password": "$2y$10$U08MqzH2haZgfQ2LppE0r.jKRVxxN09HfSVIrlHddHkV1R6X.RFPW",
         "email": "aaa@aaa.aad",
-        "groupes": [
-            "pobreza"
-        ],
+        "groupes": [],
         "username": "frappeduquartier41",
         "fullname": "Frappe Du Quartier",
         "pfp": "default.png",
@@ -65,19 +63,16 @@
         "birthday": "2000-09-08"
     },
     "6": {
-        "password": "$2y$10$KDYhZhpLOPzmkxYbtULEIef1A7p0nUboKU7U1BBMKw1lRkxX58SR2",
+        "password": "$2y$10$wTHz8Pz9eaxHT9Nc3pi52OVLHLmCCQPJRBnO8PQQiTUYTuRl7ql3e",
         "email": "Pierre.Simon@bigk.fr",
         "groupes": [
-            "Salarie",
             "Dirigeant",
             "Salarie"
         ],
         "username": "pierresimon40",
         "fullname": "Pierre Simon",
-        "question": "voiture",
-        "answer": "Supra",
         "pfp": "default.png",
-        "contact": 215,
+        "contact": "215",
         "birthday": "1978-02-23"
     },
     "7": {

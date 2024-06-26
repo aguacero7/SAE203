@@ -45,45 +45,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $groups[$group]['categories_interdites'] = array_diff($groups[$group]['categories_interdites'], [$category]);
                 file_put_contents($jsonFileGroups, json_encode($groups, JSON_PRETTY_PRINT));
                 echo json_encode(['success' => true, 'message' => 'Category removed successfully']);
-    
-                $jsonFileUsers = "../assets/tempusers.json";
-                $users = json_decode(file_get_contents($jsonFileUsers), true);
-    
-                foreach ($users as &$user) {
-                    if (isset($user['groupes']) && is_array($user['groupes']) && in_array($group, $user['groupes'])) {
-                        $key = array_search($category, $user['groupes']);
-                        if ($key !== false) {
-                            unset($user['groupes'][$key]);
-                            $user['groupes'] = array_values($user['groupes']);
-                        }
-                    }
-                }
-    
-                file_put_contents($jsonFileUsers, json_encode($users, JSON_PRETTY_PRINT));
-    
             } else {
                 echo json_encode(['success' => false, 'message' => 'Category not found']);
             }
+        } else {
+            echo json_encode(['success' => false, 'message' => 'Invalid group or category']);
         }
-        } elseif ($action === 'deleteGroup') {
+    } elseif ($action === 'deleteGroup') {
         if ($group && isset($groups[$group])) {
             unset($groups[$group]);
-
+    
             // Update users to remove the deleted group
             foreach ($users as &$user) {
-                if (isset($user['group']) && $user['group'] === $group) {
-                    unset($user['group']);
+                if (isset($user['groupes']) && is_array($user['groupes']) && in_array($group, $user['groupes'])) {
+                    $key = array_search($group, $user['groupes']);
+                    if ($key !== false) {
+                        unset($user['groupes'][$key]);
+                        $user['groupes'] = array_values($user['groupes']); // Réindexer le tableau après suppression
+                    }
                 }
             }
-
+    
             file_put_contents($jsonFileGroups, json_encode($groups, JSON_PRETTY_PRINT));
             file_put_contents($jsonFileUsers, json_encode($users, JSON_PRETTY_PRINT));
-            
+    
             echo json_encode(['success' => true, 'message' => 'Group deleted successfully']);
         } else {
             echo json_encode(['success' => false, 'message' => 'Group not found']);
         }
-    } elseif ($action === 'createGroup') {
+    }     elseif ($action === 'createGroup') {
         if ($group) {
             if (isset($groups[$group])) {
                 echo json_encode(['success' => false, 'message' => 'Group already exists']);
@@ -101,3 +91,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     echo json_encode(['success' => false, 'message' => 'Invalid request method']);
 }
+?>
