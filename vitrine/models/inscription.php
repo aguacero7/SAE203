@@ -9,7 +9,7 @@
 <div class="container mt-3">
   <h3>Créer votre compte :</h3>
     
-  <form action="vitrine.php?inscription=inscription" class="was-validated" method="POST">
+  <form action="index.php?inscription=inscription" class="was-validated" method="POST">
   <div class = "row">
     <div class="mb-3 mt-3 col">
       <label for="fullname" class="form-label">Prénom Nom :</label>

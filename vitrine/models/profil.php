@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       $data = json_encode($jsonData, JSON_PRETTY_PRINT);
       file_put_contents($path, $data);
-      header("Location: vitrine.php");
+      header("Location: index.php");
     }
   }
 }
@@ -52,7 +52,7 @@ foreach ($jsonData as $key => $value){
         <div class="col-md-8">
           <div class="card-body">
             <p class="card-text">
-            <form action="vitrine.php" class="was-validated" method="POST">
+            <form action="index.php" class="was-validated" method="POST">
             <div class = "row">
             <div class="mb-3 mt-3 col">
           <label for="fullname" class="form-label">Prénom Nom :</label>

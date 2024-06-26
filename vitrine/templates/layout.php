@@ -53,7 +53,7 @@ echo '<!DOCTYPE html>
 
                             <!-- Modal body -->
                             <div class="modal-body">
-                            <form action="vitrine.php" method="post">
+                            <form action="index.php" method="post">
                                 <div class="mb-3">
                                 <label for="idf">Identifiant :</label>
                                 <input type="text" class="form-control" id="idf" name="idf" placeholder="Entrez votre identifiant">
@@ -70,7 +70,7 @@ echo '<!DOCTYPE html>
                                     // Authentification réussie, stockage de la session
                                     $_SESSION['idf'] = $_POST['idf'];
                                     // Redirection vers la page d'accueil
-                                    header("Location: vitrine.php");
+                                    header("Location: index.php");
                                 }
                                 else {
                                     $erreur = "<div class='alert alert-danger alert-dismissible fade show'>
@@ -87,7 +87,7 @@ echo '<!DOCTYPE html>
 
                             <!-- Modal footer -->
                             <div class="modal-footer">
-                                <p><a href=vitrine.php?inscription=inscription>Sinscrire ?</a></p><br>
+                                <p><a href=index.php?inscription=inscription>Sinscrire ?</a></p><br>
                             </div>
                             </div>
                         </div>
@@ -100,7 +100,7 @@ echo '<!DOCTYPE html>
 
                     <nav class="navbar navbar-expand-sm bg-success navbar-dark justify-content-center">
                     <!-- Brand/logo -->
-                    <a class="navbar-brand " href="vitrine.php?acceuil=acceuil">
+                    <a class="navbar-brand " href="index.php?acceuil=acceuil">
                     <div>Big K</div>
                     </a>
 
@@ -110,24 +110,24 @@ echo '<!DOCTYPE html>
 
 
                     if (isset($_SESSION["idf"])){
-                        echo '<a class="nav-link" href="vitrine.php?profil=profil">Profil</a>';
+                        echo '<a class="nav-link" href="index.php?profil=profil">Profil</a>';
                     }
                     
                     echo '</li>
                     <li class="nav-item">
-                    <a class="nav-link text-white " href="vitrine.php?menu=menu">Menu <span class="sr-only"></span></a>
+                    <a class="nav-link text-white " href="index.php?menu=menu">Menu <span class="sr-only"></span></a>
                     </li>
 
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link text-white" href="vitrine.php?localisation=localisation">Localisation</a>
+                    <a class="nav-link text-white" href="index.php?localisation=localisation">Localisation</a>
                     </li>
 
                     </li>
                     <li class="nav-item">';
                     if (isset($_SESSION["idf"])){
                         echo'
-                    <a class="nav-link text-white" href="vitrine.php?panier=panier">Panier 🧺</a>
+                    <a class="nav-link text-white" href="index.php?panier=panier">Panier 🧺</a>
                     </li>';
                     }
 

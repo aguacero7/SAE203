@@ -39,7 +39,7 @@ foreach ($jsonData as $key => $value) {
 
             echo "<tbody>";
             echo "<tr>";
-            echo '<td><a style="text-decoration:none" href="vitrine.php?supprimer='.$value['username'].'">❌</a></td>';
+            echo '<td><a style="text-decoration:none" href="index.php?supprimer='.$value['username'].'">❌</a></td>';
             
             echo "<td>".$jsonData[$key]['commande']['nb_viandes']."</td>";
             echo "<td>".$viandes."</td>";

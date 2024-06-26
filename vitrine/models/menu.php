@@ -3,7 +3,7 @@
 <div class="container">
 <br>
 <h4>Commandez en ligne !</h4><br>
-<form action="vitrine.php?menu=menu" method="post" class="mb-4">
+<form action="index.php?menu=menu" method="post" class="mb-4">
 
 <label><input class="form-check-input" type="radio" name="livraison" value="emporter"> A EMPORTER 🛒</label>
 <br>
