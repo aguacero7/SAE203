@@ -73,7 +73,6 @@ function checkPermissions($userOBJ) {
     }
 }
 
-
 function checkLOGIN(){
     
     $GLOBALS['Connexion'] = null;
