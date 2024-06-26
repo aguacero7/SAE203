@@ -12,7 +12,7 @@
         "birthday": "1789-07-14"
     },
     "2": {
-        "password": "$2y$10$dJpUECEAxwmvS3eJvG6UBO1w2UE2J.UNkD9KS4jwzZblQN1RTOllO",
+        "password": "$2y$10$8HmRkexwVwohmwOpo4D7LOZjzA9PSjR5LOsZ\/8U3G8K9yWzbn8JIW",
         "email": "test@test.com",
         "groupes": [
             "SuperUtilisateur",
@@ -20,7 +20,7 @@
         ],
         "username": "test",
         "fullname": "Testeur",
-        "pfp": "default.png",
+        "pfp": "test.jpg",
         "contact": "001",
         "birthday": "1999-05-05"
     },
