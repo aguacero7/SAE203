@@ -1,0 +1,314 @@
+{
+    "0": { 
+        "username": "CHEESE",
+        "catégorie" : "CLASSICS",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "1" : {
+        "username": "DOUBLE CHEESE",
+        "catégorie" : "CLASSICS",
+        "quantite" : 30,
+        "prix" : 50
+    },
+    "2" : {
+        "username": "TRIPLE CHEESE",
+        "catégorie" : "CLASSICS",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "3" : {
+        "username": "BIG K 180",
+        "catégorie" : "CLASSICS",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "4" : {
+        "username": "BIG K 360",
+        "catégorie" : "CLASSICS",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "5" : {
+        "username": "EGG CHEESE",
+        "catégorie" : "CLASSICS",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "6" : {
+        "username": "LE ROSTI",
+        "catégorie" : "CLASSICS",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "7" : {
+        "username": "BIG MIX",
+        "catégorie" : "CLASSICS",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "8" : {
+        "username": "LE CHICKEN",
+        "catégorie" : "CLASSICS",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "9" : {
+        "username": "LE BIG CRISPY",
+        "catégorie" : "CLASSICS",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "10" : {
+        "username": "LE CRISPY",
+        "catégorie" : "CLASSICS",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "11" : {
+        "username": "KEBAB",
+        "catégorie" : "BEST SELLER",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "12" : {
+        "username": "LE SUPREME",
+        "catégorie" : "BEST SELLER",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "13" : {
+        "username": "LE PHENOMENE",
+        "catégorie" : "BEST SELLER",
+        "quantite" : 30,
+        "prix" : 50
+    },
+    "14" : {
+        "username": "ESCALOPE DE POULET",
+        "catégorie" : "SANDWICH",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "15" : {
+        "username": "CHICKEN TANDOORI",
+        "catégorie" : "SANDWICH",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "16" : {
+        "username": "CHICKEN CURRY",
+        "catégorie" : "SANDWICH",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "17" : {
+        "username": "LE CRISPY",
+        "catégorie" : "SANDWICH",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "18" : {
+        "username": "MERGUEZ",
+        "catégorie" : "SANDWICH",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "19" : {
+        "username": "KOFTE",
+        "catégorie" : "SANDWICH",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "20" : {
+        "username": "LE MIX",
+        "catégorie" : "SANDWICH",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "21" : {
+        "username": "CORDON BLEU",
+        "catégorie" : "SANDWICH",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "22" : {
+        "username": "L'IMPERIAL",
+        "catégorie" : "SANDWICH",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "23" : {
+        "username": "TRIPLEX",
+        "catégorie" : "SANDWICH",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "24" : {
+        "username": "L'ORIENTAL",
+        "catégorie" : "SANDWICH",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "25" : {
+        "username": "LE VEGETARIEN",
+        "catégorie" : "SANDWICH SANS VIANDE",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "26" : {
+        "username": "FALAFELS",
+        "catégorie" : "SANDWICH SANS VIANDE",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "27" : {
+        "username": "LE ROSTI",
+        "catégorie" : "SANDWICH SANS VIANDE",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "28" : {
+        "username": "1 VIANDE",
+        "catégorie" : "ASSIETTES",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "29" : {
+        "username": "2 VIANDES",
+        "catégorie" : "ASSIETTES",
+        "quantite" : 30,
+        "prix" : 50
+    },
+    "30" : {
+        "username": "3 VIANDES",
+        "catégorie" : "ASSIETTES",
+        "quantite" : 30,
+        "prix" : 50
+    },
+    "31" : {
+        "username": "KEBAB",
+        "catégorie" : "PANINI",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "32" : {
+        "username": "POULET",
+        "catégorie" : "PANINI",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "33" : {
+        "username": "STEAK",
+        "catégorie" : "PANINI",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "34" : {
+        "username": "3 FROMAGES",
+        "catégorie" : "PANINI",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "35" : {
+        "username": "TOMATE MOZZA",
+        "catégorie" : "PANINI",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "36" : {
+        "username": "TACOS 1 VIANDE",
+        "catégorie" : "TACOS",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "37" : {
+        "username": "TACOS 2 VIANDES",
+        "catégorie" : "TACOS",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "38" : {
+        "username": "TACOS 3 VIANDES",
+        "catégorie" : "TACOS",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "39" : {
+        "username": "KIDZ MENU",
+        "catégorie" : "KIDZ MENU",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "40" : {
+        "username": "OIGNON RINGS",
+        "catégorie" : "TEX MEX",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "41" : {
+        "username": "TENDERS",
+        "catégorie" : "TEX MEX",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "42" : {
+        "username": "MOZZA STICKS",
+        "catégorie" : "TEX MEX",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "43" : {
+        "username": "BOUCHE CAMEMBERT",
+        "catégorie" : "TEX MEX",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "44" : {
+        "username": "NUGGETS",
+        "catégorie" : "TEX MEX",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "45" : {
+        "username": "BARQUETTE DE VIANDE",
+        "catégorie" : "TEX MEX",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "46" : {
+        "username": "FRITES",
+        "catégorie" : "TEX MEX",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "47" : {
+        "username": "BOX MELANGE",
+        "catégorie" : "TEX MEX",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "48" : {
+        "username": "CRISPY WINGS",
+        "catégorie" : "TEX MEX",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "49" : {
+        "username": "PANINI AU NUTELLA",
+        "catégorie" : "DESSERTS",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "50" : {
+        "username": "TIRAMISU",
+        "catégorie" : "DESSERTS",
+        "quantite" : 30,
+        "prix" : 50
+    }, 
+    "51" : {
+        "username": "TARTE AU DAIM",
+        "catégorie" : "TEX MEX",
+        "quantite" : 30,
+        "prix" : 50
+    }
+}

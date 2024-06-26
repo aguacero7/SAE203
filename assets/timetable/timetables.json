@@ -126,5 +126,22 @@
         "invited_grp": [
             "manager"
         ]
+    },
+    {
+        "id": 9,
+        "creator": "lilian",
+        "title": "Test",
+        "date": "2024-06-26",
+        "start_time": "13:00",
+        "end_time": "16:00",
+        "color": "dark",
+        "invited": [
+            "test",
+            "lilian",
+            "homerroux14"
+        ],
+        "invited_grp": [
+            "Manager"
+        ]
     }
 ]

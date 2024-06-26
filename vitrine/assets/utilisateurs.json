@@ -1,0 +1,1042 @@
+[
+    {
+        "password": "$2y$10$.p2mAeFVQPe6afmESnHYGeBtbwFmlxjX7\/LBltUubn1vn8foozW6K",
+        "email": "Christophe.Fournier@gmail.com",
+        "username": "christophefournier40",
+        "fullname": "Christophe Fournier",
+        "contact": 154,
+        "age": 50,
+        "fidelite": 63,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": "1",
+            "viandes": [
+                "kebab"
+            ],
+            "frites": "frites-cheddar",
+            "boisson": "coca",
+            "adresse": "a"
+        }
+    },
+    {
+        "password": "$2y$10$CIUJVRXp.3.POhBF3iLb4.cskSMFhD\/.twCtM9riw3zx0wsDoufu2",
+        "email": "Pierre.Roux@gmail.com",
+        "username": "pierreroux90",
+        "fullname": "Pierre Roux",
+        "contact": 817,
+        "age": 32,
+        "fidelite": 87,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": "1",
+            "viandes": [
+                "kebab"
+            ],
+            "frites": "frites-cheddar",
+            "boisson": "coca",
+            "adresse": "a"
+        }
+    },
+    {
+        "password": "$2y$10$EFPhhyHJzvqaEbSqFySloeq1dDDBfnHDkE6vr8iE\/nD4y1uVHJV4W",
+        "email": "Christophe.Fournier@gmail.com",
+        "username": "christophefournier10",
+        "fullname": "Christophe Fournier",
+        "contact": 657,
+        "age": 80,
+        "fidelite": 50,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": "1",
+            "viandes": [
+                "kebab"
+            ],
+            "frites": "frites-cheddar",
+            "boisson": "coca",
+            "adresse": "a"
+        }
+    },
+    {
+        "password": "$2y$10$12HtpASuncPi53s0iJCNLeFaO8xBSJ.k0HK6bj30Gw6gaj7PapHHm",
+        "email": "aa",
+        "username": "aa",
+        "fullname": "aa",
+        "age": "1",
+        "fidelite": 0,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": "1",
+            "viandes": [
+                "boeuf"
+            ],
+            "frites": "frites-classiques",
+            "boisson": "eau",
+            "adresse": "za"
+        }
+    },
+    {
+        "password": "$2y$10$qlVKNmB5RxDk2vWy2.8hUOXJ4dYCfsX.LDQoyyZYO0p2Ei7iOJ0W.",
+        "email": "Sophie.Martin@gmail.com",
+        "username": "sophiemartin71",
+        "fullname": "Sophie Martin",
+        "age": 48,
+        "fidelite": 36,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 3,
+            "viande": [
+                "poulet",
+                "boeuf",
+                "kebab"
+            ],
+            "frites": "cheddar",
+            "boisson": "orangina",
+            "adresse": "71 place Jean Jaur\u00e8s"
+        }
+    },
+    {
+        "password": "$2y$10$aAWCLo18q3lstzF.4mXHMuOJ4uKkDBITisrZlltKz23L8T6MoFiTu",
+        "email": "Julie.Petit@gmail.com",
+        "username": "juliepetit54",
+        "fullname": "Julie Petit",
+        "age": 59,
+        "fidelite": 21,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 2,
+            "viande": [
+                "kebab",
+                "kebab"
+            ],
+            "frites": "classique",
+            "boisson": "fanta",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$6gV9qZBSBPfabJaURoEU\/ur6lIUaspNncekwnErLgxGlV2QVAIteq",
+        "email": "Sophie.Martin@gmail.com",
+        "username": "sophiemartin80",
+        "fullname": "Sophie Martin",
+        "age": 38,
+        "fidelite": 85,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 1,
+            "viande": [
+                "kebab"
+            ],
+            "frites": "cheddar",
+            "boisson": "ice",
+            "adresse": "99 avenue Victor Hugo"
+        }
+    },
+    {
+        "password": "$2y$10$PDLLzO1E0z7edVOfYSzYO.etUMlywYFUUU60uYh5tJF8kJKT2JAua",
+        "email": "Paul.Petit@gmail.com",
+        "username": "paulpetit72",
+        "fullname": "Paul Petit",
+        "age": 31,
+        "fidelite": 59,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 1,
+            "viande": [
+                "poulet"
+            ],
+            "frites": "cheddar",
+            "boisson": "eau",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$F0euJfymeBPGQp8BJZvYHe9NRmRhH.3O1WP2smaKaFLFIc3cw3cY6",
+        "email": "Pierre.Richard@gmail.com",
+        "username": "pierrerichard65",
+        "fullname": "Pierre Richard",
+        "age": 27,
+        "fidelite": 75,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 2,
+            "viande": [
+                "boeuf",
+                "poulet"
+            ],
+            "frites": "classique",
+            "boisson": "orangina",
+            "adresse": "46 avenue Charles de Gaulle"
+        }
+    },
+    {
+        "password": "$2y$10$vvlufAUxaYtt2KtkEoR5Q.3fAQmY00KBwoKa.YLyq4I7qWtycgYuC",
+        "email": "Jean.Fournier@gmail.com",
+        "username": "jeanfournier63",
+        "fullname": "Jean Fournier",
+        "age": 47,
+        "fidelite": 63,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 3,
+            "viande": [
+                "boeuf",
+                "kebab",
+                "poulet"
+            ],
+            "frites": "classique",
+            "boisson": "eau",
+            "adresse": "86 rue Charles de Gaulle"
+        }
+    },
+    {
+        "password": "$2y$10$2C6RJLALnU3LEQXD7kY\/EuvJBiQrNwsheWY5eybCPll.qYiTg\/9k.",
+        "email": "Nicolas.Richard@gmail.com",
+        "username": "nicolasrichard92",
+        "fullname": "Nicolas Richard",
+        "age": 29,
+        "fidelite": 3,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 3,
+            "viande": [
+                "boeuf",
+                "poulet",
+                "poulet"
+            ],
+            "frites": "cheddar",
+            "boisson": "fanta",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$ET4DNbR\/MrepOx6rZTcaWuV\/jygO1ihvWw1WBbMVZf.IGvCp2Hhze",
+        "email": "Nicolas.Leroy@gmail.com",
+        "username": "nicolasleroy19",
+        "fullname": "Nicolas Leroy",
+        "age": 25,
+        "fidelite": 89,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 2,
+            "viande": [
+                "poulet",
+                "boeuf"
+            ],
+            "frites": "cheddar",
+            "boisson": "coca",
+            "adresse": "76 rue Jean Jaur\u00e8s"
+        }
+    },
+    {
+        "password": "$2y$10$fX65ay4Af\/9RHf37U9Alje3230MhZMKKqdLuJ.FlCnEgt1hx.zm.6",
+        "email": "Thomas.Michel@gmail.com",
+        "username": "thomasmichel25",
+        "fullname": "Thomas Michel",
+        "age": 58,
+        "fidelite": 43,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 2,
+            "viande": [
+                "kebab",
+                "kebab"
+            ],
+            "frites": "classique",
+            "boisson": "fanta",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$9I.Z6MXZqEgrSOLMHUwaCucL\/dOmVyiUY4krkESQpwBkGNxfuaVBy",
+        "email": "Pierre.Bernard@gmail.com",
+        "username": "pierrebernard81",
+        "fullname": "Pierre Bernard",
+        "age": 53,
+        "fidelite": 41,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 2,
+            "viande": [
+                "poulet",
+                "boeuf"
+            ],
+            "frites": "cheddar",
+            "boisson": "orangina",
+            "adresse": "15 rue Gambetta"
+        }
+    },
+    {
+        "password": "$2y$10$D7.Iy\/Z8ZX0BdFh6mLELReSHE\/.P5mI5zNc53txTmDQUsSGzRwWwS",
+        "email": "Fran\u00e7ois.Moreau@gmail.com",
+        "username": "fran\u00e7oismoreau73",
+        "fullname": "Fran\u00e7ois Moreau",
+        "age": 58,
+        "fidelite": 53,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 3,
+            "viande": [
+                "poulet",
+                "kebab",
+                "boeuf"
+            ],
+            "frites": "classique",
+            "boisson": "eau",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$Y5OG2GtUJn9zpyrVfMC\/hOqygUCny2\/UoghekZPMjmzpkLX.pS7PG",
+        "email": "Alice.Lefebvre@gmail.com",
+        "username": "alicelefebvre55",
+        "fullname": "Alice Lefebvre",
+        "age": 41,
+        "fidelite": 80,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 2,
+            "viande": [
+                "poulet",
+                "poulet"
+            ],
+            "frites": "classique",
+            "boisson": "ice",
+            "adresse": "48 avenue Charles de Gaulle"
+        }
+    },
+    {
+        "password": "$2y$10$WW\/QSj5msCcQMNup8ht3Ouy04SfFrPuR6utHlbRr2TiOGEj3T8nBy",
+        "email": "Pierre.Thomas@gmail.com",
+        "username": "pierrethomas74",
+        "fullname": "Pierre Thomas",
+        "age": 26,
+        "fidelite": 80,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 3,
+            "viande": [
+                "poulet",
+                "kebab",
+                "boeuf"
+            ],
+            "frites": "classique",
+            "boisson": "eau",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$QeY\/WusKp2dRjsy9Qb8pru7vsUXTC2.nQTBaxGiM4t46UP3htNUUG",
+        "email": "Antoine.Martin@gmail.com",
+        "username": "antoinemartin11",
+        "fullname": "Antoine Martin",
+        "age": 69,
+        "fidelite": 64,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 3,
+            "viande": [
+                "kebab",
+                "kebab",
+                "poulet"
+            ],
+            "frites": "classique",
+            "boisson": "fanta",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$7.v41q4.yUjKmp8.v7EPdev.OH3Hxa9OD7gYSXzIgIR4mn6o3Kn1W",
+        "email": "Fran\u00e7ois.Fournier@gmail.com",
+        "username": "fran\u00e7oisfournier78",
+        "fullname": "Fran\u00e7ois Fournier",
+        "age": 46,
+        "fidelite": 16,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 1,
+            "viande": [
+                "kebab"
+            ],
+            "frites": "cheddar",
+            "boisson": "fanta",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$oRNHUkI6xsdLxzx\/Osjgv.9gu4F.y9TQygon.q.gw3ubJl0P4l4TW",
+        "email": "Martin.Bertrand@gmail.com",
+        "username": "martinbertrand31",
+        "fullname": "Martin Bertrand",
+        "age": 58,
+        "fidelite": 33,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 2,
+            "viande": [
+                "poulet",
+                "boeuf"
+            ],
+            "frites": "cheddar",
+            "boisson": "coca",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$Kj6HFUTYAlFZEmykDmJa.eldzNADAL5PQ5OoVoBnt4Lvbm9Zs9Zn.",
+        "email": "Paul.Petit@gmail.com",
+        "username": "paulpetit16",
+        "fullname": "Paul Petit",
+        "age": 72,
+        "fidelite": 55,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 1,
+            "viande": [
+                "poulet"
+            ],
+            "frites": "classique",
+            "boisson": "orangina",
+            "adresse": "20 avenue Jean Moulin"
+        }
+    },
+    {
+        "password": "$2y$10$acK7NIHruXm1egdyJlbZeer9hACwmFfTdg7ojMcoJMg4QdCVJ8dmG",
+        "email": "Paul.Petit@gmail.com",
+        "username": "paulpetit55",
+        "fullname": "Paul Petit",
+        "age": 52,
+        "fidelite": 61,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 2,
+            "viande": [
+                "boeuf",
+                "boeuf"
+            ],
+            "frites": "classique",
+            "boisson": "fanta",
+            "adresse": "32 avenue Jean Jaur\u00e8s"
+        }
+    },
+    {
+        "password": "$2y$10$BUEh2j.eXng9Nw0acTVQjuIIlN7ezgjRY4gQyth8lU7twe0OnX3GC",
+        "email": "Emilie.Richard@gmail.com",
+        "username": "emilierichard58",
+        "fullname": "Emilie Richard",
+        "age": 68,
+        "fidelite": 75,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 1,
+            "viande": [
+                "poulet"
+            ],
+            "frites": "classique",
+            "boisson": "orangina",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$9VDtx\/tkV3UncNz5YGn9auyFC2MDg1VFLyrdvV2eyalnYkGI4jcBK",
+        "email": "Alice.Martin@gmail.com",
+        "username": "alicemartin82",
+        "fullname": "Alice Martin",
+        "age": 32,
+        "fidelite": 12,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 2,
+            "viande": [
+                "poulet",
+                "boeuf"
+            ],
+            "frites": "cheddar",
+            "boisson": "eau",
+            "adresse": "95 avenue Charles de Gaulle"
+        }
+    },
+    {
+        "password": "$2y$10$BGxfLVv9TqqzWRltd0h\/eOaZ3O0GoWj5\/aQc63sz4rod2TVT69tgG",
+        "email": "Alice.Simon@gmail.com",
+        "username": "alicesimon73",
+        "fullname": "Alice Simon",
+        "age": 48,
+        "fidelite": 77,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 2,
+            "viande": [
+                "poulet",
+                "kebab"
+            ],
+            "frites": "cheddar",
+            "boisson": "fanta",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$r1jGWMwosNPMbtRFP6848OsALoMtCPtIb1bU6CduQ6V0D85k7iVDa",
+        "email": "Christophe.Laurent@gmail.com",
+        "username": "christophelaurent22",
+        "fullname": "Christophe Laurent",
+        "age": 43,
+        "fidelite": 97,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 2,
+            "viande": [
+                "boeuf",
+                "kebab"
+            ],
+            "frites": "classique",
+            "boisson": "coca",
+            "adresse": "38 place Jean Moulin"
+        }
+    },
+    {
+        "password": "$2y$10$2FwELGHFdvv7RlZ1PvGt4eK6RvntaqNRGCaRoU0LZ9RDavjsFa3AW",
+        "email": "Isabelle.Garcia@gmail.com",
+        "username": "isabellegarcia81",
+        "fullname": "Isabelle Garcia",
+        "age": 46,
+        "fidelite": 28,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 3,
+            "viande": [
+                "kebab",
+                "poulet",
+                "boeuf"
+            ],
+            "frites": "classique",
+            "boisson": "ice",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$.s0DvUhF\/fR3hqChve5x\/OEvP2wxsl3uFJxouUJzaRLg0wbKtafvO",
+        "email": "Luc.Simon@gmail.com",
+        "username": "lucsimon66",
+        "fullname": "Luc Simon",
+        "age": 63,
+        "fidelite": 90,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 2,
+            "viande": [
+                "kebab",
+                "boeuf"
+            ],
+            "frites": "cheddar",
+            "boisson": "fanta",
+            "adresse": "74 place Charles de Gaulle"
+        }
+    },
+    {
+        "password": "$2y$10$GcLVITWOGrUXYZjxSpTztOZdKCx5ixU0ZrYc4p\/044NLutcYSTK\/q",
+        "email": "Val\u00e9rie.Vincent@gmail.com",
+        "username": "val\u00e9rievincent24",
+        "fullname": "Val\u00e9rie Vincent",
+        "age": 28,
+        "fidelite": 95,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 1,
+            "viande": [
+                "kebab"
+            ],
+            "frites": "classique",
+            "boisson": "coca",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$FezScDNkF6l7M1x5pH.TRuBAwDc2r.GQ70xuHZTs.iBLLICt5L2BG",
+        "email": "Fran\u00e7ois.Richard@gmail.com",
+        "username": "fran\u00e7oisrichard86",
+        "fullname": "Fran\u00e7ois Richard",
+        "age": 27,
+        "fidelite": 37,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 2,
+            "viande": [
+                "boeuf",
+                "poulet"
+            ],
+            "frites": "cheddar",
+            "boisson": "eau",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$Ls5v8DbTBUSpFX.QcujVTO9jHBjqA2CQ8cGuyTIssFWAMiFoBt0Su",
+        "email": "Christophe.Moreau@gmail.com",
+        "username": "christophemoreau86",
+        "fullname": "Christophe Moreau",
+        "age": 34,
+        "fidelite": 95,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 2,
+            "viande": [
+                "poulet",
+                "kebab"
+            ],
+            "frites": "classique",
+            "boisson": "fanta",
+            "adresse": "91 place Gambetta"
+        }
+    },
+    {
+        "password": "$2y$10$4CNbnC0CZUY\/xFgjt0efpeujnXVLxpKXhQY.S1qXFejC.3sdEep\/S",
+        "email": "Catherine.Martin@gmail.com",
+        "username": "catherinemartin73",
+        "fullname": "Catherine Martin",
+        "age": 57,
+        "fidelite": 75,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 3,
+            "viande": [
+                "poulet",
+                "boeuf",
+                "boeuf"
+            ],
+            "frites": "cheddar",
+            "boisson": "orangina",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$R7V92uc869xMVRuoyqwWLOhpS3kkeMLx8vu2GvhYeFwpc\/YFQvgdG",
+        "email": "Nicolas.Michel@gmail.com",
+        "username": "nicolasmichel17",
+        "fullname": "Nicolas Michel",
+        "age": 40,
+        "fidelite": 90,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 3,
+            "viande": [
+                "boeuf",
+                "boeuf",
+                "poulet"
+            ],
+            "frites": "cheddar",
+            "boisson": "fanta",
+            "adresse": "7 rue Victor Hugo"
+        }
+    },
+    {
+        "password": "$2y$10$5AmBGhlELQy7SjyJ2vXgaufK0t4gEMSi9tnJCMvdRDBa3E\/xYjIjC",
+        "email": "Marie.Fournier@gmail.com",
+        "username": "mariefournier82",
+        "fullname": "Marie Fournier",
+        "age": 38,
+        "fidelite": 72,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 2,
+            "viande": [
+                "poulet",
+                "kebab"
+            ],
+            "frites": "classique",
+            "boisson": "coca",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$KWW6zZBZ454cLQExa9lamuecRym6uXBOIRD\/keoFH6KxdHGXafkEi",
+        "email": "Emilie.Martin@gmail.com",
+        "username": "emiliemartin74",
+        "fullname": "Emilie Martin",
+        "age": 18,
+        "fidelite": 60,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 2,
+            "viande": [
+                "kebab",
+                "poulet"
+            ],
+            "frites": "cheddar",
+            "boisson": "ice",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$znxlsUjBru.OUUYPo\/pFI.9zieWXq6SJwOGjz4wc2adRrmKn\/vI9G",
+        "email": "Alexandre.Bernard@gmail.com",
+        "username": "alexandrebernard63",
+        "fullname": "Alexandre Bernard",
+        "age": 67,
+        "fidelite": 88,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 3,
+            "viande": [
+                "boeuf",
+                "kebab",
+                "boeuf"
+            ],
+            "frites": "classique",
+            "boisson": "ice",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$F\/vU5qKiyD606OZY3FrQ..uNbN7U6Ct8NWEHDIim.mrUTnaW8mYxq",
+        "email": "Val\u00e9rie.Robert@gmail.com",
+        "username": "val\u00e9rierobert95",
+        "fullname": "Val\u00e9rie Robert",
+        "age": 69,
+        "fidelite": 68,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 3,
+            "viande": [
+                "kebab",
+                "boeuf",
+                "kebab"
+            ],
+            "frites": "classique",
+            "boisson": "orangina",
+            "adresse": "29 rue Charles de Gaulle"
+        }
+    },
+    {
+        "password": "$2y$10$jB8BGqVfAKqbvz71ZMwCrutPIvb5dGC1eIQDmumb..nDRImJY9\/ki",
+        "email": "Sophie.Laurent@gmail.com",
+        "username": "sophielaurent41",
+        "fullname": "Sophie Laurent",
+        "age": 40,
+        "fidelite": 29,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 3,
+            "viande": [
+                "kebab",
+                "poulet",
+                "kebab"
+            ],
+            "frites": "classique",
+            "boisson": "ice",
+            "adresse": "62 avenue Victor Hugo"
+        }
+    },
+    {
+        "password": "$2y$10$\/duUO8obaPIBet63y7rk1eV6\/wyJQIHKPvCwypWbDymsoS8lDZdZS",
+        "email": "Isabelle.Martin@gmail.com",
+        "username": "isabellemartin89",
+        "fullname": "Isabelle Martin",
+        "age": 54,
+        "fidelite": 32,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 1,
+            "viande": [
+                "poulet"
+            ],
+            "frites": "cheddar",
+            "boisson": "eau",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$NXW42HHDynz4hBbKUiCLIemvl5KrxNnG.KB8IRHTGfOBhPpsbI9PK",
+        "email": "Paul.Lefebvre@gmail.com",
+        "username": "paullefebvre32",
+        "fullname": "Paul Lefebvre",
+        "age": 60,
+        "fidelite": 38,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 2,
+            "viande": [
+                "boeuf",
+                "kebab"
+            ],
+            "frites": "classique",
+            "boisson": "ice",
+            "adresse": "49 place Gambetta"
+        }
+    },
+    {
+        "password": "$2y$10$oD3NuQxiKe6ou2rmN8w5X.udX5yQVeadZabSXaJsohORrOaZ4n39O",
+        "email": "Fran\u00e7ois.Bernard@gmail.com",
+        "username": "fran\u00e7oisbernard13",
+        "fullname": "Fran\u00e7ois Bernard",
+        "age": 43,
+        "fidelite": 11,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 3,
+            "viande": [
+                "poulet",
+                "kebab",
+                "poulet"
+            ],
+            "frites": "classique",
+            "boisson": "coca",
+            "adresse": "7 avenue Jean Moulin"
+        }
+    },
+    {
+        "password": "$2y$10$xVRIF2B4Fg4.LQS0UloXM.PwGCw.4KMeyQYtDZvmHSDoJZuBoclLG",
+        "email": "Alexandre.Laurent@gmail.com",
+        "username": "alexandrelaurent63",
+        "fullname": "Alexandre Laurent",
+        "age": 38,
+        "fidelite": 19,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 3,
+            "viande": [
+                "kebab",
+                "poulet",
+                "boeuf"
+            ],
+            "frites": "cheddar",
+            "boisson": "ice",
+            "adresse": "64 avenue Gambetta"
+        }
+    },
+    {
+        "password": "$2y$10$NESNx1EcyxYW4j5WKMyx0OMq5KtCpbxZvQeX9Gpdi3RJj0LSR5LAS",
+        "email": "Pierre.Moreau@gmail.com",
+        "username": "pierremoreau90",
+        "fullname": "Pierre Moreau",
+        "age": 21,
+        "fidelite": 23,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 3,
+            "viande": [
+                "boeuf",
+                "kebab",
+                "poulet"
+            ],
+            "frites": "classique",
+            "boisson": "ice",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$h.ZnyB.hJUuNzbCCu9vtC.vKwZyzFjGM1D4LL1BTAI9uw1ijbj.z.",
+        "email": "Catherine.Durand@gmail.com",
+        "username": "catherinedurand90",
+        "fullname": "Catherine Durand",
+        "age": 31,
+        "fidelite": 85,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 1,
+            "viande": [
+                "poulet"
+            ],
+            "frites": "cheddar",
+            "boisson": "coca",
+            "adresse": "74 place Gambetta"
+        }
+    },
+    {
+        "password": "$2y$10$2xtZ3KwLaMKbtbVH.zkrYeqQYY5ADd2wQMyLU39uriQeOC2YWZ1aK",
+        "email": "Alice.Leroy@gmail.com",
+        "username": "aliceleroy34",
+        "fullname": "Alice Leroy",
+        "age": 55,
+        "fidelite": 24,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 3,
+            "viande": [
+                "kebab",
+                "poulet",
+                "poulet"
+            ],
+            "frites": "cheddar",
+            "boisson": "orangina",
+            "adresse": "59 place Gambetta"
+        }
+    },
+    {
+        "password": "$2y$10$GlnhtPdB59riQRNwAuXeE.ACtflelHZbnpCw8FADjXjgPtTUZ4ZYu",
+        "email": "Fran\u00e7ois.Thomas@gmail.com",
+        "username": "fran\u00e7oisthomas48",
+        "fullname": "Fran\u00e7ois Thomas",
+        "age": 71,
+        "fidelite": 38,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 1,
+            "viande": [
+                "kebab"
+            ],
+            "frites": "cheddar",
+            "boisson": "coca",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$3PayV.by1yWdQZhK033zv.vUwk63Rdps2v43ceePyHFpiQQyk\/5Rm",
+        "email": "Pierre.Richard@gmail.com",
+        "username": "pierrerichard68",
+        "fullname": "Pierre Richard",
+        "age": 55,
+        "fidelite": 89,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 1,
+            "viande": [
+                "poulet"
+            ],
+            "frites": "cheddar",
+            "boisson": "eau",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$wPdPXX2aiD2xl76uCZefaei1gbaYkHT\/SMJAJtKNp3ssrrninjFMC",
+        "email": "Marie.Dubois@gmail.com",
+        "username": "mariedubois42",
+        "fullname": "Marie Dubois",
+        "age": 34,
+        "fidelite": 54,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 2,
+            "viande": [
+                "kebab",
+                "kebab"
+            ],
+            "frites": "classique",
+            "boisson": "fanta",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$HvtcHaEI33S7C0T3Dnr0kusBAYla6tPeY9FyyGOVJAirzZA\/jbNym",
+        "email": "Fran\u00e7ois.Garcia@gmail.com",
+        "username": "fran\u00e7oisgarcia55",
+        "fullname": "Fran\u00e7ois Garcia",
+        "age": 54,
+        "fidelite": 7,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 3,
+            "viande": [
+                "kebab",
+                "kebab",
+                "kebab"
+            ],
+            "frites": "classique",
+            "boisson": "eau",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$Pz70w73ja0b973nEOLPs6uqGNNK3aTpkW24hmMoI.msQA0DVDXMH2",
+        "email": "Luc.Bernard@gmail.com",
+        "username": "lucbernard95",
+        "fullname": "Luc Bernard",
+        "age": 23,
+        "fidelite": 36,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 1,
+            "viande": [
+                "boeuf"
+            ],
+            "frites": "cheddar",
+            "boisson": "ice",
+            "adresse": "7 avenue Victor Hugo"
+        }
+    },
+    {
+        "password": "$2y$10$6JdZhaNd3AkhpUX2lWZlK.X1rvwUVCRfUjSgBMWkYz5SwUX9o9VKe",
+        "email": "Elise.Thomas@gmail.com",
+        "username": "elisethomas62",
+        "fullname": "Elise Thomas",
+        "age": 77,
+        "fidelite": 49,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 2,
+            "viande": [
+                "boeuf",
+                "boeuf"
+            ],
+            "frites": "cheddar",
+            "boisson": "coca",
+            "adresse": "10 avenue Charles de Gaulle"
+        }
+    },
+    {
+        "password": "$2y$10$S8QNcJqZ8xzoujc27wLZGuFOo8paVxNlNcFVHPQUn.y3aLXXwqyuS",
+        "email": "Julie.Garcia@gmail.com",
+        "username": "juliegarcia15",
+        "fullname": "Julie Garcia",
+        "age": 34,
+        "fidelite": 47,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 3,
+            "viande": [
+                "poulet",
+                "kebab",
+                "kebab"
+            ],
+            "frites": "cheddar",
+            "boisson": "fanta",
+            "adresse": "34 rue Gambetta"
+        }
+    },
+    {
+        "password": "$2y$10$XNcc75qSfmDi7s.cK6joHewvgpDwdpce6QLHLaVRaPwZYNON0zAFW",
+        "email": "Julie.Dubois@gmail.com",
+        "username": "juliedubois59",
+        "fullname": "Julie Dubois",
+        "age": 33,
+        "fidelite": 88,
+        "commande": {
+            "manger": "livraison",
+            "nb_viandes": 2,
+            "viande": [
+                "kebab",
+                "poulet"
+            ],
+            "frites": "cheddar",
+            "boisson": "fanta",
+            "adresse": "55 avenue Gambetta"
+        }
+    },
+    {
+        "password": "$2y$10$9tsB7fYeZL26H44IejdnVO6y0LE4zuWxZ5mGtOtMMdG7p7Dcx\/Lw6",
+        "email": "Christophe.Laurent@gmail.com",
+        "username": "christophelaurent81",
+        "fullname": "Christophe Laurent",
+        "age": 40,
+        "fidelite": 14,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": 2,
+            "viande": [
+                "kebab",
+                "kebab"
+            ],
+            "frites": "cheddar",
+            "boisson": "fanta",
+            "adresse": ""
+        }
+    },
+    {
+        "password": "$2y$10$eOOB.pD9RQdj5UcPOvxSj.PgYI6F1EfqZ.S4i\/y4lg0Gk.gkoAFXK",
+        "email": "bb",
+        "username": "bb",
+        "fullname": "bb",
+        "age": "bb",
+        "fidelite": 0
+    }
+]

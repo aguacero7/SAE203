@@ -19,3 +19,11 @@
 2024-06-25 19:13:34 ::1 200 ERROR_PAGE mama
 2024-06-25 19:16:06 DEBUG_ERROR test
 2024-06-25 19:16:06 ::1 200 ERROR_PAGE mama
+2024-06-26 08:01:06 ::1 501 ERROR_PAGE Cette fonctionnalité n'est pas encore implémentée
+2024-06-26 08:01:27 ::1 501 ERROR_PAGE Cette fonctionnalité n'est pas encore implémentée
+2024-06-26 08:01:39 ::1 501 ERROR_PAGE Cette fonctionnalité n'est pas encore implémentée
+2024-06-26 08:17:15 ::1 501 ERROR_PAGE Cette fonctionnalité n'est pas encore implémentée
+2024-06-26 08:17:16 ::1 501 ERROR_PAGE Cette fonctionnalité n'est pas encore implémentée
+2024-06-26 08:17:24 ::1 501 ERROR_PAGE Cette fonctionnalité n'est pas encore implémentée
+2024-06-26 08:17:27 ::1 501 ERROR_PAGE Cette fonctionnalité n'est pas encore implémentée
+2024-06-26 08:17:29 ::1 501 ERROR_PAGE Cette fonctionnalité n'est pas encore implémentée

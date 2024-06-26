@@ -13,7 +13,6 @@
     "Manager": {
         "categories_interdites": [
             "Administration",
-            "dirigeant",
             "Commandes",
             "Comptabilit\u00e9"
         ]
@@ -35,16 +34,5 @@
             "Compabilit\u00e9",
             "Emploi du temps"
         ]
-    },
-    "pobreza": {
-        "categories_interdites": {
-            "0": "Administration",
-            "2": "Annuaire",
-            "3": "Commandes",
-            "4": "Compabilit\u00e9",
-            "5": "Stocks",
-            "6": "Comptabilit\u00e9",
-            "7": "Salaires"
-        }
     }
 }
