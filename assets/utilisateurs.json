@@ -3,7 +3,8 @@
         "password": "$2y$10$VOMKJanhHfE3MGAM1MK3leKeMlH8yFc\/3MN.\/4IOIBw1tiS.\/Kq02",
         "email": "admin@admin.com",
         "groupes": [
-            "SuperUtilisateur"
+            "SuperUtilisateur",
+            "Salarie"
         ],
         "username": "administrateur",
         "fullname": "Admin Du Site",
@@ -28,7 +29,8 @@
         "password": "$2y$10$Ox.Vn\/yukBNRJZnUgOar1eExdxlZos0JVlS7axDD9Kp1JikAOwX3K",
         "email": "lilian@cool.com",
         "groupes": [
-            "SuperUtilisateur"
+            "SuperUtilisateur",
+            "Salarie"
         ],
         "username": "lilian",
         "fullname": "lilian",
@@ -36,30 +38,18 @@
         "contact": "002",
         "birthday": "1999-05-05"
     },
-    "4": {
-        "password": "$2y$10$U08MqzH2haZgfQ2LppE0r.jKRVxxN09HfSVIrlHddHkV1R6X.RFPW",
-        "email": "aaa@aaa.aad",
-        "groupes": [],
-        "username": "frappeduquartier41",
-        "fullname": "Frappe Du Quartier",
-        "pfp": "default.png",
-        "contact": "5168",
-        "birthday": "2024-06-05"
-    },
     "5": {
-        "password": "$2y$10$gB25XbfCDR.O.m\/EgLyuWugFgJvZYLq.mxw9BgZLcfCkcpHbV.sD.",
+        "password": "$2y$10$WRUzI6WjRyLLwN5.TRtd1eNaXtO6oOYRLVW87I87bcfvCyB42KHm2",
         "email": "Homer.Roux@bigk.fr",
         "groupes": [
-            "Salarie",
             "Dirigeant",
-            "Manager"
+            "Manager",
+            "Salarie"
         ],
         "username": "homerroux14",
         "fullname": "Homer Roux",
-        "question": "voiture",
-        "answer": "C1",
-        "pfp": "default.png",
-        "contact": 453,
+        "pfp": "homerroux14.jpg",
+        "contact": "453",
         "birthday": "2000-09-08"
     },
     "6": {
