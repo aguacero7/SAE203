@@ -1,6 +1,6 @@
 {
     "0": {
-        "password": "$2y$10$OjsOHUttTARO1hO\/m1gvG.y3\/2542ROlmd5hoiqgOJ37NgtYK\/.8y",
+        "password": "$2y$10$VOMKJanhHfE3MGAM1MK3leKeMlH8yFc\/3MN.\/4IOIBw1tiS.\/Kq02",
         "email": "admin@admin.com",
         "groupes": [
             "SuperUtilisateur"
@@ -47,5 +47,804 @@
         "pfp": "default.png",
         "contact": "5168",
         "birthday": "2024-06-05"
+    },
+    "5": {
+        "password": "$2y$10$gB25XbfCDR.O.m\/EgLyuWugFgJvZYLq.mxw9BgZLcfCkcpHbV.sD.",
+        "email": "Homer.Roux@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Manager"
+        ],
+        "username": "homerroux14",
+        "fullname": "Homer Roux",
+        "question": "voiture",
+        "answer": "C1",
+        "pfp": "default.png",
+        "contact": 453,
+        "birthday": "2000-09-08"
+    },
+    "6": {
+        "password": "$2y$10$KDYhZhpLOPzmkxYbtULEIef1A7p0nUboKU7U1BBMKw1lRkxX58SR2",
+        "email": "Pierre.Simon@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Salarie"
+        ],
+        "username": "pierresimon40",
+        "fullname": "Pierre Simon",
+        "question": "voiture",
+        "answer": "Supra",
+        "pfp": "default.png",
+        "contact": 215,
+        "birthday": "1978-02-23"
+    },
+    "7": {
+        "password": "$2y$10$hooIWotWZSAhBk8YroU4.ODc1.5xbcvRalE1teLCZy8x70Ye4rZkG",
+        "email": "Isabelle.Bernard@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Manager",
+            "Salarie"
+        ],
+        "username": "isabellebernard34",
+        "fullname": "Isabelle Bernard",
+        "question": "mere",
+        "answer": "Dupont",
+        "pfp": "default.png",
+        "contact": 596,
+        "birthday": "1976-02-10"
+    },
+    "8": {
+        "password": "$2y$10$O6s5eztit\/y0fvO7mh5BnOHIp6EeF9cfvnE\/PpG8KhudfCk3hexBW",
+        "email": "Catherine.Moreau@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Salarie"
+        ],
+        "username": "catherinemoreau27",
+        "fullname": "Catherine Moreau",
+        "question": "plat",
+        "answer": "poutine",
+        "pfp": "default.png",
+        "contact": 123,
+        "birthday": "1990-08-17"
+    },
+    "9": {
+        "password": "$2y$10$kYm0sVeOy6c\/v31wYAwnF.42XB6tmCpFsIytNtWcAJyYpGHNd3Zcy",
+        "email": "Alice.Thomas@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Salarie"
+        ],
+        "username": "alicethomas63",
+        "fullname": "Alice Thomas",
+        "question": "voiture",
+        "answer": "Aventador",
+        "pfp": "default.png",
+        "contact": 588,
+        "birthday": "1992-08-04"
+    },
+    "10": {
+        "password": "$2y$10$ZePwbzFRMREam3dZdjxqounsWPyzcPFMa56lVLdossUAl0BPjIP\/q",
+        "email": "Paul.Vincent@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Manager"
+        ],
+        "username": "paulvincent56",
+        "fullname": "Paul Vincent",
+        "question": "plat",
+        "answer": "ratatouille",
+        "pfp": "default.png",
+        "contact": 289,
+        "birthday": "1985-05-19"
+    },
+    "11": {
+        "password": "$2y$10$Bj5uoXi9TrkY7I7WRZ9DxO8bhgbLhCH8DH39mNq0FSYyliTldYc1O",
+        "email": "Nicolas.Fernandes@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Manager",
+            "Comptable"
+        ],
+        "username": "nicolasfernandes57",
+        "fullname": "Nicolas Fernandes",
+        "question": "plat",
+        "answer": "tacos",
+        "pfp": "default.png",
+        "contact": 680,
+        "birthday": "2007-04-01"
+    },
+    "12": {
+        "password": "$2y$10$DMe3zjZR7GSKbTo1juo6We\/7u5kS8OKChowY8dSkRPqWSG1aTCjlu",
+        "email": "Thomas.Malherre@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Manager",
+            "Comptable"
+        ],
+        "username": "thomasmalherre19",
+        "fullname": "Thomas Malherre",
+        "question": "plat",
+        "answer": "hamburger",
+        "pfp": "default.png",
+        "contact": 885,
+        "birthday": "1980-11-11"
+    },
+    "13": {
+        "password": "$2y$10$3cfEasM6vv72DoHqdHRNDuOFZ7WBBZx28kZ4sTXm\/yEp\/hvv3e5se",
+        "email": "Elise.Thomas@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Salarie",
+            "Comptable"
+        ],
+        "username": "elisethomas21",
+        "fullname": "Elise Thomas",
+        "question": "mere",
+        "answer": "Messi",
+        "pfp": "default.png",
+        "contact": 295,
+        "birthday": "2006-11-20"
+    },
+    "14": {
+        "password": "$2y$10$.jctzd5g4TCyCO3fifolH.ZWsC7NW5XrvdWPxfjZyowT7TMb69gOi",
+        "email": "Nicolas.Thomas@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Comptable"
+        ],
+        "username": "nicolasthomas47",
+        "fullname": "Nicolas Thomas",
+        "question": "mere",
+        "answer": "Martin",
+        "pfp": "default.png",
+        "contact": 749,
+        "birthday": "1961-09-03"
+    },
+    "15": {
+        "password": "$2y$10$4ZkKxtinzba9TE8zHU2rfOSYLTWQJTycLIP10I1Lnm.0qPu6fyrgO",
+        "email": "Nicolas.Laurent@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Comptable"
+        ],
+        "username": "nicolaslaurent52",
+        "fullname": "Nicolas Laurent",
+        "question": "plat",
+        "answer": "pizza",
+        "pfp": "default.png",
+        "contact": 863,
+        "birthday": "1977-09-07"
+    },
+    "16": {
+        "password": "$2y$10$NCmt5M4qtTh93yNluC5HUuEHHBA6Fs9uH6L7h9Zqvqzt3N\/J7x98O",
+        "email": "Alice.Lefebvre@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Comptable"
+        ],
+        "username": "alicelefebvre90",
+        "fullname": "Alice Lefebvre",
+        "question": "plat",
+        "answer": "poutine",
+        "pfp": "default.png",
+        "contact": 451,
+        "birthday": "1959-06-12"
+    },
+    "17": {
+        "password": "$2y$10$1M5a\/lieQZp6L362er2De.fo7Cty8K1m1l2xTnXLxl8avEfGAMRiO",
+        "email": "Alexandre.Yilmaz@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Manager",
+            "Comptable"
+        ],
+        "username": "alexandreyilmaz40",
+        "fullname": "Alexandre Yilmaz",
+        "question": "plat",
+        "answer": "ratatouille",
+        "pfp": "default.png",
+        "contact": 861,
+        "birthday": "1968-04-17"
+    },
+    "18": {
+        "password": "$2y$10$h7YaT3jf4Sn2v6TP5NieLuo6fTDdXKy\/4DkXIRGozuYjMhlwYRAWW",
+        "email": "No\u00e9.Roux@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Salarie"
+        ],
+        "username": "no'eroux91",
+        "fullname": "No\u00e9 Roux",
+        "question": "voiture",
+        "answer": "C1",
+        "pfp": "default.png",
+        "contact": 663,
+        "birthday": "1987-08-18"
+    },
+    "19": {
+        "password": "$2y$10$kkmXFFqtbO1bzF5Gpl37k.yHkt.jwsTGvnfYjBBPSSpfV59raqDmW",
+        "email": "Bruno.Garcia@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Manager",
+            "Salarie",
+            "Comptable"
+        ],
+        "username": "brunogarcia83",
+        "fullname": "Bruno Garcia",
+        "question": "mere",
+        "answer": "Bernard",
+        "pfp": "default.png",
+        "contact": 212,
+        "birthday": "2000-11-23"
+    },
+    "20": {
+        "password": "$2y$10$pVX27MahsiU2oF9mh.RmQ.O5BgJN\/l\/CfI\/CWR7jG9EGEiFnhqPca",
+        "email": "Catherine.Simon@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Manager",
+            "Salarie",
+            "Comptable"
+        ],
+        "username": "catherinesimon62",
+        "fullname": "Catherine Simon",
+        "question": "voiture",
+        "answer": "Urus",
+        "pfp": "default.png",
+        "contact": 944,
+        "birthday": "1992-07-09"
+    },
+    "21": {
+        "password": "$2y$10$FPi9KIeCmUUfPaf.smfkPOYJiPH.tjjUT03FPHKivyVZgm68Pruaq",
+        "email": "Arda.Martin@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Salarie"
+        ],
+        "username": "ardamartin42",
+        "fullname": "Arda Martin",
+        "question": "voiture",
+        "answer": "Fiesta",
+        "pfp": "default.png",
+        "contact": 276,
+        "birthday": "2006-06-11"
+    },
+    "22": {
+        "password": "$2y$10$Coe3OKwHu5lLjAQ3Nxec\/.ZzqZT06G4dEU.9qYYFg2ECHhKEBPT6.",
+        "email": "Luc.Moreau@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Manager"
+        ],
+        "username": "lucmoreau37",
+        "fullname": "Luc Moreau",
+        "question": "plat",
+        "answer": "tacos",
+        "pfp": "default.png",
+        "contact": 747,
+        "birthday": "1993-07-13"
+    },
+    "23": {
+        "password": "$2y$10$piEhMIfiPDZ.D4QWFNS3S.jhnKhBnBeHoRVGHhQir\/rOlhgpjrS0m",
+        "email": "No\u00e9.Dubois@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Manager"
+        ],
+        "username": "no'edubois44",
+        "fullname": "No\u00e9 Dubois",
+        "question": "plat",
+        "answer": "poutine",
+        "pfp": "default.png",
+        "contact": 855,
+        "birthday": "2007-04-01"
+    },
+    "24": {
+        "password": "$2y$10$Ig7MCOoxpsvGW6J40wiQp.cit9zQpuOSbVeieyoX3\/uDlQQ8pgDUq",
+        "email": "Bruno.Yilmaz@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Salarie"
+        ],
+        "username": "brunoyilmaz70",
+        "fullname": "Bruno Yilmaz",
+        "question": "plat",
+        "answer": "hamburger",
+        "pfp": "default.png",
+        "contact": 110,
+        "birthday": "1965-09-25"
+    },
+    "25": {
+        "password": "$2y$10$N\/UoJKRE0X.c3mva3z1\/suN.tyCD8AEXhUXD8vR.RaZb2poo.X2qS",
+        "email": "Emilie.Dubois@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Manager",
+            "Salarie"
+        ],
+        "username": "emiliedubois65",
+        "fullname": "Emilie Dubois",
+        "question": "plat",
+        "answer": "poutine",
+        "pfp": "default.png",
+        "contact": 106,
+        "birthday": "1978-06-14"
+    },
+    "26": {
+        "password": "$2y$10$uPw2ma20SqrSpRgYy6ZNaOUIKjeKUyH1OKMiIghcXlmR3aMyuI\/yW",
+        "email": "Elise.Fournier@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Manager",
+            "Salarie",
+            "Comptable"
+        ],
+        "username": "elisefournier34",
+        "fullname": "Elise Fournier",
+        "question": "mere",
+        "answer": "Messi",
+        "pfp": "default.png",
+        "contact": 352,
+        "birthday": "2006-12-25"
+    },
+    "27": {
+        "password": "$2y$10$3uw5te2vpQS\/pG.fDn8veO7cnH19zcRPLuT\/Wewlb1lPrTHFOCKbC",
+        "email": "Catherine.Dubois@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Manager",
+            "Comptable"
+        ],
+        "username": "catherinedubois52",
+        "fullname": "Catherine Dubois",
+        "question": "voiture",
+        "answer": "Scenic",
+        "pfp": "default.png",
+        "contact": 618,
+        "birthday": "2000-05-19"
+    },
+    "28": {
+        "password": "$2y$10$Y9wR1b3I0678J9BPL5WyseyJ.VBsVyPcN01G6C1PD.ePsWv5uUIZa",
+        "email": "Fran\u00e7ois.Roux@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Manager"
+        ],
+        "username": "francoisroux78",
+        "fullname": "Fran\u00e7ois Roux",
+        "question": "plat",
+        "answer": "hamburger",
+        "pfp": "default.png",
+        "contact": 782,
+        "birthday": "1969-07-14"
+    },
+    "29": {
+        "password": "$2y$10$nhthCLVcKG8iaQUAE2Z0s.RWcKkR12w1Y.IfenOqsl1wrP.U4yzgO",
+        "email": "Alexandre.Richard@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Manager",
+            "Comptable"
+        ],
+        "username": "alexandrerichard71",
+        "fullname": "Alexandre Richard",
+        "question": "mere",
+        "answer": "Dupont",
+        "pfp": "default.png",
+        "contact": 547,
+        "birthday": "2002-03-21"
+    },
+    "30": {
+        "password": "$2y$10$UIAfoGzoBjLdIuRxtfm5k.qKc0\/9.7D2s8xUhO.K..wFf0fvfOV8a",
+        "email": "Alexandre.Martin@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Manager",
+            "Salarie"
+        ],
+        "username": "alexandremartin89",
+        "fullname": "Alexandre Martin",
+        "question": "mere",
+        "answer": "Bernard",
+        "pfp": "default.png",
+        "contact": 538,
+        "birthday": "2006-05-18"
+    },
+    "31": {
+        "password": "$2y$10$20CEDfTWbQaLuLda1bDM7.Bk8b2UvIcOaMlnZzqY..\/IvdafgJxzO",
+        "email": "Emilie.Martin@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Manager",
+            "Salarie",
+            "Comptable"
+        ],
+        "username": "emiliemartin35",
+        "fullname": "Emilie Martin",
+        "question": "voiture",
+        "answer": "Fiesta",
+        "pfp": "default.png",
+        "contact": 251,
+        "birthday": "1976-01-17"
+    },
+    "32": {
+        "password": "$2y$10$QgX2rsgQ46Z85PJyihvtle1eN2Acd31bHhMijg2zk4cKzR5AL0tWe",
+        "email": "Jean.Fournier@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Salarie"
+        ],
+        "username": "jeanfournier43",
+        "fullname": "Jean Fournier",
+        "question": "mere",
+        "answer": "Dupont",
+        "pfp": "default.png",
+        "contact": 835,
+        "birthday": "1993-09-15"
+    },
+    "33": {
+        "password": "$2y$10$av03SMRyqUiUohVr.C3p1ODv63.jq5SDftEgLEEugqXAvQrAe2uJC",
+        "email": "Elise.Simpsons@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Manager"
+        ],
+        "username": "elisesimpsons37",
+        "fullname": "Elise Simpsons",
+        "question": "mere",
+        "answer": "Dupont",
+        "pfp": "default.png",
+        "contact": 924,
+        "birthday": "1991-05-06"
+    },
+    "34": {
+        "password": "$2y$10$wV0IolKYuTZmA2UhhbCHqOoeoP\/UhJZMXWAR2atmfWOLRY4OPVMhm",
+        "email": "Julie.Lefebvre@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Comptable"
+        ],
+        "username": "julielefebvre48",
+        "fullname": "Julie Lefebvre",
+        "question": "voiture",
+        "answer": "C1",
+        "pfp": "default.png",
+        "contact": 432,
+        "birthday": "1987-07-13"
+    },
+    "35": {
+        "password": "$2y$10$EK1adgQqeGDrmNUJEgVsp.qFUpuX\/gVm1Am5orSCwk0Jix17BOcxa",
+        "email": "Julie.Martin@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Manager"
+        ],
+        "username": "juliemartin38",
+        "fullname": "Julie Martin",
+        "question": "voiture",
+        "answer": "Scenic",
+        "pfp": "default.png",
+        "contact": 309,
+        "birthday": "1990-01-11"
+    },
+    "36": {
+        "password": "$2y$10$0uTA6TMQfUeuOmmr\/BLKV..1JmEZnhuBFLIxXmkWBtrHl481lYnj.",
+        "email": "Fran\u00e7ois.Leroy@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Salarie",
+            "Comptable"
+        ],
+        "username": "francoisleroy59",
+        "fullname": "Fran\u00e7ois Leroy",
+        "question": "plat",
+        "answer": "poutine",
+        "pfp": "default.png",
+        "contact": 679,
+        "birthday": "2001-10-11"
+    },
+    "37": {
+        "password": "$2y$10$YH.YqDODtK1SrraN2NSipOucwQSaixyfCrtqaM0trMZl\/hxEbwP7G",
+        "email": "Christophe.Dubois@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Comptable"
+        ],
+        "username": "christophedubois42",
+        "fullname": "Christophe Dubois",
+        "question": "plat",
+        "answer": "hamburger",
+        "pfp": "default.png",
+        "contact": 209,
+        "birthday": "1993-01-02"
+    },
+    "38": {
+        "password": "$2y$10$CaxMktGaOgIYutwZc5n1cegTC\/QHeW7KnyPx4ALPvfOfCBJTGX2YG",
+        "email": "Yassine.Bernard@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant"
+        ],
+        "username": "yassinebernard25",
+        "fullname": "Yassine Bernard",
+        "question": "plat",
+        "answer": "kebab",
+        "pfp": "default.png",
+        "contact": 771,
+        "birthday": "1979-02-25"
+    },
+    "39": {
+        "password": "$2y$10$cB7TbIA8b\/YiSlxP1GksUOuS3oyVrS\/zbP7E3IKzbFydV5sp2siie",
+        "email": "Sophie.Ronaldo@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Manager",
+            "Comptable"
+        ],
+        "username": "sophieronaldo10",
+        "fullname": "Sophie Ronaldo",
+        "question": "mere",
+        "answer": "Bernard",
+        "pfp": "default.png",
+        "contact": 328,
+        "birthday": "1998-10-18"
+    },
+    "40": {
+        "password": "$2y$10$tBTe.0BdemnNpU1MzC8uXuLwuu8EUUPLWVdIVnVXE9oU2utaz.h2m",
+        "email": "Catherine.Bertrand@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Manager",
+            "Comptable"
+        ],
+        "username": "catherinebertrand57",
+        "fullname": "Catherine Bertrand",
+        "question": "voiture",
+        "answer": "Scenic",
+        "pfp": "default.png",
+        "contact": 664,
+        "birthday": "1984-12-28"
+    },
+    "41": {
+        "password": "$2y$10$4Qc\/wVA4l98lXu12IE2IQ.x.xep3esaEyYKCgC\/Ai12djDJxPaGPK",
+        "email": "Paul.Garcia@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Manager",
+            "Salarie"
+        ],
+        "username": "paulgarcia82",
+        "fullname": "Paul Garcia",
+        "question": "mere",
+        "answer": "Ronaldo",
+        "pfp": "default.png",
+        "contact": 451,
+        "birthday": "2001-02-03"
+    },
+    "42": {
+        "password": "$2y$10$clM6fWUBWyD6Oh6EbzmhP.RzMtuxklbnS.qyVGRN78C3QUFbabak6",
+        "email": "Nicolas.Roux@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Salarie",
+            "Comptable"
+        ],
+        "username": "nicolasroux65",
+        "fullname": "Nicolas Roux",
+        "question": "mere",
+        "answer": "Ronaldo",
+        "pfp": "default.png",
+        "contact": 799,
+        "birthday": "1998-05-18"
+    },
+    "43": {
+        "password": "$2y$10$PiRB8b8B36yS9GbkKp7rg.a9WCw1ppWqvvNWjMNK2ByHOChcv\/Yk.",
+        "email": "Alexandre.Fournier@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Manager",
+            "Salarie"
+        ],
+        "username": "alexandrefournier60",
+        "fullname": "Alexandre Fournier",
+        "question": "voiture",
+        "answer": "Supra",
+        "pfp": "default.png",
+        "contact": 559,
+        "birthday": "1975-07-21"
+    },
+    "44": {
+        "password": "$2y$10$WkAwl7QgZhcB5QkSxahLRep2Kd6Q.2KB4mt8MQi1uknBPHx1FTS.u",
+        "email": "Alice.David@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Comptable"
+        ],
+        "username": "alicedavid44",
+        "fullname": "Alice David",
+        "question": "mere",
+        "answer": "Messi",
+        "pfp": "default.png",
+        "contact": 739,
+        "birthday": "1964-07-05"
+    },
+    "45": {
+        "password": "$2y$10$8lbBEU2DqLXBAqFD0cuUf.ID5nNJk7dUVTl.bo9dTtPO8sfGvy2CC",
+        "email": "Jeanne.Petit@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant"
+        ],
+        "username": "jeannepetit30",
+        "fullname": "Jeanne Petit",
+        "question": "mere",
+        "answer": "Ronaldo",
+        "pfp": "default.png",
+        "contact": 998,
+        "birthday": "2003-07-23"
+    },
+    "46": {
+        "password": "$2y$10$rWcvY6h.xpEkvOFiVRluHeVIE544PY0BOmLPNhMy0mXhVMwgu4YGK",
+        "email": "Martin.Simpsons@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Salarie"
+        ],
+        "username": "martinsimpsons83",
+        "fullname": "Martin Simpsons",
+        "question": "mere",
+        "answer": "Dupont",
+        "pfp": "default.png",
+        "contact": 618,
+        "birthday": "1981-07-20"
+    },
+    "47": {
+        "password": "$2y$10$WBfArL5XEC4Goa0N2JA1tOtK.iNl0HRX\/m\/DOJQs.cVF0bm1woVuO",
+        "email": "Mathilde.Robert@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Manager",
+            "Salarie"
+        ],
+        "username": "mathilderobert72",
+        "fullname": "Mathilde Robert",
+        "question": "voiture",
+        "answer": "Scenic",
+        "pfp": "default.png",
+        "contact": 756,
+        "birthday": "1989-01-26"
+    },
+    "48": {
+        "password": "$2y$10$cDeCiYyawUSMeK2SBYiA3u5ARBL1Dko0DW7LuiFxs.SFYRe5Tk1ra",
+        "email": "Isabelle.Vincent@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Manager"
+        ],
+        "username": "isabellevincent91",
+        "fullname": "Isabelle Vincent",
+        "question": "mere",
+        "answer": "Ronaldo",
+        "pfp": "default.png",
+        "contact": 630,
+        "birthday": "2001-10-25"
+    },
+    "49": {
+        "password": "$2y$10$7f3PuZ8nzA7xJmHwTwmuWOt1EBp7W29MkaWlBtfcdjMvaSpKD12Ve",
+        "email": "Val\u00e9rie.Simpsons@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Comptable"
+        ],
+        "username": "val'eriesimpsons34",
+        "fullname": "Val\u00e9rie Simpsons",
+        "question": "mere",
+        "answer": "Messi",
+        "pfp": "default.png",
+        "contact": 288,
+        "birthday": "1984-12-27"
+    },
+    "50": {
+        "password": "$2y$10$DVlocJUzwW0Wa87g0XmmreJb5J.aX9AEH.6ipHGQa0kDjlIVQ6Zo.",
+        "email": "Jean.Lefebvre@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Manager"
+        ],
+        "username": "jeanlefebvre20",
+        "fullname": "Jean Lefebvre",
+        "question": "plat",
+        "answer": "poutine",
+        "pfp": "default.png",
+        "contact": 504,
+        "birthday": "1993-02-05"
+    },
+    "51": {
+        "password": "$2y$10$N8Usjexaf53G4OarepEH6ehXg9\/fcC0ATDc.PD6l88ZA5N7GygOSu",
+        "email": "Christophe.Fournier@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Manager"
+        ],
+        "username": "christophefournier72",
+        "fullname": "Christophe Fournier",
+        "question": "plat",
+        "answer": "tacos",
+        "pfp": "default.png",
+        "contact": 749,
+        "birthday": "1962-06-06"
+    },
+    "52": {
+        "password": "$2y$10$m1mwFutV050FpiiAVBqMyuR78mBfMy06R2zLMULIrRJ2KreX.lgne",
+        "email": "Pierre.Simpsons@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Manager"
+        ],
+        "username": "pierresimpsons75",
+        "fullname": "Pierre Simpsons",
+        "question": "voiture",
+        "answer": "Supra",
+        "pfp": "default.png",
+        "contact": 991,
+        "birthday": "2000-11-06"
+    },
+    "53": {
+        "password": "$2y$10$KIO5cuPzMxXDSHX.51HAyODiHji6eXXJ7AI.xraW7NxxzGF078vYS",
+        "email": "Alice.Garnacho@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Manager"
+        ],
+        "username": "alicegarnacho55",
+        "fullname": "Alice Garnacho",
+        "question": "mere",
+        "answer": "Martin",
+        "pfp": "default.png",
+        "contact": 464,
+        "birthday": "2007-02-18"
+    },
+    "54": {
+        "password": "$2y$10$AvhKIc9ETJVHQII0Wgpwl.lx3s8EQ4FJifXV921F9ZsMa3g\/Yt13C",
+        "email": "Paul.Martin@bigk.fr",
+        "groupes": [
+            "Salarie",
+            "Dirigeant",
+            "Manager",
+            "Salarie"
+        ],
+        "username": "paulmartin92",
+        "fullname": "Paul Martin",
+        "question": "plat",
+        "answer": "tacos",
+        "pfp": "default.png",
+        "contact": 897,
+        "birthday": "1970-07-12"
     }
 }

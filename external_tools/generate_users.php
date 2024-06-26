@@ -7,7 +7,7 @@ function generate_hashed_password() {
 $users_json = file_get_contents('../assets/utilisateurs.json');
 $users = json_decode($users_json, true);
 
-$groupes = ["admin","manager","comptable","dirigeant"];
+$groupes = ["Dirigeant","Manager","Salarie","Comptable"];
 $prenoms = ['Jean', 'Paul', 'Marie', 'Pierre', 'Luc','Yassine','Noé', 'Sophie', 'Alice', 'Antoine','Arda','Bruno','Omer','Homer', 'Julie', 'Alexandre', 'Nicolas', 'Isabelle', 'Christophe', 'Emilie', 'François','Mathilde',"Alice",'Jeanne','Marie', 'Valérie', 'Thomas', 'Catherine', 'Martin', 'Elise'];
 $noms = ['Dubois',"Malherre",'Fernandes','Garnacho','Ronaldo','Yilmaz', 'Martin', 'Bernard', 'Thomas', 'Petit','Mbappe', 'Robert','Simpsons', 'Richard', 'Durand', 'Leroy', 'Moreau', 'Simon', 'Laurent', 'Lefebvre', 'Michel', 'Garcia', 'David', 'Bertrand', 'Roux', 'Vincent', 'Fournier'];
 
@@ -73,7 +73,7 @@ for($i=0;$i<50;$i++){
     } while (contact_exists($contact, $users));
 
             
-    $user_groupes = ["salarie"]; // Par défaut
+    $user_groupes = ["Salarie"]; // Par défaut
     $random_group_count = mt_rand(1, 3);
     $random_groupes = array_rand(array_flip($groupes), $random_group_count); //prendre entre 1 et 3 grp au hasard
     if (is_array($random_groupes)) {
