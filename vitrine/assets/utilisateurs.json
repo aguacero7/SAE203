@@ -44,7 +44,17 @@
         "fullname": "Christophe Fournier",
         "contact": 657,
         "age": 80,
-        "fidelite": 50
+        "fidelite": 50,
+        "commande": {
+            "manger": "emporter",
+            "nb_viandes": "1",
+            "viandes": [
+                "kebab"
+            ],
+            "frites": "frites-cheddar",
+            "boisson": "coca",
+            "adresse": "a"
+        }
     },
     {
         "password": "$2y$10$12HtpASuncPi53s0iJCNLeFaO8xBSJ.k0HK6bj30Gw6gaj7PapHHm",
@@ -57,11 +67,11 @@
             "manger": "emporter",
             "nb_viandes": "1",
             "viandes": [
-                "kebab"
+                "boeuf"
             ],
-            "frites": "frites-cheddar",
-            "boisson": "coca",
-            "adresse": "aa"
+            "frites": "frites-classiques",
+            "boisson": "eau",
+            "adresse": "za"
         }
     },
     {
@@ -1020,5 +1030,13 @@
             "boisson": "fanta",
             "adresse": ""
         }
+    },
+    {
+        "password": "$2y$10$eOOB.pD9RQdj5UcPOvxSj.PgYI6F1EfqZ.S4i\/y4lg0Gk.gkoAFXK",
+        "email": "bb",
+        "username": "bb",
+        "fullname": "bb",
+        "age": "bb",
+        "fidelite": 0
     }
 ]

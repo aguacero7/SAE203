@@ -13,7 +13,7 @@ $jsonData = json_decode($jsonString, true);
 
 echo '<table class="table container mt-6">';
 echo '<thead>';
-echo "<tr><th>🗑️</th><th>Nombre de viande(s) :</th><th>Viande(s) :</th><th>Viande(s) :</th><th>Frites :</th><th>Boisson :</th></tr>";
+echo "<tr><th>🗑️</th><th>Nombre de viande(s) :</th><th>Viande(s) :</th><th>Livraison :</th><th>Frites :</th><th>Boisson :</th></tr>";
 echo '</thead>';
 
 $compteur = 0;
@@ -33,19 +33,22 @@ foreach ($jsonData as $key => $value) {
             }
         }
 
-        $viandes = implode(" ,",$jsonData[$key]['commande']['viandes']);
+        if (isset($jsonData[$key]['commande'])){
 
-        echo "<tbody>";
-        echo "<tr>";
-        echo '<td><a style="text-decoration:none" href="administrer.php?supprimer='.$value['username'].'">❌</a></td>';
-        
+            $viandes = implode(" ,",$jsonData[$key]['commande']['viandes']);
 
-        echo "<td>".$jsonData[$key]['commande']['nb_viandes']."</td>";
-        echo "<td>".$viandes."</td>";
-        echo "<td>".$jsonData[$key]['commande']['frites']."</td>";
-        echo "<td>".$jsonData[$key]['commande']['boisson']."</td>";
-        echo '<td>
-        </td></tr>';
+            echo "<tbody>";
+            echo "<tr>";
+            echo '<td><a style="text-decoration:none" href="vitrine.php?supprimer='.$value['username'].'">❌</a></td>';
+            
+            echo "<td>".$jsonData[$key]['commande']['nb_viandes']."</td>";
+            echo "<td>".$viandes."</td>";
+            echo "<td>".$jsonData[$key]['commande']['manger']."</td>";
+            echo "<td>".$jsonData[$key]['commande']['frites']."</td>";
+            echo "<td>".$jsonData[$key]['commande']['boisson']."</td>";
+            echo '<td>
+            </td></tr>';
+        }
     }
 
     $compteur ++;
