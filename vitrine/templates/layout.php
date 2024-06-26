@@ -1,5 +1,7 @@
 <?php
 
+require_once('models/functions.php');
+
 echo '<!DOCTYPE html>
     <html lang="fr">
     <head>
@@ -60,7 +62,7 @@ echo '<!DOCTYPE html>
                                 <label for="pswd">Password:</label>
                                 <input type="password" class="form-control" id="pwd" placeholder="Entrez votre mot de passe" name="pswd">
                                 </div>
-                                <button type="submit" class="btn btn-danger">Connexion</button>
+                                <button type="submit" class="btn btn-success">Connexion</button>
                             </form>';
                             // Traitement du formulaire de connexion
                             if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['pswd'])) {
@@ -106,30 +108,9 @@ echo '<!DOCTYPE html>
                     <ul class="navbar-nav">
                     <li class="nav-item">';
 
-                    if (isset($_SESSION["idf"])){
-                        if ($_SESSION["idf"] == 'admin'){
-                            echo '<a class="nav-link" href="administrer.php">Administration</a>';
-                        }
-                    }
-
-                    echo'</li>
-                    <li class="nav-item">';
-
 
                     if (isset($_SESSION["idf"])){
                         echo '<a class="nav-link" href="vitrine.php?profil=profil">Profil</a>';
-                    }
-                    
-                    echo '</li>
-                    <li class="nav-item">';
-
-
-                    if (isset($_SESSION["idf"])){
-                        echo '<a class="nav-link" href="vitrine.php?panier=panier">Profil
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-secondary">+99 
-                                <span class="visually-hidden">unread messages</span>
-                            </span>
-                        </a>';
                     }
                     
                     echo '</li>
@@ -143,11 +124,14 @@ echo '<!DOCTYPE html>
                     </li>
 
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link text-white" href="vitrine.php?panier=panier">Panier</a>
-                    </li>
+                    <li class="nav-item">';
+                    if (isset($_SESSION["idf"])){
+                        echo'
+                    <a class="nav-link text-white" href="vitrine.php?panier=panier">Panier 🧺</a>
+                    </li>';
+                    }
 
-                    </ul>
+                    echo '</ul>
                     </nav>';
 
 ?>

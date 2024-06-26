@@ -2,7 +2,6 @@
 
 $title = "Profil";
 
-session_start();
 
 $path = 'assets/utilisateurs.json';
 $jsonString = file_get_contents($path);
@@ -40,9 +39,6 @@ foreach ($jsonData as $key => $value){
       margin-bottom: 10px; /* Added */
     }
     </style>
-    <div class="jumbotron bg-danger jumbotron-fluid text-center text-white p-3">
-    <h2><kbd>Profil :</kbd></h2>
-    </div>
 
     <div class="container">
     <br>
@@ -51,7 +47,7 @@ foreach ($jsonData as $key => $value){
     <div class="card mb-3 justify-content-center" style="max-width: 540px;">
       <div class="row g-0">
         <div class="col-md-4">
-          <img src="images/profil_vierge.png" class="img-fluid rounded-start" alt="profil_vierge">
+          <img src="img/profil_vierge.png" class="img-fluid rounded-start" alt="profil_vierge">
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -94,7 +90,7 @@ foreach ($jsonData as $key => $value){
         </div>
         </div>
             <br>
-            <button type="submit" class="btn btn-danger">Modifier</button>
+            <button type="submit" class="btn btn-success">Modifier</button>
             <p class="card-text"><small class="text-body-secondary">Vous pouvez modifier votre profil</small></p>
           </form>
             </p>

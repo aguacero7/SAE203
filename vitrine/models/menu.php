@@ -1,114 +1,74 @@
 <?php $title = "Menu";?>
 
-<script>
-        function autoSubmit() {
-            document.getElementById("radioForm").submit();
-        }
-</script>
-
 <div class="container">
 <br>
 <h4>Commandez en ligne !</h4><br>
+<form action="vitrine.php?menu=menu" method="post" class="mb-4">
+
+<label><input class="form-check-input" type="radio" name="livraison" value="emporter"> A EMPORTER 🛒</label>
+<br>
+<label><input class="form-check-input" type="radio" name="livraison" value="livraison"> LIVRAISON 🛵</label>
+<br>
+
+    <div class="row text-center">
+        <div class="col">
+            <div class="card bg-dark text-white">
+                <h2>Tacos</h2>
+                    <p>Choisissez le nombres de viandes :</p>
+                    <label><input class="form-check-input" type="radio" id="1viande" name="nb_viandes" value="1"> 1 Viande</label>
+                    <label><input class="form-check-input" type="radio" id="2viandes" name="nb_viandes" value="2"> 2 Viandes</label>
+                    <label><input class="form-check-input" type="radio" id="3viandes" name="nb_viandes" value="3"> 3 Viandes</label>
+                    <p>Choisissez une viandes :</p>
+                    <label><input class="form-check-input" type="checkbox" id="boeuf" name="viande" value="boeuf"> Boeuf</label>
+                    <label><input class="form-check-input" type="checkbox" id="poulet" name="viande" value="poulet"> Poulet</label>
+                    <label><input class="form-check-input" type="checkbox" id="kebab" name="viande" value="kebab"> kebab</label>
+                    <p>Choisissez des frites :</p>
+                    <label><input class="form-check-input" type="radio" id="classique" name="frites" value="frites-classiques"> Frites classiques</label>
+                    <label><input class="form-check-input" type="radio" id="cheddar" name="frites" value="frites-chedar"> Frites chedar</label>
+                    <p>Choisissez une boisson :</p>
+                    <label><input class="form-check-input" type="radio" id="eau" name="boisson" value="eau"> Eau</label>
+                    <label><input class="form-check-input" type="radio" id="coca" name="boisson" value="coca"> Coca </label>
+                    <label><input class="form-check-input" type="radio" id="ice" name="boisson" value="ice-tea"> Ice Tea </label>
+                    <label><input class="form-check-input" type="radio" id="orangina" name="boisson" value="orangina"> Orangina </label>
+                    <label><input class="form-check-input" type="radio" id="fanta" name="boisson" value="fanta"> Fanta </label>
+            </div>
+        </div>
+    </div>
+    <br>
 
 
-<form id="radioForm" action="vitrine.php?menu=menu" method="post" class="mb-4">
-    <div class="form-check">
-        <input class="form-check-input" type="radio" id="option1" name="options[]" value="Option 1" onchange="autoSubmit()" <?php if (isset($_POST['options']) && in_array('Option 1', $_POST['options'])) echo 'checked'; ?>>
-        <label class="form-check-label" for="option1">LIVRAISON 🛵</label>
+
+   <div class="mb-3">
+        <label for="adresse" class="form-label">Adresse (Si le code postale de votre ville n est pas en 354XX, cela fait trop loin pour nous à livrer !) :</label>
+        <input type="adresse" name="adresse" class="form-control" id="adresse" placeholder="Format : nom rue 354XX Ville" required>
     </div>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" id="option2" name="options[]" value="Option 2" onchange="autoSubmit()" <?php if (isset($_POST['options']) && in_array('Option 2', $_POST['options'])) echo 'checked'; ?>>
-        <label class="form-check-label" for="option2">À EMPORTER 🛒</label>
-    </div>
+    
+    <br>
+    <input type="submit" class="btn btn-success" value="Commander" name="submit">
 </form>
 
-<!--
-<div class="container mt-3">
-    <h3 class="text-center">Résultats</h3>
-    <div class="alert alert-info">
-        <?php
-        /*
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if (isset($_POST['options'])) {
-                echo "Options sélectionnées : " . implode(", ", $_POST['options']);
-            } else {
-                echo "Aucune option sélectionnée.";
-            }
-        } else {
-            echo "Aucune option sélectionnée.";
+<?php
+
+$path = 'assets/utilisateurs.json';
+$jsonString = file_get_contents($path);
+$jsonData = json_decode($jsonString, true);
+
+if (isset($_POST['livraison']) && isset($_POST['submit']) && isset($_POST['nb_viandes']) && isset($_POST['viande']) && isset($_POST['frites']) && isset($_POST['boisson']) && isset($_POST['adresse'])){
+
+    var_dump($_POST['viande']);
+        
+    
+    $newData = array("manger"=>$_POST['livraison'],"nb_viandes"=>$_POST['nb_viandes'],"viandes"=>[$_POST['viande']],"frites"=>$_POST['frites'],"boisson"=>$_POST['boisson'],"adresse"=>$_POST['adresse']);
+    
+    foreach ($jsonData as $key => $value){
+        if ($_SESSION["idf"] == $jsonData[$key]['username']){
+            $jsonData[$key]['commande'] = $newData;
         }
-            */
-        ?>
-    </div>
-</div>
--->
+    }
+    $data = json_encode($jsonData, JSON_PRETTY_PRINT);
+    file_put_contents('assets/utilisateurs.json', $data);
+}
 
+?>
 
-<div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-        <div class="card bg-dark text-white">
-            <h2>Tacos 1 viande</h2>
-            <p>Choisissez une viandes :</p>
-            <form id="commandeForm">
-                <label><input class="form-check-input" type="checkbox" id="check1" name="viande" value="boeuf"> Boeuf</label>
-                <label><input class="form-check-input" type="checkbox" id="check2" name="viande" value="poulet"> Poulet</label>
-                <label><input class="form-check-input" type="checkbox" id="check3" name="viande" value="kebab"> kebab</label>
-                <p>Choisissez des frites :</p>
-                <label><input class="form-check-input" type="radio" id="check4" name="frites" value="frites-classiques"> Frites classiques</label>
-                <label><input class="form-check-input" type="radio" id="check5" name="frites" value="frites-chedar"> Frites chedar</label>
-                <p>Choisissez une boisson :</p>
-                <label><input class="form-check-input" type="radio" id="check6" name="boisson" value="eau"> Eau</label>
-                <label><input class="form-check-input" type="radio" id="check7" name="boisson" value="coca"> Coca </label>
-                <label><input class="form-check-input" type="radio" id="check8" name="boisson" value="coca"> Ice Tea </label>
-                <label><input class="form-check-input" type="radio" id="check9" name="boisson" value="coca"> Orangina </label>
-                <label><input class="form-check-input" type="radio" id="check10" name="boisson" value="coca"> Fanta </label>
-                <input type="submit" class="btn btn-success" value="Commander">
-            </form>
-        </div>
-    </div>
-
-    <div class="col">
-        <div class="card bg-dark text-white">
-            <h2>Tacos 2 viandes</h2>
-            <p>Choisissez deux viandes :</p>
-            <form id="commandeForm">
-                <label><input class="form-check-input" type="checkbox" id="check1" name="viande" value="boeuf"> Boeuf</label>
-                <label><input class="form-check-input" type="checkbox" id="check2" name="viande" value="poulet"> Poulet</label>
-                <label><input class="form-check-input" type="checkbox" id="check3" name="viande" value="kebab"> kebab</label>
-                <p>Choisissez des frites :</p>
-                <label><input class="form-check-input" type="radio" id="check4" name="frites" value="frites-classiques"> Frites classiques</label>
-                <label><input class="form-check-input" type="radio" id="check5" name="frites" value="frites-chedar"> Frites chedar</label>
-                <p>Choisissez une boisson :</p>
-                <label><input class="form-check-input" type="radio" id="check6" name="boisson" value="eau"> Eau</label>
-                <label><input class="form-check-input" type="radio" id="check7" name="boisson" value="coca"> Coca </label>
-                <label><input class="form-check-input" type="radio" id="check8" name="boisson" value="coca"> Ice Tea </label>
-                <label><input class="form-check-input" type="radio" id="check9" name="boisson" value="coca"> Orangina </label>
-                <label><input class="form-check-input" type="radio" id="check10" name="boisson" value="coca"> Fanta </label>
-                <input type="submit" class="btn btn-success" value="Commander">
-            </form>
-        </div>
-    </div>
-
-    <div class="col">
-        <div class="card bg-dark text-white">
-            <h2>Tacos 3 viandes</h2>
-            <p>Choisissez trois viandes :</p>
-            <form id="commandeForm">
-                <label><input class="form-check-input" type="checkbox" id="check1" name="viande" value="boeuf"> Boeuf</label>
-                <label><input class="form-check-input" type="checkbox" id="check2" name="viande" value="poulet"> Poulet</label>
-                <label><input class="form-check-input" type="checkbox" id="check3" name="viande" value="kebab"> kebab</label>
-                <p>Choisissez des frites :</p>
-                <label><input class="form-check-input" type="radio" id="check4" name="frites" value="frites-classiques"> Frites classiques</label>
-                <label><input class="form-check-input" type="radio" id="check5" name="frites" value="frites-chedar"> Frites chedar</label>
-                <p>Choisissez une boisson :</p>
-                <label><input class="form-check-input" type="radio" id="check6" name="boisson" value="eau"> Eau</label>
-                <label><input class="form-check-input" type="radio" id="check7" name="boisson" value="coca"> Coca </label>
-                <label><input class="form-check-input" type="radio" id="check8" name="boisson" value="coca"> Ice Tea </label>
-                <label><input class="form-check-input" type="radio" id="check9" name="boisson" value="coca"> Orangina </label>
-                <label><input class="form-check-input" type="radio" id="check10" name="boisson" value="coca"> Fanta </label>
-                <input type="submit" class="btn btn-success" value="Commander">
-            </form>
-        </div>
-    </div>
-</div>
 </div>
