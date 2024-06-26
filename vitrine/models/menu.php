@@ -63,6 +63,7 @@ if (isset($_POST['livraison']) && isset($_POST['submit']) && isset($_POST['nb_vi
     foreach ($jsonData as $key => $value){
         if ($_SESSION["idf"] == $jsonData[$key]['username']){
             $jsonData[$key]['commande'] = $newData;
+            $jsonData[$key]['fidelite'] += 1;
         }
     }
     $data = json_encode($jsonData, JSON_PRETTY_PRINT);
